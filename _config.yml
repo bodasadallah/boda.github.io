@@ -69,7 +69,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: bodasadallah # your GitHub user name
 gitlab_username: bodasadallah # your GitLab user name
-x_username: # your X handle
+x_username: bodasadallah # your X handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: boda-sadallah # your LinkedIn user name
 telegram_username: # your Telegram user name
@@ -104,7 +104,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  For contact, send an Email at <a href="mailto:abdelrahman.sadallah@mbzuai.ac.ae"></a>.
+  For contact, send an Email at abdelrahman dot sadallah at mbzuai dot ac dot ae
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

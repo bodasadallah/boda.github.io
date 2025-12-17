@@ -377,8 +377,22 @@ async function loadLayoutConfiguration() {
             // Add navigation links
             config.layout.header.navigation.forEach(navItem => {
                 const linkElement = document.createElement('a');
-                linkElement.href = navItem.href;
+                let href = navItem.href;
+                
+                // Replace {{cv_url}} placeholder with actual CV URL
+                if (href.includes('{{cv_url}}') && config.site?.cv_url) {
+                    href = href.replace('{{cv_url}}', config.site.cv_url);
+                }
+                
+                linkElement.href = href;
                 linkElement.innerHTML = navItem.label;
+                
+                // Add target="_blank" for external links (like CV)
+                if (navItem.is_external) {
+                    linkElement.target = '_blank';
+                    linkElement.rel = 'noopener noreferrer';
+                }
+                
                 navLinksElement.appendChild(linkElement);
             });
             

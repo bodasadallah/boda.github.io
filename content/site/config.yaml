@@ -11,6 +11,7 @@ site:
   nationality_flags: "🇿🇦 🇨🇭"  # Optional: displayed under profile picture
   author_name_pattern: "F. Fehr"  # Pattern to bold in publication author lists
   google_scholar_url: "https://scholar.google.com/citations?user=WaZWY0wAAAAJ&hl=en"
+  cv_url: "content/site/Fabio_J_Fehr_CV_2025.pdf"  # Path to CV/Resume PDF
   role:
     title: "Postdoctoral Researcher"
     affiliation: "Oxford University, TVG"
@@ -29,6 +30,9 @@ layout:
         href: "#publications-heading"
       - label: "Blog"
         href: "#blog-heading"
+      - label: "Resume"
+        href: "{{cv_url}}"
+        is_external: true
   
   sections:
     timeline:

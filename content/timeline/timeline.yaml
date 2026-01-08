@@ -24,7 +24,7 @@
   description: |
     **Applied Data Scientist Internship** at [Amazon](https://www.amazon.science/). Focused on enhancing retrieval in the Retrieval Augmented Generation (RAG) pipeline for code generation using Large Language Models (LLMs). Designed and trained a lightweight retrieval model that integrated code semantics with dense embeddings, file directory hierarchy, and call graph structure.
 
-    *Publication:* [CoRet: Improved Retriever for Code Editing](https://aclanthology.org/2025.acl-long.1/) - ACL 2025.
+    *Publication:* [CoRet: Improved Retriever for Code Editing](https://aclanthology.org/2025.acl-short.62/) - ACL 2025.
   logo: "content/timeline/logos/Amazon.svg"
 
 - id: "epfl-phd"

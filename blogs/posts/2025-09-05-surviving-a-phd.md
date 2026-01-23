@@ -1,0 +1,726 @@
+---
+title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
+date: 2025-09-05
+excerpt: "A personal survival guide for a PhD in Machine Learning at EPFL, Idiap, and Martigny"
+thumbnail: "blogs/images/idiap/Fabio-Jamie.jpeg"
+permalink: /fablogio/surviving-a-phd/
+---
+
+
+**TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at EPFL and Idiap Research Institute in Martigny Switzerland between the years of 2021-2025.
+
+
+### Who is this for?
+
+
+
+- A younger version of myself who would have loved this advice when deciding whether to pursue a PhD
+- Anyone contemplating doctoral studies in machine learning or AI
+- Current PhD students looking for practical tips and tricks
+- A personal reflection on my Switzerland journey
+
+**Credit where it's due**: 
+
+Writing this I watched, read and synthesized the following blogs and videos. These are PhDs through time that are respected in the field. I recommend checking them out!
+
+<style>
+  .phd-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--border-color, #e0e0e0);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 180px;
+    height: 160px;
+    text-align: center;
+    transition: all 0.2s ease;
+    background-color: var(--bg-color, #fff);
+    cursor: pointer;
+  }
+  
+  .phd-card:hover {
+    background-color: var(--hover-bg, #ffe4cc);
+    transform: translateY(-2px);
+  }
+  
+  .phd-card-img-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    background-color: #ddd;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phd-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .phd-card-title {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-color, #0a0a0a);
+    padding: 6px 6px 2px 6px;
+    line-height: 1.3;
+    flex-shrink: 0;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .phd-card-desc {
+    margin: 0;
+    font-size: 10px;
+    color: var(--muted-color, #666);
+    padding: 2px 6px 6px 6px;
+    flex-shrink: 0;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .paper-figure {
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+  }
+
+  .paper-figure:hover {
+    background-color: var(--hover-bg, #ffe4cc);
+    border-color: var(--border-color, #e0e0e0);
+    transform: translateY(-2px);
+  }
+</style>
+
+<style>
+  figure img { border-radius: 8px; }
+  .collab-figure img { width: 100%; height: 200px; object-fit: contain; object-position: center; border-radius: 8px; }
+</style>
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+  <!-- Karpathy Blog -->
+  <a href="https://karpathy.github.io/2016/09/07/phd/" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://karpathy.github.io/assets/phd/phds.jpg" alt="Andrej Karpathy (2016)">
+      </div>
+      <h4 class="phd-card-title">Andrej Karpathy (2016)</h4>
+      <p class="phd-card-desc">A Survival Guide to a PhD</p>
+    </div>
+  </a>
+
+  <!-- Yannic Kilcher Video -->
+  <a href="https://www.youtube.com/watch?v=rHQPBqMULXo" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/rHQPBqMULXo/hqdefault.jpg" alt="Yannic Kilcher (2021)">
+      </div>
+      <h4 class="phd-card-title">Yannic Kilcher (2021)</h4>
+      <p class="phd-card-desc">ML PhD Survival Guide</p>
+    </div>
+  </a>
+
+  <!-- Letitia Video -->
+  <a href="https://www.youtube.com/watch?v=prGZTX-Sgqw" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/prGZTX-Sgqw/hqdefault.jpg" alt="Letitia Parcalabescu (2024)">
+      </div>
+      <h4 class="phd-card-title">Letitia Parcalabescu (2024)</h4>
+      <p class="phd-card-desc">My PhD Journey in AI / ML </p>
+    </div>
+  </a>
+</div>
+
+
+## Why should you do a PhD?
+
+A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from Why Greatness Cannot Be Planned, Simon Sinek’s Golden Circle, and Ikigai. You don’t chase outcomes. You start with why. When the problem matters to you, progress follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
+
+That’s why knowing why you want to do a PhD is so important. Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, and late nights fighting bugs. Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems, stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
+
+A PhD is also a long exercise in focus. Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, and datasets will change. The underlying problems you care about probably won’t. Something my supervisor said in our first meeting stuck with me. He was genuinely excited and said, “It may not be easy, but it will be so cool.” That enthusiasm mattered. It made the challenge feel worth it. That’s the kind of “why” I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
+
+
+--- 
+
+
+Why should you do it? New cool people and topics and time. You are often your own boss and you go to new places. For me I can really highlight travel. Learn culture. Enjoy the time. Dont work all the time because its the down time and fun that alows the mind to rest properly for cool new ideas later. You can get a job anyday and earn money but this is rare, self improving time.
+
+WHY DO A PhD. Make sure you know this. Ikigai, Golden circle from simon sinek. It will give you the grit when the gind of phD goes.
+
+For me: It was to focus on something technical and strentch my mind. Thats important in my work of my 8 hour day. Growth. It was to be in switzerland and connect with my roots and family culture. It was to expand my experiences and travel learn bout things outside of South Africa. ALso needed to be self supporting. My family didnt come from enough money to support this. Does it have longevity? Useful questions to ask yourself before going in.  My MSc was in something I thought was so cool and useful. Biomedical engineering and statistics but it was entry level deep learning and bayesian nonparametrics. My undergraduate project was in NLP and statistics. So this actually aligned well.
+
+###  Where do a PhD? 
+
+I’ll take a strong stance on this. Switzerland is one of the best places to do a PhD.
+
+**Financially**, the balance is hard to beat. PhD salaries are among the highest in the world, and the cost of living is manageable if you’re sensible. In my case, rent was about a quarter of my income after tax. I could pay rent, eat well, and not constantly worry about money. That matters more than people like to admit. If you can’t afford to do a PhD, it becomes much harder to focus on the work. For ML they had enough Resources for compute 
+
+**Quality**, Swiss universities consistently rank near the top (Iwas at EPFL), especially in technical fields. For me, it was also personal. I’m Swiss by birth, with family there, so it felt natural. But even without that connection, I’d still strongly recommend Switzerland as a place to do a PhD. Why Idiap. Small but big enough. Experts in AI for 30 years (at the time famous for speech modality). Get to know across robotics, biometrics, speech, vision, NLP, AI with a variety of applications such as computational creativity, genomics, emotion modeling, graphs, privacy you name it!
+
+**Lifestyle** When research gets tough, you need ways to reset. Switzerland made that easy. Mountains, nature, skiing on winter weekends, and an international community of people going through similar things. That helped more than I expected. ALso center of Europe with a strong currency so its wasy to explore other countries easily on holidays.
+
+**Its not all roses** I lived in a small town Martigny, which can feel very quiet if you’re used to big cities. For my PhD, that focus was a benefit, but it’s not for everyone. It’s also intimidatingly French-speaking. If you don’t speak French (like I didnt) it became a side project to learn and embrace myself in it. Swiss culture can also be hard to crack (Even for me who is Swiss on paper), especially as a foreigner. I ended up spending most of my time with the international research community at Idiap, and those bonds became some of the closest I made. 
+
+If you’re choosing where to do a PhD, don’t underestimate the environment. You’ll live there for years. It will shape how well you work, and how well you live.
+
+### With who should you do a PhD?
+
+I liked the once a week 1-1. Really helpful Procrastination - Weekly meetings. Reality check just some your thoughts.
+
+I liked the group meetings. This was a nice touch
+
+
+###  What topic should you work on?
+
+
+I applied to everything under the sun. Jobs, internships, masters programs, PhD programs. over 50 applications and maybe only 20 responses, of which 17 were reject (rest were ghosts) an then 3 I got to final rounds of a startup in machine learning (then rejected), A phD offer in microbiome forensics at UniL and then PhD offer at EPFL and Idiap. I can tell you that turning down the offer of Unil was super tough. I thought about it. At the end of 4 years do I want to be the specialist in dead guy stomach data? I was going to be the most technical in the team. I wanted to be the dumbest in the room not the smartest. Then I have the most to learn!   
+
+
+- Topic. Choose something where people around you or above you have XP at. They can help. You Should be interested. You should have some expertise. A bit like Ikigai.
+    - Unique and cool to you.  (love)
+    - Supervisor is good at / passionate about.
+    - Good at it. (also ikigai)
+    - Money ?
+    - World needs it?
+- Resources… Can you do pretraining? Ie you do noy have massive GPU clusters? Can you feasibly do research that you are not competing directly with Google, OpenAI and Meta Apple Amazon etc the FANGs (This is why internships are cool later…)
+- Choose the biggest hottest topic right now! (For me that would have been 2021 finetuning or training embedding models like BERT, then in 2022 or 2023 WOuld be diffusion models, 2023-2024 would be precursor LLMs like GPT2, Now (end of 2025) would be LLMs and Agents). I would not recommend it. Imagine you started working on MCMC style models or RNN/LSTMs or embedding models. You would really struggle to publish as the fashion trend changes or when the big tech out muscle you. What is niche but important? What could have value always? What could get more important through time?
+    - Niche - less competition - become the best at it. Bandits, optimisation, biologically plausible NN, SOmething with a theoretic backbone that isnt super easy to dive into. Legal NLP, ML applications such as Legal, Medical, Education, Psycology and emotions, Security, generalisation, trustworthyness (safety), explainable, mechanistic interpretability, reasoning etc. As technology advances do these topics become more or less important through time?
+    - I worked on my own niche. This was really hard. Because there was very little to benchmark against. A VAE for transformers. At the time there wasnt anything like it. Required complex math and very MNIST style base plates to make sure it works.
+    - What communities publish consistently every year?
+    - Take your time and make sure you care. It will be your topic for approx 4 years.
+    - Chat to people (or read blogs like these) they have gone through it and can speak from XP buit as bob dylan wrote “Ohhh tiems they are a changining”
+    - Projects - how many papers, or journals. What are the expectations of the phd This is something you should .
+    - What do you want to do after?
+    - A phd I a long term exercise on focus. Can you do youtr thing for 4 years. It will be tough it wont work (nearly always) and you got to keep going.
+    -
+
+
+## All the other things (Put this early)
+
+- Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, driving, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
+
+
+Make thumbnails bigger and the images
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+  <!-- Most Uncertainly -->
+  <a href="https://www.youtube.com/watch?v=Gm_JDGQxTdQ&t=684" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Gm_JDGQxTdQ/hqdefault.jpg" alt="Most Uncertainly">
+      </div>
+      <h4 class="phd-card-title">2021 Most Uncertainly</h4>
+      <p class="phd-card-desc">SciFilmIt Hackathon</p>
+    </div>
+  </a>
+
+  <!-- SYNTH*IA* -->
+  <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="SYNTH*IA*">
+      </div>
+      <h4 class="phd-card-title">2025 SYNTH*IA*</h4>
+      <p class="phd-card-desc">Idiap Create Challenge Hackathon</p>
+    </div>
+  </a>
+</div>
+
+
+## Collaborations
+
+PhDs are, by design, insular and individual contributions to knowledge. You work alone, you own your problem, and collaboration can feel optional, or even like a distraction. I think that’s a darn shame.
+
+Done well, collaborations are one of the most underrated accelerators in a PhD. You get to learn skills from others, offer skills others don’t, and everyone moves faster when the division of labour is clear. It’s mutually beneficial, and when it works, the productivity compounds.
+
+For people who thrive in social environments (like myself), collaboration felt natural. Places like Idiap Research Institute worked especially well for this: small enough to connect easily with people, aligned enough to intersect on AI, but cross-disciplinary enough to make the collaborations interesting. Here are a few fun examples of collaborations at Idiap (some I was part of) and the lessons learned along the way.
+
+### Torch
+
+[**Torch**](http://torch.ch/torch3/) is one of Idiap’s old and famous collaborations which predates most modern PhDs: the precursor to [**PyTorch**](https://github.com/pytorch/pytorch). The Idiapers [Ronan Collobert](https://scholar.google.com/citations?user=32w7x1cAAAAJ&hl=en), [Samy Bengio](https://scholar.google.com/citations?user=Vs-MdPcAAAAJ&hl=en), and [Johnny Mariéthoz](https://dblp.org/pid/26/2004.html) built an open-source machine learning library that would later evolve into PyTorch, now a foundational tool for AI research and deployment worldwide.
+
+The technical impact is obvious. What I found more telling were their team photos. You don’t see a formal product team. You see friends building something together. They never lost their sense of humour. They were able to be silly *and* technically rigorous! Now that is rare and inspiring. Do good work, but enjoy the process. That’s something that I really resonate with and Idiap was the perfect place to foster this.
+
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
+    <img src="images/idiap/torch_meme.png" alt="Torch Team">
+    <figcaption style="text-align: center; font-size: 14px; color: gray;">Torch founders from Idiap [Torch Library](http://torch.ch/torch3/) (top), and Idiapers of 2025 recreating for fun (bottom). 
+       </figcaption>
+  </figure>
+  <a href="https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content" target="_blank" style="text-decoration: none;">
+    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
+      <img src="images/idiap/torch.png" alt="Torch Paper">
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">[Original Torch paper.](https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content)</figcaption>
+    </figure>
+  </a>
+</div>
+
+### Linear Transformers
+
+Linear transformers came just before my time at Idiap, but they carry an important message.
+
+The project started in a course at EPFL, by a small group of friends. If I got the story right, they didn’t manage to publish the idea on the first attempt. The method was interesting, but the practical impact wasn’t clear yet. They couldn’t show convincing speedups.
+
+Instead of moving on, Apoorv and Angelos doubled down. They rewrote the linear attention module in custom CUDA kernels to get real speedups on GPUs. As anyone who has tried to write CUDA knows, this kinda sucks. It also explains, in part, why NVIDIA has such a strong moat. And this was all before AI assistants. Just slow and careful engineering. It was a serious commitment, and it paid off.
+
+Once that work was done, they packaged it beautifully. Clean code. Clear documentation. Easy to run. Easy to benchmark against. This is something many people miss in research.
+
+Making your code reusable matters. If your code is usable, people will try it. If they can build on it, your idea will gain traction. It improves adoption, citations, and ultimately the community. We’re not engineers by default, and that’s fine. But during a PhD, you have the chance to learn these skills. Even basic engineering can go a long way. It makes you a stronger researcher. Go check out Apoorv and Angelos today they are likely to still be crushing it!
+
+This collaboration is a great example of theory meeting engineering, and being shared in a way the community could actually use. **Good ideas matter, but clean, usable code creates traction.**
+
+* The paper: ICML 2020. Well cited, for good reason.
+  [https://proceedings.mlr.press/v119/katharopoulos20a.html](https://proceedings.mlr.press/v119/katharopoulos20a.html)
+
+* A proper website.
+  [https://linear-transformers.com/](https://linear-transformers.com/)
+
+* Clean, usable code.
+  [https://github.com/idiap/fast-transformers](https://github.com/idiap/fast-transformers)
+
+* A video explaining it.
+  [https://www.youtube.com/watch?v=hAooAOFRsYc](https://www.youtube.com/watch?v=hAooAOFRsYc)
+
+
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
+    <img src="images/idiap/lineartransformers-batmanRobin.png" alt="Apoorv and Angelos">
+    <figcaption style="text-align: center; font-size: 14px; color: gray;">I made this depiction of Apoorv and Angelos. I am fairly certain this was how it looked when they were working on Linear Transformers. </figcaption>
+  </figure>
+  <a href="https://proceedings.mlr.press/v119/katharopoulos20a.html" target="_blank" style="text-decoration: none;">
+    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
+      <img src="images/idiap/linear-transformers.png" alt="Linear Transformers Paper">
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">Paper well cited and published in ICML 2020</figcaption>
+    </figure>
+  </a>
+</div>
+
+
+
+### Hypermixer
+
+
+We were inspired by MLP-Mixer. A clean idea. Mixing across and within tokens using only MLPs and transposition. No attention. It worked well for fixed-size images. The question was whether the same idea could work for language.
+
+At first, it didn’t. Language has variable sequence lengths. Fixed mixing meant padding everything to a constant size. That didn’t scale.
+
+The solution was to make the mixing dynamic, like attention. The same function works for any input size. We used hypernetworks to generate the right-sized parameters on the fly. The model remained fully MLP-based, and linear in the input dimension instead of quadratic like attention. In that sense, HyperMixer became a nice complement to linear transformers.
+
+What stayed with me was how far a simple idea can go with the right group of people. Just curiosity and iteration. That eventually led to my first publication. ACL 2023. My first paper and collaboration.
+
+Keep ideas as simple as possible, but no simpler.
+
+paper - https://aclanthology.org/2023.acl-long.871/
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
+    <img src="images/idiap/hypermixer-avengers.png" alt="Hypermixer Team">
+    <figcaption style="text-align: center; font-size: 14px; color: gray;">The Hypermixer team assemble</figcaption>
+  </figure>
+  <a href="https://aclanthology.org/2023.acl-long.871/" target="_blank" style="text-decoration: none;">
+    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
+      <img src="images/idiap/hypermixer.png" alt="Hypermixer Paper">
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">First publication at ICLR 2023</figcaption>
+    </figure>
+  </a>
+</div>
+
+### Abstraction with NVIB
+
+This collaboration came out of the momentum from earlier projects. Once I saw how much ground you can cover with the right setup, I wanted to test it.
+
+I initiated this project with Melika as a one-month experiment. The goal was simple. Could we use the explainability properties of NVIB to induce useful abstract representations? We split the work cleanly. I focused on modelling, training, and design. Melika handled the data, evaluations, and interpretation. Clear ownership. Minimal overlap. Very little friction.
+
+That structure made all the difference. In one month, we published a short paper at EMNLP showing that NVIB can induce useful, sparse abstract representations. We shared first authorship. A small but meaningful contribution to explainability and representation learning.
+
+What stood out to me was how effective a small team can be. Complementary skills. Clear responsibilities. We moved quickly, learned from each other, and both benefited from the collaboration.
+
+Clear division of labour lets small teams move fast.
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
+    <img src="images/idiap/abstractNVIB-nemo.png" alt="AbstractNVIB Nemo">
+    <figcaption style="text-align: center; font-size: 14px; color: gray;">Abstract NVIB Nemo</figcaption>
+  </figure>
+  <a href="https://aclanthology.org/2023.findings-emnlp.106/" target="_blank" style="text-decoration: none;">
+    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
+      <img src="images/idiap/learningtoabstract.png" alt="Learning to Abstract">
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">Learning to Abstract</figcaption>
+    </figure>
+  </a>
+</div>
+
+
+### Fine-Tuning with NVIB
+
+
+After seeing how well small collaborations worked, I wanted to scale the idea up.
+
+Idiap made this possible. It has multiple research groups with strengths across AI domains. NLP, speech, graphs, vision. I proposed a lab-wide collaboration around my PhD topic, NVIB, applied across modalities. I acted as first author and coordinator, connecting the core idea to each model, while each student owned one experiment.
+
+In practice, the flat structure was hard to manage. There were eight PhD students and three supervisors, with no hierarchy or sub-teams. I became the central point for communication and technical integration. Every new insight had to flow through me, be reimplemented across pipelines, and passed back out. The overhead added up quickly.
+
+The project still worked. We produced a unified paper spanning multiple modalities, and it was accepted as an ICLR workshop paper. But the cost was depth. With so many moving pieces and a flat structure, it was hard to go deep in any single domain.
+
+That said, the experience was valuable. I gained exposure to new domains, especially speech, and learned what different communities care about. I also learned a lot about leadership, coordination, and communication under pressure. I had to move fast just to avoid becoming the bottleneck.
+
+What I loved most was seeing people help each other across domains. Sharing tools. Explaining pipelines. Building on each other’s strengths. The project may not have produced a single dramatic breakthrough, but the individual growth was real, and the collaboration itself was genuinely rewarding.
+
+Large collaborations can work, but they need structure as they scale. Clear division of labour is not enough. Without hierarchy, coordination becomes the hardest problem.
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
+    <img src="images/idiap/justiceLeagueNVIB.png" alt="Justice League">
+    <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles</figcaption>
+  </figure>
+  <a href="https://openreview.net/forum?id=eX0VFgG4IS" target="_blank" style="text-decoration: none;">
+    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
+      <img src="images/idiap/finetuningNVIB.png" alt="Fine-tuning NVIB">
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">Fine-tuning NVIB</figcaption>
+    </figure>
+  </a>
+</div>
+
+### Takeaways
+
+
+Clear ownership + structure
+
+Clear timeline
+
+Keep teams small
+2-3 PhDs
+Lower communication
+Greater depth on the project
+
+I learned that collaboration needs to be designed, just like models do. 
+
+Small teams thrive on simplicity, trust, and clear ownership. They move fast and go deep. Larger teams can scale ideas across domains, but only if structure scales with them. Without hierarchy, communication becomes the bottleneck. Without usable code, ideas stall. These projects taught me more than how to publish papers. I learned how to work with people, engineer for others, and lead without authority.
+
+Done well, collaboration doesn’t distract from research. It multiplies it.
+
+## Code
+
+Release code. Make it use the biggest most widely adopted libraries. Think huggingface, transformers, pytorch. Pytorch lightning. Make sure its use is easy to change, and compare. This will make your idea adoptions easier. Being new to coding myself this took me some time to get going and i still try and improve on this each iteration.
+
+Each paper is an iteration. Get better learn and move forward.
+
+- Take time to learn the systems. Get excited about how to get more compute. We all created our own submitters to the grid. Mine had emojis.
+    - Visualise your models training. Visualise the gradients. Visualise the maps, dive deep into what the hell this thing is doing
+    - Debugging! -  Visualise. Also print everything show everything gradients, wandb for training. Pytorch lightning. DOnt reinvent
+    - Make things simply usable - get good at the software engineering. If people can use it. they may not be able to understand like a cars engine they will build it forward, more citations  more impact more success as a researcher. Hopefully your writing too is good and visuals so people grasp it soon.
+
+
+## Paper writing 
+
+Writing papers:
+
+Essential skill you will need to learn. They look a certain way. They flow a certain way the language statistics, figures. Review is important. You get to see many papers. Good and bad and learn from both. 
+
+HAHA from Kaparthy. Wow 10 years ago he nailed this.
+
+An introduction of ~1 page. A ~1 page related work section with a good density of citations - not too sparse but not too crowded. A well-designed pull figure (on page 1 or 2) and system figure (on page 3) that were not made in MS Paint. A technical section with some math symbols somewhere, results tables with lots of numbers and some of them bold, one additional cute analysis experiment, and the paper has exactly 8 pages (the page limit) and not a single line less. **(written in 2016) -** Intro, Related Work, Model, Experiments, Conclusions.
+
+What is the single core contribution of the paper. Sells the idea that wasnt obvious before. Argue its important, novel, your experiments have rigour and merit and that the reader should care. 
+
+I like to organize each of my paragraphs around a single concrete point stated on the first sentence that is then supported in the rest of the paragraph. Easy to skim HOW TO SPEAK 
+
+Intro is very important.
+
+1st paragraph. The problem is important. why should you care.
+
+2nd Previous work addresses this as follows… but has problems still of… (building the moat of why your idea is unique) Why is it hard. Why hasnt this been solved before
+
+3rd in this work we do.
+
+4th This gives us the properties of… and our experiments show…
+
+Avoid the **the laundry list.** Here is the problem. Okay now to solve this problem first we do X, then we do Y, then we do Z, and now we do W, and here is what we get. Your paper should be a story. That is motivated why someone should care. Each point should be justified, motivated, explained. Why do you do X or Y? What are the alternatives? What have others done? It’s okay to say things like this is common (add citation if possible). It is supposed to teach your colleagues something and you have to justify your steps, not just describe what you did.
+
+An internal deadline. 2 weeks before for the group to review. they then review like a conference and give feedback.
+
+- Check out https://cs.stanford.edu/people/widom/paper-writing.html
+
+**How to publish a paper?** Write papers that cannot be rejected. For me I would never get 8/10 reviews. Always 5 and 6. Not big breakthroughs but consistent, solid work with rigourous abalations and logical not overclaimed solutions.  
+
+- They are incentivised to reject your paper easily. Do not give them this. Make sure your claims are not overstated, clearly backed by experiments
+- So read papers. Read in your niche and read the best papers and their reviews. Why were they good? What did the reviewers like and not like? How do these papers look? DIfferent conferences have different styles. so you need to chameleon your paper to not make the paper look out of place. Writing style, their experiment structure, theoretical foundations. No obvious critisism. For me this was the FAT appendix. Any extra question or thought you have. Put in that appendix.
+- Dont take it to heart if you are rejected. Do your best. Listen to reviewers within reason make the obvious and easy edits and then **resubmit** but do not fall into the trap of slogging and redoing the work until its perfect. Its never perfect. You need to move on approx 8 months
+- Reviewers are like you (Most of the time they are exactly like you) they dont have time. They dont read properly they critisise and things to get it rejected. You are misunderstood. Resubmit. Reviewer number 2 will come for blood.
+- YOU NEED LUCK actually. Look at the distrubution of scores and acceptances.
+
+Roach papers
+
+### Thesis writing
+
+SIngle author. How will this transend time? Not just a colleciton of your papaers but a story of youre research. What themes are important. What will remain important. Its not the end but the start.
+
+LOOK at my thesis. 
+
+I used summaries of paper and links to make it easy to skim
+
+I also kept a theme for all my figures, graphs and plots. SO this is why the pallet is nice. 
+
+
+
+Thesis writing: stressful more experiments. Start writing. Decide structure. Keep writing. Easy to edit not easy to start.
+
+
+
+## Publishing and dealing with reviews
+
+Reviews. Can feel random, unfair, dont take it personally
+
+## Speaking and Presentation
+
+TALKS
+
+Something I am really passionate about. 
+
+what you did in your paper. This is incorrect.  1) get the audience really excited about the **problem** you worked on otherwise they will not care about your solution otherwise! 2 Teach them something 3 entertain. If its not fun they will glaze over and not listen.
+
+- Pictures. lloads
+- Do: make the talk actionable - talk about something someone can *do* after your talk. Demos!
+- Story
+- Cite and acknowledge your authors. You are humble of your contributions
+- Practice the talk. You wont run out of time then
+- Less text.
+- Problem: Too general then too technical. SO people get bored then confused.
+- I like outline slides when the talk is long. WHen its short we can move
+- Last slide is the most important It will be up for longest. No thank you. A summary of the talk. Imprint your message into their head.
+- What do great speakers do? Break it down. How do they stand, where do they stand, what time of day? What lighting, what slides, how do they pause, when do they joke, when are they serious. SO IMPORTANT.
+
+Speak, write and the quality of your ideas
+
+Quality = knowledge K, practice P and talent T (least important) - Whats important is what you know.
+
+- Better at skiing because of K, P over T
+- This is a skill. Look at people you admire who speak. What is their style and what do they do. Then you can build.
+- Notice there was an outline that was always visable.
+
+# How to start
+
+## Promise
+
+Start with an empowerment **promise**  Something here will help you in communication and it will make a difference. What will you know at the end. Reason for being here.  
+
+# 4 samples
+
+## 1. Cycle on the idea
+
+Tell them 3 times. Increase probability.
+
+## 2. Build a fence
+
+This is my idea. Not to be confused with close alternatives. 
+
+## 3. Verbal punctuation
+
+People fog out and come back. Tell them this is about time they will come back. Like an outline. I will tell you 3 things and then reiterate them.
+
+## 4. Ask a question
+
+7 seconds pause. Careful. If its too obvious no one will answer as its embarassing. If its too hard no one will have anything to say….
+
+# The tools
+
+## Time and place
+
+- Time: 11 am. People are awake and not gone back to sleep. Not after lunch as people are digesting.
+- Place:
+    - Well lit, full up. sleepy in low light.
+    - Understand the place, go first.
+    - More than half full. Adjust the size.
+    
+
+Boards
+
+is for informing, slides are for exposing. Graphics! Speed is good for understanding. Target - point at stuff something to do 
+
+Props
+
+Playwrites -There is stove in the corner that at the end you know the book is going in the stove.
+
+Ductape on a wheel. Blow on the wheel and which direction do you think the wheel will turn? Engineers have fancy math. He uses a prop and shows it nicely.
+
+Job talks
+
+Empathetic mirroring - you can feel yourself writing, metal ball on a pendulim and props are effective.
+
+Slides
+
+Exposing ideas and not teaching them. Too many slides and too many words. Its always true. A slide full of text.
+
+Dont read your slides. People can read them already and it drives them mad. Few words that are easy to read.
+
+You are far away from the slides
+
+No background junk
+
+Few words 
+
+No logos
+
+No title! - I will tell you the title.
+
+Eliminate clutter. No need for bullets.
+
+Big sizes
+
+Break the pointer. no eye contact. (Think the cat with pingpong good prop) in you slides you can point directly with an arrow.
+
+Print it out and put on the table. Whitespace, graphics, imagery too heavy. Needs some air. Like garlic.  
+
+hapax legomenon  - only one instance or use. This is used in Zipfs law haha. But think its important to only have one complex thing in a paper or talk. Only one.
+
+Hands in the pocket crime.
+
+Make it easy to access. Light.
+
+# Informing
+
+Promise. start (Cycling back)
+
+**Inspiration**. How to inspire people. Highschool (you can do it), University (new way of seeing), common thread is passion!
+
+What I work on is AI. If you arent passionate or interested then you arent interested in interesting things. Talk about what you think is cool!
+
+- He gives an example. Algorithm that takes lifetime of the solar system to seconds. With a visual example. Isnt that cool?
+
+**How to think** is what I teach people. Then they ask: “How do you do that…” you give a blank stare… They then think!
+
+- We are story telling animals. This is how people learn to think. Provide them with:
+    - The stories they need to know
+    - What should we ask about those stories?
+    - Mechanisms to analyse those stories
+    - Ways to put together those stories
+    - Evaluating how reliable a story is.
+
+**Persuading** Oral exams. 
+
+Failure to situate (Your search and context) - Motivate and why should we care
+
+Practice - You need fresh eyes. If you cant make me cry I wont value you.
+
+Job talks - (5 mins)
+
+Vision - Problem someone cares + new in your approach
+
+Done something - What are the steps. Some of them not all.
+
+Then contributions - Mirrors we have done soemthing
+
+Get famous - Need to be recognised for what you do. 
+
+Why? - You get used to being famous, you never get used to being ignored. Your ideas are like children. If you make sure you communicate them correctly they will be recognised for their value.
+
+How ? - 
+
+Symbol - Symbol with the work. “The arch” 
+
+Slogan - Handle on the work “One shot learning”
+
+Salient - salient idea novelty it sticks out. Near miss idea.
+
+Surprise - One example and you could learn something from
+
+Story - How you did it, how it works and why it important.
+
+**How to stop? -** The final slide
+
+Collaborators - Thank you etc First slides not last slides
+
+Questions - Squanders real estaete
+
+For details - link… 
+
+The end.
+
+Thank you (WEAK - polite to be there. Thats bullshit)
+
+- WASTES an opportunties
+- IT SHOULD BE YOUR CONTRIBUTIONS - Wait for people to read it. Then what do we get out of all of it.
+- Tell a joke at the end? - If you finish with a joke people think they have fun the whole time.
+- ITE MISSA EST
+- Salute - Its been great fun being here. and Presenting to you. Stimulated by the questions you have been asked its been great.
+    - Im glad you are here. Im glad you have engaged with me and I salute you for that. DONT SAY THANK YOU.
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+  <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Speaking and Presentation">
+      </div>
+      <h4 class="phd-card-title"> How to Speak</h4>
+      <p class="phd-card-desc">Professor Patrick Winston (MIT)</p>
+    </div>
+  </a>
+</div>
+
+
+## Reviewing 
+
+You will be asked to review. You need to set the bar. You gain nothing. But write the review you would like to recieve. DO you actually add value to their paper. DOes it make it better. How could your score be improved. Dooo it. Helps you understand. Makes you a better author and community member
+
+## Teaching
+
+Teaching. Take it seriouslty. Actually the people you know will one day be working with you. Try and uplift them. You will gain by being helpful and giving them your time. I know your time is a scarce resource, but remember kindness is free and invaluable to receive.
+
+Teaching: Bachelors - simple - Perfection is a trap. Learn to keep it simple. Make material for others.
+
+## Conferences
+
+Conferences. They are about the people. Meet and discuss. Make a friend. Those friends will be waaaay more valuable than any subject matter. Maybe it inspires a new idea. or a new zeitgeist of where the field is moving but its often delayed. Panels are cool. They are discussing things they a=care about now. Summerschools! meet the commuinity. Ask to go early. I got lucky to go to ACL early after COvid.
+
+Dont linkedin lur ch. Be open and build authentic connections with people. The next step will be working together and doing great work. In that order. Dont meet people to get something out of them. Meet and talk to people conference. Not for your own benefit. You can learn alll sorts that you could never learn through a talk or paper. Experiements that dont work ect.
+
+Conferences. Speak to people you admire. You could embarass yourself and they ignore you. But lol they would do that anyway. I doubt they will hate you. Cold emailing can work. But make it about them, no one wants an email that gives them more work. They want emails that give them interesting opportunities (How to win friends and influence people).
+
+## Internships and interviewing
+
+Internships. Yes. differnt persepective. large company. resources. cool people differnt work. Not academics whcih is a cool mindset. SO refreshing. 
+
+Lucky to get these day so competitve
+
+YES
+- CV online presence and marketing?
+- Apoorvs doc?
+
+## Conclusion
+
+What is unique to this story. (Mine is coming from a more 3rd world country outside of Europe. Mine is Martigny, Switzerland. Mine is timing handing COVID and multi cultures. Mine is the boom of AI and NLP ChatGPT, during my PhD. Mine is being an extrovert and craving social interaction in a very solo endevour. I am a productive procrastinator. )
+
+
+Futures so bright I gotta wear shades. kid glasses gifs
+
+PhD of the year award
+
+
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+  <a href="https://www.youtube.com/watch?v=wEDG70-SO0A" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/wEDG70-SO0A/hqdefault.jpg" alt="PhD Defence">
+      </div>
+      <h4 class="phd-card-title">2025 PhD Defence</h4>
+      <p class="phd-card-desc">Nonparametric VIB</p>
+    </div>
+  </a>
+</div>
+
+<figure>
+  <img src="images/idiap/Fabio-Jamie.jpeg" alt="PhD Defence" style="width: 100%;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">PhD Defence: Dr Fabio J. Fehr and his supervisor Dr. James Henderson 05/09/2025  </figcaption>
+</figure>

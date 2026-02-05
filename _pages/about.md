@@ -2,8 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student @ <a href='https://www.usi.ch/'>USI</a>, Switzerland <br>
-MSc of NLP from <a href='https://mbzuai.ac.ae/'>MBZUAI</a>, Abu Dhabi - BSc from <a href='https://eng.asu.edu.eg/'>ENG-ASU</a>, Egypt.
+subtitle: PhD Student @ <a href='https://www.usi.ch/'>USI</a>, Switzerland <br> MSc of NLP from <a href='https://mbzuai.ac.ae/'>MBZUAI</a>, Abu Dhabi - BSc from <a href='https://eng.asu.edu.eg/'>ENG-ASU</a>, Egypt.
 
 profile:
   align: right

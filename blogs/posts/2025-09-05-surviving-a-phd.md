@@ -10,16 +10,15 @@ permalink: /fablogio/surviving-a-phd/
 **TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at EPFL and Idiap Research Institute in Martigny Switzerland between the years of 2021-2025.
 
 
-### Who is this for?
 
 
+## Who is this for?
 
-- A younger version of myself who would have loved this advice when deciding whether to pursue a PhD
-- Anyone contemplating doctoral studies in machine learning or AI
-- Current PhD students looking for practical tips and tricks
-- A personal reflection on my Switzerland journey
+This is no manifesto. It's more of a reflection. You do not need to read it all, maybe just skim what is useful for you and ignore the rest. 
 
-**Credit where it's due**: 
+This blog is for prospective or current PhD students who want a practical perspective from someone in the trenches. Perhaps it is also for a younger version of myself who would have valued honest advice before starting. At its core, this is a personal account of what worked, what did not, and what I would consider more carefully if I had to choose again. If you are somewhere along that path, parts of this may resonate.
+
+### Credits and other resources 
 
 Writing this I watched, read and synthesized the following blogs and videos. These are PhDs through time that are respected in the field. I recommend checking them out!
 
@@ -139,52 +138,64 @@ Writing this I watched, read and synthesized the following blogs and videos. The
   </a>
 </div>
 
-
-## Why should you do a PhD?
-
-A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from Why Greatness Cannot Be Planned, Simon Sinek’s Golden Circle, and Ikigai. You don’t chase outcomes. You start with why. When the problem matters to you, progress follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
-
-That’s why knowing why you want to do a PhD is so important. Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, and late nights fighting bugs. Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems, stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
-
-A PhD is also a long exercise in focus. Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, and datasets will change. The underlying problems you care about probably won’t. Something my supervisor said in our first meeting stuck with me. He was genuinely excited and said, “It may not be easy, but it will be so cool.” That enthusiasm mattered. It made the challenge feel worth it. That’s the kind of “why” I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
+## Four decisions that shape your PhD:
 
 
---- 
+Here are some thoughts that I believe are essential to consider. **Why**, with **Whom**, **Where**, and in **What** should I do a PhD (in that order). I know, I know, it's  strange to put the topic last but let me explain.
+
+### Why should you do a PhD?
+
+A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Ideally, you shouldn't chase outcomes. You start with **why**. When the problem matters to you, progress and success follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
+
+That’s why knowing why you want to do a PhD is so important. Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
+
+A PhD is also a long exercise in focus. Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, datasets and even required skills will change. The underlying problems you care about probably won’t. The best advice I got from my MSc supervisor was simple: "*Work on something that you like because ultimately it’s your project*". That responsibility does not disappear in a PhD. If anything, it becomes heavier. Something my PhD supervisor said in our first meeting reinforced that idea. He was genuinely excited and said, "*It may not be easy, but it will be so cool!*". That level of enthusiasm mattered to me. It made the challenge feel worth it. That’s the kind of "why" I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
+
+<!-- --- 
 
 
 Why should you do it? New cool people and topics and time. You are often your own boss and you go to new places. For me I can really highlight travel. Learn culture. Enjoy the time. Dont work all the time because its the down time and fun that alows the mind to rest properly for cool new ideas later. You can get a job anyday and earn money but this is rare, self improving time.
 
 WHY DO A PhD. Make sure you know this. Ikigai, Golden circle from simon sinek. It will give you the grit when the gind of phD goes.
 
-For me: It was to focus on something technical and strentch my mind. Thats important in my work of my 8 hour day. Growth. It was to be in switzerland and connect with my roots and family culture. It was to expand my experiences and travel learn bout things outside of South Africa. ALso needed to be self supporting. My family didnt come from enough money to support this. Does it have longevity? Useful questions to ask yourself before going in.  My MSc was in something I thought was so cool and useful. Biomedical engineering and statistics but it was entry level deep learning and bayesian nonparametrics. My undergraduate project was in NLP and statistics. So this actually aligned well.
+For me: It was to focus on something technical and strentch my mind. Thats important in my work of my 8 hour day. Growth. It was to be in switzerland and connect with my roots and family culture. It was to expand my experiences and travel learn bout things outside of South Africa. ALso needed to be self supporting. My family didnt come from enough money to support this. Does it have longevity? Useful questions to ask yourself before going in.  My MSc was in something I thought was so cool and useful. Biomedical engineering and statistics but it was entry level deep learning and bayesian nonparametrics. My undergraduate project was in NLP and statistics. So this actually aligned well. -->
 
-###  Where do a PhD? 
 
-I’ll take a strong stance on this. Switzerland is one of the best places to do a PhD.
+### With whom should you do a PhD?
 
-**Financially**, the balance is hard to beat. PhD salaries are among the highest in the world, and the cost of living is manageable if you’re sensible. In my case, rent was about a quarter of my income after tax. I could pay rent, eat well, and not constantly worry about money. That matters more than people like to admit. If you can’t afford to do a PhD, it becomes much harder to focus on the work. For ML they had enough Resources for compute 
+With whom you do your PhD *may* matter more than the topic itself. If you do not gel, imagine being stuck in that relationship for four years... You need someone who has your back, trusts you, and you can communicate with when times get hard. If you trust your supervisor and their vision, the topic tends to follow more naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.
 
-**Quality**, Swiss universities consistently rank near the top (Iwas at EPFL), especially in technical fields. For me, it was also personal. I’m Swiss by birth, with family there, so it felt natural. But even without that connection, I’d still strongly recommend Switzerland as a place to do a PhD. Why Idiap. Small but big enough. Experts in AI for 30 years (at the time famous for speech modality). Get to know across robotics, biometrics, speech, vision, NLP, AI with a variety of applications such as computational creativity, genomics, emotion modeling, graphs, privacy you name it!
+There is often an inverse relationship between seniority and time. The more famous the professor and the larger the group, the less day-to-day guidance you get. If you are a maverick and enjoy figuring things out alone, a big lab with a well-known name can work very well. The reputation will open doors, but you will need to steer and build collaborations yourself. If you are newer to research and still building confidence, a younger supervisor willing to go through the trenches with you can make all the difference. The structure you choose should match the researcher you are.
 
-**Lifestyle** When research gets tough, you need ways to reset. Switzerland made that easy. Mountains, nature, skiing on winter weekends, and an international community of people going through similar things. That helped more than I expected. ALso center of Europe with a strong currency so its wasy to explore other countries easily on holidays.
+The supervision routine also matters more than people admit. I valued my weekly one-to-one meetings even if there was not much to speak about. They reduced procrastination and forced clarity. They were a reality check for half-formed ideas. I also appreciated our weekly group meetings. They created shared momentum and reminded me that I was not alone. Those small structures shaped my PhD experience as much as the research itself.
 
-**Its not all roses** I lived in a small town Martigny, which can feel very quiet if you’re used to big cities. For my PhD, that focus was a benefit, but it’s not for everyone. It’s also intimidatingly French-speaking. If you don’t speak French (like I didnt) it became a side project to learn and embrace myself in it. Swiss culture can also be hard to crack (Even for me who is Swiss on paper), especially as a foreigner. I ended up spending most of my time with the international research community at Idiap, and those bonds became some of the closest I made. 
+### Where should you do a PhD? 
+
+I’ll take a strong stance on this one. Switzerland is one of the best places to do a PhD.
+
+**Quality**, Swiss universities consistently rank near the top (I was at EPFL), especially in technical fields. For me, it was also personal. I’m a Swiss national, with family there, so it felt natural. But even without that connection, I’d still strongly recommend Switzerland as a place to do a PhD. Why Idiap. Small but big enough. Experts in AI for 30 years (built off the back of artichoke liquor money and famous for work in speech processing). The institute had labs in robotics, biometrics, speech, vision, NLP, AI with a variety of applications such as computational creativity, genomics, emotion modelling, graphs, and privacy.
+
+**Financially**, the balance is hard to beat. PhD salaries are among the highest in the world, and the cost of living is manageable if you’re sensible. In my case, rent was about a quarter of my income after tax. I could pay rent, eat well, and not constantly worry about money. That matters more than people like to admit. If you can’t afford to do a PhD, it becomes much harder to focus on the work. For machine learning computational PhD  considering if the lab has enough resources for compute, experiments etc is also an important consideration. 
+
+**Lifestyle** When research gets tough, you need ways to reset. Switzerland made that easy. Mountains, nature, skiing on winter weekends, and an international community of people going through similar troubles as you. That helped more than I expected. Also being in the center of Europe with a strong currency made it easier explore other countries easily on holidays.
+
+**Its not all roses** I lived in a small town Martigny, which can feel very quiet if you’re used to big cities. For my PhD, that focus was a benefit, but it’s not for everyone. It’s also intimidatingly French-speaking. If you don’t speak French (like I didn't) it became a necessary side project to learn and embrace myself in it. Swiss culture can also be hard to crack (Even for me who is Swiss on paper), especially as a foreigner. I ended up spending most of my time with the international crowd at Idiap, and those bonds became the closest I made. 
 
 If you’re choosing where to do a PhD, don’t underestimate the environment. You’ll live there for years. It will shape how well you work, and how well you live.
 
-### With who should you do a PhD?
-
-I liked the once a week 1-1. Really helpful Procrastination - Weekly meetings. Reality check just some your thoughts.
-
-I liked the group meetings. This was a nice touch
+### In what topic should you do a PhD?
 
 
-###  What topic should you work on?
+**What topic should you work on?**  Start with a simple question: does the topic genuinely matter to you? I applied broadly and ended up choosing between a PhD in microbiome forensics at UniL and one in core machine learning at EPFL and Idiap. Turning down UniL was tough. It was interesting and I would likely have been the most technical person in the team. But I asked myself a harder question. At the end of four years, do I want to be the expert in this very specific application, or do I want to work on more general problems in learning and representation? I realised I would rather be the dumbest in the room and stretch upwards than be the local expert too early. The topic you choose will shape how you think, so it must connect to a deeper curiosity, not just a short-term opportunity.
+
+**Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? (see previous section on with whom). A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational.
+
+**Where to next?** Finally, think about where this leaves you after four years. The world will change. In 2021 it was embeddings. Then 2023 was diffusion and shortly after large language models and now in 2025-2026 it is agents. The fast fashion of AI moves quickly. If you chase the hottest topic, you risk being outpaced by large labs with deeper pockets. If you choose something too narrow, you risk being boxed in. The balance is to stay general in the problems you care about, but niche and technical enough to build depth without being crushed by competition. You are making a four-year bet on yourself. Choose a problem that will still make sense to you when the trend cycle moves on.
 
 
+<!-- 
 I applied to everything under the sun. Jobs, internships, masters programs, PhD programs. over 50 applications and maybe only 20 responses, of which 17 were reject (rest were ghosts) an then 3 I got to final rounds of a startup in machine learning (then rejected), A phD offer in microbiome forensics at UniL and then PhD offer at EPFL and Idiap. I can tell you that turning down the offer of Unil was super tough. I thought about it. At the end of 4 years do I want to be the specialist in dead guy stomach data? I was going to be the most technical in the team. I wanted to be the dumbest in the room not the smartest. Then I have the most to learn!   
-
-
+This changes fast in ML so the topic is likely to morph as you go but the bigger why and bigger problems you are trying to solve. What are the big problems? Video understanding? Representing learning how do we represent data correctly? How do we solve impactful problems in spaces: Climate, Legal problems, Medical, Education, think bigger. What types of things do need? Faster systems? systems on different hardware? This one derives back to the why in the first point. Do you think this idea has longevity? At the end do you want to be an expert in this? 
 - Topic. Choose something where people around you or above you have XP at. They can help. You Should be interested. You should have some expertise. A bit like Ikigai.
     - Unique and cool to you.  (love)
     - Supervisor is good at / passionate about.
@@ -201,12 +212,13 @@ I applied to everything under the sun. Jobs, internships, masters programs, PhD 
     - Projects - how many papers, or journals. What are the expectations of the phd This is something you should .
     - What do you want to do after?
     - A phd I a long term exercise on focus. Can you do youtr thing for 4 years. It will be tough it wont work (nearly always) and you got to keep going.
-    -
+    - 
+-->
 
 
-## All the other things (Put this early)
+## All the other things
 
-- Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, driving, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
+- Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, learning to drive and driving a car in Switzerland The license is international and never expires!, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
 
 
 Make thumbnails bigger and the images
@@ -331,7 +343,7 @@ paper - https://aclanthology.org/2023.acl-long.871/
   <a href="https://aclanthology.org/2023.acl-long.871/" target="_blank" style="text-decoration: none;">
     <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
       <img src="images/idiap/hypermixer.png" alt="Hypermixer Paper">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">First publication at ICLR 2023</figcaption>
+      <figcaption style="text-align: center; font-size: 14px; color: gray;">First publication at ACL 2023</figcaption>
     </figure>
   </a>
 </div>
@@ -410,21 +422,40 @@ Small teams thrive on simplicity, trust, and clear ownership. They move fast and
 
 Done well, collaboration doesn’t distract from research. It multiplies it.
 
-## Code
+## Tools, Coding Tips and AI assistants
 
-Release code. Make it use the biggest most widely adopted libraries. Think huggingface, transformers, pytorch. Pytorch lightning. Make sure its use is easy to change, and compare. This will make your idea adoptions easier. Being new to coding myself this took me some time to get going and i still try and improve on this each iteration.
+**Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
 
+**AI Coding Assistants** Coding is changing. Higher levels of abstraction are emerging, from assembly to C to Python, and now to prompting ([Software 3.0 and vibe-coding by Andrej Karparthy](https://www.youtube.com/watch?v=LCEmiRjPEtQ)). The level of abstraction keeps rising and the barrier to building is getting lower. This is incredible, but I believe understanding the fundamentals will become increasingly important. AI assistants are tools that accelerate writing, scaffold code or challenge/review your reasoning. **Do not let them replace your thinking**. Form your own hypotheses. Do the maths. Design the strategy. Whatever you put out there is ultimately your responsibility. Use these tools to do more, but not to think less.
+<!--
+ Release code. Make it use the biggest most widely adopted libraries and tools. During my time Think huggingface, transformers, pytorch. Pytorch lightning. Make sure its use is easy to change, and compare. This will make your idea adoptions easier. Being new to coding myself this took me some time to get going and i still try and improve on this each iteration.
 Each paper is an iteration. Get better learn and move forward.
-
 - Take time to learn the systems. Get excited about how to get more compute. We all created our own submitters to the grid. Mine had emojis.
     - Visualise your models training. Visualise the gradients. Visualise the maps, dive deep into what the hell this thing is doing
     - Debugging! -  Visualise. Also print everything show everything gradients, wandb for training. Pytorch lightning. DOnt reinvent
     - Make things simply usable - get good at the software engineering. If people can use it. they may not be able to understand like a cars engine they will build it forward, more citations  more impact more success as a researcher. Hopefully your writing too is good and visuals so people grasp it soon.
-
+AI assistants - This only came in at the tail end of my PhD but it is now a defacto. I would say they are tools. But do not let them replace your skills. Writing word for word. Thats great. brain storming great. But they are no replacement for your thought. I believe you should generate hypothesis and opinions and ideas. These things help you bring it to life from a code or writing perspective. Ie reviewing. Read the paper. Make your own notes then form your judgements and ideas use llms to help you find biases or structure your thoughts but the thoughts are your own. Same with code. Your idea to code soemthing. DO the math do the high level stragy but the model can help you speed up implementation and back and forth with you for robustness. Whatever it generates I think you are liable. Make sure you know whats going on. 
+-->
 
 ## Paper writing 
 
-Writing papers:
+
+### Conference Paper Writing
+
+TODO: Add in paragraph formatting - 
+
+**Conference Paper Style** writing is a skill you need to learn deliberately. Conference papers have a certain "look", a flow, a structure, a language, a density of citations and a style of figures that the community expects. Andrej Karpathy joked about this in his blog, a typical ML paper has a one-page introduction, a polished pull figure, a technical section with some maths, bold numbers in tables, one cute extra experiment, a dense related work section, and exactly the page limit with not a line to spare. It's funny because it's true. Understanding the format and style is not cheating. It is learning the game.
+
+**One Contribution** A strong paper revolves around one clear contribution. *What is that single idea that was not obvious before?* Your job is to argue that it is important, novel and supported by rigorous experiments. The introduction does most of the heavy lifting. First, explain why the problem matters. Second, explain how previous work approached it and what is still missing. Build the *moat* around why it is hard. Third, state clearly what you do. Fourth, show what properties this gives you and what your experiments demonstrate. Avoid the laundry list of “we do X, then Y, then Z”. Your paper should be a story. Every design choice should be motivated. *Why this method?* *What are the alternatives?* *What has been tried before?*You are not just describing what you did. You are teaching your reader why it makes sense.
+
+**Publishing Strategy** During PhD shooting for a spectacular 8 out of 10 paper is nice in theory but could be risky. An alternative strategy is the '*Cockroach Paper*' strategy. Create a paper thats hard to kill which will get consistent 5s and 6s. Do solid work with careful ablations and no overclaiming. Reviewers are incentivised to find reasons to reject, so do not give them easy ones. Make sure your claims are precise and backed by evidence. Read papers in your niche and read their reviews if you can. Notice what reviewers praise and what they criticise. Different venues have different styles, so learn to *chameleon* your paper accordingly. Put extra analysis and anticipated objections in the appendix. Set internal deadlines and let your group review your draft as if it were a conference submission. Theeen when you submit.. and you will likely be rejected. This is normal. But listen to reasonable feedback, make the obvious fixes, ignore the other noise and resubmit. Its not worth waiting for perfection as its a competitive game and there is luck involved. Your job is to remove any avoidable weaknesses and keep moving.
+
+### Thesis writing
+
+A thesis should not just be a collection of your papers (ideally). My supervisor described it as a single-author document that should transcend them. It should tell the story of your research and the themes that connect your work. It should not read like an ending of this work, but the beginning of what comes next. What questions are still important? What ideas matured over time? Think about how it will read in ten years. I used short chapter summaries and links to make mine easy to skim, and kept a consistent visual theme across figures and plots so it felt intentional. (Mine is [here](https://infoscience.epfl.ch/entities/publication/dad86ab3-09eb-48bf-b6d4-8c3d903eb94d) if you are interested) The thesis should feel coherent, not stitched together. Thesis writing it is stressful, but the principle is simple. Decide on the structure early and start writing. Then keep writing. It is easier to edit than to begin. There will always be another experiment you could run, but at some point you must draw the line.
+
+
+<!-- Writing papers:
 
 Essential skill you will need to learn. They look a certain way. They flow a certain way the language statistics, figures. Review is important. You get to see many papers. Good and bad and learn from both. 
 
@@ -474,7 +505,7 @@ I also kept a theme for all my figures, graphs and plots. SO this is why the pal
 
 
 
-Thesis writing: stressful more experiments. Start writing. Decide structure. Keep writing. Easy to edit not easy to start.
+Thesis writing: stressful more experiments. Start writing. Decide structure. Keep writing. Easy to edit not easy to start. -->
 
 
 
@@ -511,31 +542,31 @@ Quality = knowledge K, practice P and talent T (least important) - Whats importa
 
 # How to start
 
-## Promise
+ Promise
 
 Start with an empowerment **promise**  Something here will help you in communication and it will make a difference. What will you know at the end. Reason for being here.  
 
-# 4 samples
+4 samples
 
-## 1. Cycle on the idea
+1. Cycle on the idea
 
 Tell them 3 times. Increase probability.
 
-## 2. Build a fence
+2. Build a fence
 
 This is my idea. Not to be confused with close alternatives. 
 
-## 3. Verbal punctuation
+3. Verbal punctuation
 
 People fog out and come back. Tell them this is about time they will come back. Like an outline. I will tell you 3 things and then reiterate them.
 
-## 4. Ask a question
+4. Ask a question
 
 7 seconds pause. Careful. If its too obvious no one will answer as its embarassing. If its too hard no one will have anything to say….
 
-# The tools
+The tools
 
-## Time and place
+Time and place
 
 - Time: 11 am. People are awake and not gone back to sleep. Not after lunch as people are digesting.
 - Place:
@@ -588,7 +619,7 @@ Hands in the pocket crime.
 
 Make it easy to access. Light.
 
-# Informing
+Informing
 
 Promise. start (Cycling back)
 
@@ -673,6 +704,10 @@ Thank you (WEAK - polite to be there. Thats bullshit)
 
 You will be asked to review. You need to set the bar. You gain nothing. But write the review you would like to recieve. DO you actually add value to their paper. DOes it make it better. How could your score be improved. Dooo it. Helps you understand. Makes you a better author and community member
 
+Reviewers know this and are signaled if you dont.  You read many papers. Some are excellent. Some are weak. You learn from both. 
+
+But dont be reviewer 2!
+
 ## Teaching
 
 Teaching. Take it seriouslty. Actually the people you know will one day be working with you. Try and uplift them. You will gain by being helpful and giving them your time. I know your time is a scarce resource, but remember kindness is free and invaluable to receive.
@@ -724,3 +759,6 @@ PhD of the year award
   <img src="images/idiap/Fabio-Jamie.jpeg" alt="PhD Defence" style="width: 100%;">
   <figcaption style="text-align: center; font-size: 14px; color: gray;">PhD Defence: Dr Fabio J. Fehr and his supervisor Dr. James Henderson 05/09/2025  </figcaption>
 </figure>
+
+
+"*Again and again I therefore admonish my students both in Europe and in America: "Don't aim at success—the more you aim at it and make it a target, the more you are going to miss it. For success, like happiness, cannot be pursued; it must ensue, and it only does so as the unintended side-effect of one's dedication to a cause greater than oneself or as the by-product of one's surrender to a person other than oneself. Happiness must happen, and the same holds for success: you have to let it happen by not caring about it. I want you to listen to what your conscience commands you to do and go on to carry it out to the best of your knowledge. Then you will live to see that in the long run—in the long run, I say!—success will follow you precisely because you had forgotten to think of it.*" - A Man's Search for Meaning by Viktor E. Frankl

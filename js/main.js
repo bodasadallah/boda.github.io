@@ -131,11 +131,44 @@ function parseMarkdown(markdown) {
     // Parse italic *text*
     html = html.replace(/\*([^\*]+)\*/g, '<em>$1</em>');
     
-    // Parse paragraphs (double newline = new paragraph)
+    // Parse lists - handle both unordered (-) and ordered (1.)
     const blocks = html.split(/\n\n+/);
     html = blocks.map(block => {
         block = block.trim();
         if (!block) return '';
+        
+        // Check for unordered list (lines starting with - or *)
+        const isUnorderedList = block.split('\n').every(line => 
+            line.trim().match(/^[-*]\s/) || line.trim() === ''
+        );
+        
+        if (isUnorderedList && block.match(/^[-*]\s/m)) {
+            const listItems = block.split('\n')
+                .filter(line => line.trim())
+                .map(line => {
+                    const match = line.match(/^[-*]\s+(.+)$/);
+                    return match ? `<li>${match[1]}</li>` : '';
+                })
+                .join('\n');
+            return `<ul>\n${listItems}\n</ul>`;
+        }
+        
+        // Check for ordered list (lines starting with numbers)
+        const isOrderedList = block.split('\n').every(line => 
+            line.trim().match(/^\d+\.\s/) || line.trim() === ''
+        );
+        
+        if (isOrderedList && block.match(/^\d+\.\s/m)) {
+            const listItems = block.split('\n')
+                .filter(line => line.trim())
+                .map(line => {
+                    const match = line.match(/^\d+\.\s+(.+)$/);
+                    return match ? `<li>${match[1]}</li>` : '';
+                })
+                .join('\n');
+            return `<ol>\n${listItems}\n</ol>`;
+        }
+        
         // Don't wrap if it's already an HTML tag
         if (block.startsWith('<h') || block.startsWith('<figure') || 
             block.startsWith('<ul') || block.startsWith('<ol') ||

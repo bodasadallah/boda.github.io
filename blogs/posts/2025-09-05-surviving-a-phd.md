@@ -6,8 +6,9 @@ thumbnail: "blogs/images/idiap/Fabio-Jamie.jpeg"
 permalink: /fablogio/surviving-a-phd/
 ---
 
+TODO: I want a way to say how many minutes this takes to read. 
 
-**TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at EPFL and Idiap Research Institute in Martigny Switzerland between the years of 2021-2025.
+**TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at [EPFL](https://www.epfl.ch/about/) and [Idiap Research Institute](https://www.idiap.ch/en/) in Martigny Switzerland between the years of 2021-2025.
 
 
 
@@ -18,9 +19,11 @@ This is no manifesto. It's more of a reflection. You do not need to read it all,
 
 This blog is for prospective or current PhD students who want a practical perspective from someone in the trenches. Perhaps it is also for a younger version of myself who would have valued honest advice before starting. At its core, this is a personal account of what worked, what did not, and what I would consider more carefully if I had to choose again. If you are somewhere along that path, parts of this may resonate.
 
+Sorry its long, it started small but as I got going I realised there was loads to say. Oops haha
+
 ### Credits and other resources 
 
-Writing this I watched, read and synthesized the following blogs and videos. These are PhDs through time that are respected in the field. I recommend checking them out!
+Writing this I watched, read and synthesized the following blogs, videos and discussion with other researchers. I recommend checking out these resources too.
 
 <style>
   .phd-card {
@@ -140,12 +143,11 @@ Writing this I watched, read and synthesized the following blogs and videos. The
 
 ## Four decisions that shape your PhD:
 
-
 Here are some thoughts that I believe are essential to consider. **Why**, with **Whom**, **Where**, and in **What** should I do a PhD (in that order). I know, I know, it's  strange to put the topic last but let me explain.
 
 ### Why should you do a PhD?
 
-A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Ideally, you shouldn't chase outcomes. You start with **why**. When the problem matters to you, progress and success follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
+A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai) (Strong recommend on checking them out!). Ideally, you shouldn't chase outcomes. You start with **why**. When the problem matters to you, progress and success follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
 
 That’s why knowing why you want to do a PhD is so important. Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
 
@@ -163,7 +165,7 @@ For me: It was to focus on something technical and strentch my mind. Thats impor
 
 ### With whom should you do a PhD?
 
-With whom you do your PhD *may* matter more than the topic itself. If you do not gel, imagine being stuck in that relationship for four years... You need someone who has your back, trusts you, and you can communicate with when times get hard. If you trust your supervisor and their vision, the topic tends to follow more naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.
+With whom you do your PhD *may* matter more than the topic itself. I see a parallel between a supervision relationship and a romantic relationship. Consider a romantic partner that you do not gel with. Now imagine being stuck in that relationship for four years... Yea.. not great. You need someone who has your back, trusts you, willing to grow with you, and you can communicate with when times get hard. You need the same with a supervisor. If you trust your supervisor and their vision, the topic tends to follow more naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.
 
 There is often an inverse relationship between seniority and time. The more famous the professor and the larger the group, the less day-to-day guidance you get. If you are a maverick and enjoy figuring things out alone, a big lab with a well-known name can work very well. The reputation will open doors, but you will need to steer and build collaborations yourself. If you are newer to research and still building confidence, a younger supervisor willing to go through the trenches with you can make all the difference. The structure you choose should match the researcher you are.
 
@@ -185,15 +187,37 @@ If you’re choosing where to do a PhD, don’t underestimate the environment. Y
 
 ### In what topic should you do a PhD?
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+TODO: Plane with bullet holes. This is research. Where is no one looking. Simpler and easy to use code enables! Low pressure high interest This is the best environment. Look at why greatness cant be planned. Start with roach papers. Get the safety net. Then low pressure shoot high. Look for places and gaps that are the engine. WHere is no one publishing and why... Poke there. Survivorship bias. Look at the test of time awards at conferences. What has stuck around and why? Read why greatness cant be planned. The computational steam roller and the bitter lesson about computation.
+LINK to the publishing. THE computational steamer and bitter lesson about computation. Look at the test of time awards at conferences. What has stuck around and why? Read why greatness cant be planned. The computational steam roller and the bitter lesson about computation.
+
 
 **What topic should you work on?**  Start with a simple question: does the topic genuinely matter to you? I applied broadly and ended up choosing between a PhD in microbiome forensics at UniL and one in core machine learning at EPFL and Idiap. Turning down UniL was tough. It was interesting and I would likely have been the most technical person in the team. But I asked myself a harder question. At the end of four years, do I want to be the expert in this very specific application, or do I want to work on more general problems in learning and representation? I realised I would rather be the dumbest in the room and stretch upwards than be the local expert too early. The topic you choose will shape how you think, so it must connect to a deeper curiosity, not just a short-term opportunity.
 
+<div style="display: flex; justify-content: center; margin: 4px 0;">
+  <figure style="margin: 0; text-align: center; max-width: 480px;">
+    <img src="images/idiap/Survivorship-bias.png" alt="WWII plane bullet-hole survivorship bias diagram" style="width: 100%; border-radius: 8px; display: block;">
+    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;"> [The survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias): The planes that didn't make it back had holes in different places. Research works the same way. The important research is where no one is publishing (yet).</figcaption>
+  </figure>
+</div>
+
 **Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? (see previous section on with whom). A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational.
+
+<div style="display: flex; justify-content: center; margin: 4px 0;">
+  <figure style="margin: 0; text-align: center; max-width: 480px;">
+    <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;">
+    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Through time the ability to scale in computation has beaten clever model building and inductive bias. There is no stopping the computational steamroller, think of ways of working with it.</figcaption>
+  </figure>
+</div>
 
 **Where to next?** Finally, think about where this leaves you after four years. The world will change. In 2021 it was embeddings. Then 2023 was diffusion and shortly after large language models and now in 2025-2026 it is agents. The fast fashion of AI moves quickly. If you chase the hottest topic, you risk being outpaced by large labs with deeper pockets. If you choose something too narrow, you risk being boxed in. The balance is to stay general in the problems you care about, but niche and technical enough to build depth without being crushed by competition. You are making a four-year bet on yourself. Choose a problem that will still make sense to you when the trend cycle moves on.
 
 
-<!-- 
+
+
+
+<!--
 I applied to everything under the sun. Jobs, internships, masters programs, PhD programs. over 50 applications and maybe only 20 responses, of which 17 were reject (rest were ghosts) an then 3 I got to final rounds of a startup in machine learning (then rejected), A phD offer in microbiome forensics at UniL and then PhD offer at EPFL and Idiap. I can tell you that turning down the offer of Unil was super tough. I thought about it. At the end of 4 years do I want to be the specialist in dead guy stomach data? I was going to be the most technical in the team. I wanted to be the dumbest in the room not the smartest. Then I have the most to learn!   
 This changes fast in ML so the topic is likely to morph as you go but the bigger why and bigger problems you are trying to solve. What are the big problems? Video understanding? Representing learning how do we represent data correctly? How do we solve impactful problems in spaces: Climate, Legal problems, Medical, Education, think bigger. What types of things do need? Faster systems? systems on different hardware? This one derives back to the why in the first point. Do you think this idea has longevity? At the end do you want to be an expert in this? 
 - Topic. Choose something where people around you or above you have XP at. They can help. You Should be interested. You should have some expertise. A bit like Ikigai.
@@ -217,6 +241,9 @@ This changes fast in ML so the topic is likely to morph as you go but the bigger
 
 
 ## All the other things
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
 
 - Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, learning to drive and driving a car in Switzerland The license is international and never expires!, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
 
@@ -406,6 +433,10 @@ Large collaborations can work, but they need structure as they scale. Clear divi
 
 ### Takeaways
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
+THMS take home messages
 
 Clear ownership + structure
 
@@ -424,6 +455,10 @@ Done well, collaboration doesn’t distract from research. It multiplies it.
 
 ## Tools, Coding Tips and AI assistants
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance.
+
 **Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
 
 **AI Coding Assistants** Coding is changing. Higher levels of abstraction are emerging, from assembly to C to Python, and now to prompting ([Software 3.0 and vibe-coding by Andrej Karparthy](https://www.youtube.com/watch?v=LCEmiRjPEtQ)). The level of abstraction keeps rising and the barrier to building is getting lower. This is incredible, but I believe understanding the fundamentals will become increasingly important. AI assistants are tools that accelerate writing, scaffold code or challenge/review your reasoning. **Do not let them replace your thinking**. Form your own hypotheses. Do the maths. Design the strategy. Whatever you put out there is ultimately your responsibility. Use these tools to do more, but not to think less.
@@ -439,16 +474,22 @@ AI assistants - This only came in at the tail end of my PhD but it is now a defa
 
 ## Paper writing 
 
-
 ### Conference Paper Writing
-
-TODO: Add in paragraph formatting - 
 
 **Conference Paper Style** writing is a skill you need to learn deliberately. Conference papers have a certain "look", a flow, a structure, a language, a density of citations and a style of figures that the community expects. Andrej Karpathy joked about this in his blog, a typical ML paper has a one-page introduction, a polished pull figure, a technical section with some maths, bold numbers in tables, one cute extra experiment, a dense related work section, and exactly the page limit with not a line to spare. It's funny because it's true. Understanding the format and style is not cheating. It is learning the game.
 
 **One Contribution** A strong paper revolves around one clear contribution. *What is that single idea that was not obvious before?* Your job is to argue that it is important, novel and supported by rigorous experiments. The introduction does most of the heavy lifting. First, explain why the problem matters. Second, explain how previous work approached it and what is still missing. Build the *moat* around why it is hard. Third, state clearly what you do. Fourth, show what properties this gives you and what your experiments demonstrate. Avoid the laundry list of “we do X, then Y, then Z”. Your paper should be a story. Every design choice should be motivated. *Why this method?* *What are the alternatives?* *What has been tried before?*You are not just describing what you did. You are teaching your reader why it makes sense.
 
-**Publishing Strategy** During PhD shooting for a spectacular 8 out of 10 paper is nice in theory but could be risky. An alternative strategy is the '*Cockroach Paper*' strategy. Create a paper thats hard to kill which will get consistent 5s and 6s. Do solid work with careful ablations and no overclaiming. Reviewers are incentivised to find reasons to reject, so do not give them easy ones. Make sure your claims are precise and backed by evidence. Read papers in your niche and read their reviews if you can. Notice what reviewers praise and what they criticise. Different venues have different styles, so learn to *chameleon* your paper accordingly. Put extra analysis and anticipated objections in the appendix. Set internal deadlines and let your group review your draft as if it were a conference submission. Theeen when you submit.. and you will likely be rejected. This is normal. But listen to reasonable feedback, make the obvious fixes, ignore the other noise and resubmit. Its not worth waiting for perfection as its a competitive game and there is luck involved. Your job is to remove any avoidable weaknesses and keep moving.
+**Publishing Strategy** Build a safety net 🪳 then shoot for the stars 🚀. During PhD shooting for a spectacular 8 out of 10 research paper is nice in theory but could be risky at first. I recommend the '*Cockroach Paper*' strategy to start. This allows you to get enough papers to secure your graduation and then provides a low pressure safety net for big moonshot ideas. The *Roach* paper is hard to kill which will get consistent 5s and 6s. It is solid work with careful ablations and no overclaiming. Reviewers in general are incentivised to find reasons to reject, so don't make it easy. Make sure your claims are precise and backed by evidence. A nice trick is to read papers in your niche and read their reviews if you can. Notice what reviewers praise and what they criticise. Different venues have different styles, so learn to *chameleon* your paper accordingly. Put extra analysis and anticipated objections in the appendix. Set internal deadlines and let your group review your draft as if it were a conference submission. Then you submit.. and you will likely be rejected. This is normal. But listen to reasonable feedback, make the obvious fixes, ignore the other noise and **resubmit**. Its not worth waiting for perfection as its a competitive game and there is luck involved. Your job is to remove any avoidable weaknesses and keep moving. Now that you have a few papers supporting you 🪳, its time to take-some-time and think about the starship big ideas. What ideas will stand the test of time? If they work you're famous! If not, who knows, you might miss and get to the moon? 🚀
+
+<div style="display: flex; justify-content: center; margin: 4px 0;">
+  <figure style="margin: 0; text-align: center; max-width: 420px;">
+    <img src="images/idiap/roach-to-rocket.png" alt="Roach to Rocket" style="width: 100%; border-radius: 8px; display: block;">
+    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Build the Roach 🪳. Then Launch the Rocket 🚀. Secure survival. Then take bold swings.</figcaption>
+  </figure>
+</div>
+
+Thats an ideal. Ironically I did this in reverse. My supervisor and I took 2 years to publish his [moonshot idea](https://openreview.net/forum?id=6QkjC_cs03X) and after I roached the rest haha 🪳.
 
 ### Thesis writing
 
@@ -511,9 +552,15 @@ Thesis writing: stressful more experiments. Start writing. Decide structure. Kee
 
 ## Publishing and dealing with reviews
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
 Reviews. Can feel random, unfair, dont take it personally
 
 ## Speaking and Presentation
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
 
 TALKS
 
@@ -540,7 +587,7 @@ Quality = knowledge K, practice P and talent T (least important) - Whats importa
 - This is a skill. Look at people you admire who speak. What is their style and what do they do. Then you can build.
 - Notice there was an outline that was always visable.
 
-# How to start
+How to start
 
  Promise
 
@@ -702,6 +749,9 @@ Thank you (WEAK - polite to be there. Thats bullshit)
 
 ## Reviewing 
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
 You will be asked to review. You need to set the bar. You gain nothing. But write the review you would like to recieve. DO you actually add value to their paper. DOes it make it better. How could your score be improved. Dooo it. Helps you understand. Makes you a better author and community member
 
 Reviewers know this and are signaled if you dont.  You read many papers. Some are excellent. Some are weak. You learn from both. 
@@ -710,11 +760,17 @@ But dont be reviewer 2!
 
 ## Teaching
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
 Teaching. Take it seriouslty. Actually the people you know will one day be working with you. Try and uplift them. You will gain by being helpful and giving them your time. I know your time is a scarce resource, but remember kindness is free and invaluable to receive.
 
 Teaching: Bachelors - simple - Perfection is a trap. Learn to keep it simple. Make material for others.
 
 ## Conferences
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
 
 Conferences. They are about the people. Meet and discuss. Make a friend. Those friends will be waaaay more valuable than any subject matter. Maybe it inspires a new idea. or a new zeitgeist of where the field is moving but its often delayed. Panels are cool. They are discussing things they a=care about now. Summerschools! meet the commuinity. Ask to go early. I got lucky to go to ACL early after COvid.
 
@@ -724,15 +780,35 @@ Conferences. Speak to people you admire. You could embarass yourself and they ig
 
 ## Internships and interviewing
 
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
+What are interships for? This is an important question. Is it for job security after? Is it for growing your research profile? Is it to explore ideas you couldnt have in academia? Is it for a new perspective outside of academia? I wrote a blog on this. But the main thing is that they allow you to grow in a way that academia doesnt allow for. I got to see the pressure, heirarchy, incentives of a larger company. I didnt like it and went and did a postdoc. I want agency. I want the freedom to work on big ideas. I want to steer towards what I think is important in the era of AI. I made a blog about what was valuable. But new perspective, country, environment, scaling code, priorities, germany and culture and language, growth. Its what gave me the confidence to apply for things I really wanted to do. 
+
+Are internships useless now ? They are so product driven we are starting to see this since LLM era. They may not let you publish your work. Google used to publish all sorts and be open. Think 2017 attention based models that could be different from RNNs. It was not a big deal infact I think it was a poster at neurips no one said heeey paradigm shift coming. They didnt know and we need to explore like this to make real advancement. Real diversity. If thats what you want working with smart people on diverse ideas perhaps academia might actually be the place for now?
+
+What you do get to see is what they dont publish. How do they do that? Published things in companies are the things that dont work... Look at the plane bullet holes thing
+
 Internships. Yes. differnt persepective. large company. resources. cool people differnt work. Not academics whcih is a cool mindset. SO refreshing. 
 
 Lucky to get these day so competitve
+
+Interviewing: I think this is likely to change quite soon, but what it was like for me. First is coding, then theory of machine learning, then boss battle with the manager, how do you approach unsolved problems. 
+
+You are first told to solve some silly coding problem with data structures no where close to your skillset for PhD. Feels like a tangential hard task that you are meant to learn to get past the gatekeepers of big tech. Its like a test of grit and determination. Ie can you learn how to do this other task which is solving puzzles as a part time thing while you are already busy with a PhD so that we see you are committed to get into these jobs. At first I didnt know this. I had interviews with Apple (classic code KNN and Kmeans from scratch. It floored me. I was so flustered that Kmeans I forgot to average to aggregate clusters doh its means haha funny how the brain works in these zones), meta, cohere (nice approach they are an online company so their tests were online. I submitted a work book of a cool analysis I did but never heard back. Thats how ), Microsoft (this went well I though, I solved the problems, showed my expertise and logically handled their problems of unstrucutred mail organising.)  ... others. They were were hard, my worst interview with amazon actually was the one that landed me the internship. In amazon theory they destroyed me on good ol fashioned theory on kernel trick to get nonlinearlity in a linear regression. Aleph alpha was more targeted on NLP which was nice as I knew what was going on but couldnt get why we we would assume a gaussian distribution give loads of data. It was the CLT theorem=, first year statistics slaps me in the face. Something I am a master of... Such a funny experience. I dont think this representative of how you solve problems. I might have access to the best answers on the spot. but I work hard and find a solution and dont give up. Ie with time I can make progress. Isnt that more important? hey ho, thats more important to me.  Tough times never last only tough people last meme.
+
+
+Confidence is the most impressive thing. A bit like dating. No one wants someone who is desperate and its unattractive in the job world too. Only when I applied things with a lack of desperation did I get more offers than before. It shows I dont need you but I want you. If others want something then we feel we should to. Having other offers in hand are super powerful for negotiation. Negotiation is always possible and recommended when you have been given the tick of approval. This standard practice and benefits the brave. Hav some gutspa. 
+
 
 YES
 - CV online presence and marketing?
 - Apoorvs doc?
 
 ## Conclusion
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+OO
 
 What is unique to this story. (Mine is coming from a more 3rd world country outside of Europe. Mine is Martigny, Switzerland. Mine is timing handing COVID and multi cultures. Mine is the boom of AI and NLP ChatGPT, during my PhD. Mine is being an extrovert and craving social interaction in a very solo endevour. I am a productive procrastinator. )
 

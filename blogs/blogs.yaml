@@ -1,9 +1,9 @@
-# - id: a-phd-survival-guide-2025-epfl-idiap-and-martigny-2025
-#   title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
-#   date: '2025-09-05'
-#   excerpt: A personal survival guide for a PhD in Machine Learning at EPFL, Idiap,
-#     and Martigny
-#   thumbnail: blogs/images/idiap/Fabio-Jamie.jpeg
+- id: a-phd-survival-guide-2025-epfl-idiap-and-martigny-2025
+  title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
+  date: '2025-09-05'
+  excerpt: A personal survival guide for a PhD in Machine Learning at EPFL, Idiap,
+    and Martigny
+  thumbnail: blogs/images/idiap/Fabio-Jamie.jpeg
 - id: interning-at-amazon-berlin-2024-the-grind-growth-and-gratitude-2025
   title: 'Interning at Amazon Berlin 2024: the Grind, Growth, and Gratitude'
   date: '2025-02-25'

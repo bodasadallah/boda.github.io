@@ -30,7 +30,7 @@ layout:
         href: "#publications-heading"
       - label: "Blog"
         href: "#blog-heading"
-      - label: "Resume"
+      - label: "CV"
         href: "{{cv_url}}"
         is_external: true
   

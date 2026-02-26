@@ -103,10 +103,9 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
 
 <style>
   figure img { border-radius: 8px; }
-  .collab-figure img { width: 100%; height: 200px; object-fit: contain; object-position: center; border-radius: 8px; }
 </style>
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
   <!-- Karpathy Blog -->
   <a href="https://karpathy.github.io/2016/09/07/phd/" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
@@ -290,19 +289,10 @@ For people who thrive in social environments (like myself), collaboration felt n
 The technical impact is obvious. What I found more telling were their team photos. You don’t see a formal product team. You see friends building something together. They never lost their sense of humour. They were able to be silly *and* technically rigorous! Now that is rare and inspiring. Do good work, but enjoy the process. That’s something that I really resonate with and Idiap was the perfect place to foster this.
 
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
-  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
-    <img src="images/idiap/torch_meme.png" alt="Torch Team">
-    <figcaption style="text-align: center; font-size: 14px; color: gray;">Torch founders from Idiap [Torch Library](http://torch.ch/torch3/) (top), and Idiapers of 2025 recreating for fun (bottom). 
-       </figcaption>
-  </figure>
-  <a href="https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content" target="_blank" style="text-decoration: none;">
-    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
-      <img src="images/idiap/torch.png" alt="Torch Paper">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">[Original Torch paper.](https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content)</figcaption>
-    </figure>
-  </a>
-</div>
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
+  <img src="images/idiap/torch_meme.png" alt="Torch Team" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Torch founders from Idiap [Torch Library](http://torch.ch/torch3/) (top), and Idiapers of 2025 recreating for fun (bottom). [Original Torch paper.](https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content)</figcaption>
+</figure>
 
 ### Linear Transformers
 
@@ -332,18 +322,10 @@ This collaboration is a great example of theory meeting engineering, and being s
 
 
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
-  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
-    <img src="images/idiap/lineartransformers-batmanRobin.png" alt="Apoorv and Angelos">
-    <figcaption style="text-align: center; font-size: 14px; color: gray;">I made this depiction of Apoorv and Angelos. I am fairly certain this was how it looked when they were working on Linear Transformers. </figcaption>
-  </figure>
-  <a href="https://proceedings.mlr.press/v119/katharopoulos20a.html" target="_blank" style="text-decoration: none;">
-    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
-      <img src="images/idiap/linear-transformers.png" alt="Linear Transformers Paper">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">Paper well cited and published in ICML 2020</figcaption>
-    </figure>
-  </a>
-</div>
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
+  <img src="images/idiap/lineartransformers-batmanRobin.png" alt="Apoorv and Angelos" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">I made this depiction of Apoorv and Angelos. I am fairly certain this was how it looked when they were working on Linear Transformers. [Paper (ICML 2020).](https://proceedings.mlr.press/v119/katharopoulos20a.html)</figcaption>
+</figure>
 
 
 
@@ -362,18 +344,10 @@ Keep ideas as simple as possible, but no simpler.
 
 paper - https://aclanthology.org/2023.acl-long.871/
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
-  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
-    <img src="images/idiap/hypermixer-avengers.png" alt="Hypermixer Team">
-    <figcaption style="text-align: center; font-size: 14px; color: gray;">The Hypermixer team assemble</figcaption>
-  </figure>
-  <a href="https://aclanthology.org/2023.acl-long.871/" target="_blank" style="text-decoration: none;">
-    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
-      <img src="images/idiap/hypermixer.png" alt="Hypermixer Paper">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">First publication at ACL 2023</figcaption>
-    </figure>
-  </a>
-</div>
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
+  <img src="images/idiap/hypermixer-avengers.png" alt="Hypermixer Team" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">The Hypermixer team assemble. [Paper (ACL 2023).](https://aclanthology.org/2023.acl-long.871/)</figcaption>
+</figure>
 
 ### Abstraction with NVIB
 
@@ -387,18 +361,10 @@ What stood out to me was how effective a small team can be. Complementary skills
 
 Clear division of labour lets small teams move fast.
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
-  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
-    <img src="images/idiap/abstractNVIB-nemo.png" alt="AbstractNVIB Nemo">
-    <figcaption style="text-align: center; font-size: 14px; color: gray;">Abstract NVIB Nemo</figcaption>
-  </figure>
-  <a href="https://aclanthology.org/2023.findings-emnlp.106/" target="_blank" style="text-decoration: none;">
-    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
-      <img src="images/idiap/learningtoabstract.png" alt="Learning to Abstract">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">Learning to Abstract</figcaption>
-    </figure>
-  </a>
-</div>
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
+  <img src="images/idiap/abstractNVIB-nemo.png" alt="AbstractNVIB Nemo" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Abstract NVIB Nemo. [Paper (EMNLP Findings 2023).](https://aclanthology.org/2023.findings-emnlp.106/)</figcaption>
+</figure>
 
 
 ### Fine-Tuning with NVIB
@@ -418,18 +384,10 @@ What I loved most was seeing people help each other across domains. Sharing tool
 
 Large collaborations can work, but they need structure as they scale. Clear division of labour is not enough. Without hierarchy, coordination becomes the hardest problem.
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
-  <figure class="collab-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px;">
-    <img src="images/idiap/justiceLeagueNVIB.png" alt="Justice League">
-    <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles</figcaption>
-  </figure>
-  <a href="https://openreview.net/forum?id=eX0VFgG4IS" target="_blank" style="text-decoration: none;">
-    <figure class="collab-figure paper-figure" style="flex: 1; min-width: 350px; margin: 0; overflow: hidden; border-radius: 8px; cursor: pointer;">
-      <img src="images/idiap/finetuningNVIB.png" alt="Fine-tuning NVIB">
-      <figcaption style="text-align: center; font-size: 14px; color: gray;">Fine-tuning NVIB</figcaption>
-    </figure>
-  </a>
-</div>
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
+  <img src="images/idiap/justiceLeagueNVIB.png" alt="Justice League" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles. [Paper (ICLR Workshop 2024).](https://openreview.net/forum?id=eX0VFgG4IS)</figcaption>
+</figure>
 
 ### Takeaways
 
@@ -734,7 +692,7 @@ Thank you (WEAK - polite to be there. Thats bullshit)
 - Salute - Its been great fun being here. and Presenting to you. Stimulated by the questions you have been asked its been great.
     - Im glad you are here. Im glad you have engaged with me and I salute you for that. DONT SAY THANK YOU.
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
   <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
       <div class="phd-card-img-container">
@@ -805,6 +763,15 @@ YES
 - CV online presence and marketing?
 - Apoorvs doc?
 
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; margin: 20px 0; flex-wrap: wrap;">
+  <figure style="flex: 1; min-width: 280px; margin: 0; text-align: center;">
+    <img src="images/idiap/tough_times.gif" alt="Tough times never last" style="width: 100%; border-radius: 8px; display: block;">
+  </figure>
+  <figure style="flex: 1; min-width: 280px; margin: 0; text-align: center;">
+    <img src="images/idiap/tough_people.gif" alt="But tough people do" style="width: 100%; border-radius: 8px; display: block;">
+  </figure>
+</div>
+
 ## Conclusion
 
 <span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
@@ -819,7 +786,7 @@ PhD of the year award
 
 
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: nowrap;">
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
   <a href="https://www.youtube.com/watch?v=wEDG70-SO0A" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
       <div class="phd-card-img-container">
@@ -832,7 +799,7 @@ PhD of the year award
 </div>
 
 <figure>
-  <img src="images/idiap/Fabio-Jamie.jpeg" alt="PhD Defence" style="width: 100%;">
+  <img src="images/idiap/Fabio-Jamie.jpeg" alt="PhD Defence" style="width: 100%; border-radius: 8px; display: block;">
   <figcaption style="text-align: center; font-size: 14px; color: gray;">PhD Defence: Dr Fabio J. Fehr and his supervisor Dr. James Henderson 05/09/2025  </figcaption>
 </figure>
 

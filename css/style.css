@@ -7,6 +7,10 @@
    CSS VARIABLES & THEME CONFIGURATION
    ======================================================================== */
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   /* Layout */
   --maxw: 1100px;

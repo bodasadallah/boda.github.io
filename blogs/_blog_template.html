@@ -91,6 +91,8 @@
             font-size: 17px;
             line-height: 1.7;
             color: var(--text-color);
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         
         .blog-body h2 {
@@ -176,20 +178,26 @@
             margin: 24px 0;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 720px) {
             .blog-container {
                 flex-direction: column;
+                align-items: stretch;
                 padding: 0 20px;
             }
-            
+
+            .blog-content {
+                width: 100%;
+                min-width: 0;
+            }
+
             .blog-toc {
                 display: none;
             }
-            
+
             .blog-title {
                 font-size: 28px;
             }
-            
+
             .blog-body {
                 font-size: 16px;
             }

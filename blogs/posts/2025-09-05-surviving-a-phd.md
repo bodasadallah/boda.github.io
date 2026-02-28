@@ -15,11 +15,11 @@ TODO: I want a way to say how many minutes this takes to read.
 
 ## Who is this for?
 
-This is no manifesto. It's more of a reflection. You do not need to read it all, maybe just skim what is useful for you and ignore the rest. 
+This is no manifesto. It’s more of a reflection. You do not need to read it all, maybe just skim what is useful for you and ignore the rest.
 
-This blog is for prospective or current PhD students who want a practical perspective from someone in the trenches. Perhaps it is also for a younger version of myself who would have valued honest advice before starting. At its core, this is a personal account of what worked, what did not, and what I would consider more carefully if I had to choose again. If you are somewhere along that path, parts of this may resonate.
+This blog is for the prospective or current PhD students who want a practical perspective from someone in the trenches. Maybe it’s also for a younger version of myself who would have valued honest advice before starting. At its core, this is a personal account of what worked, what did not, and what I would consider more carefully if I had to choose again. If you are somewhere along that path, parts of this may resonate.
 
-Sorry its long, it started small but as I got going I realised there was loads to say. Oops haha
+Sorry it’s long, it started small but as I got going I realised there was loads to say. Oops haha.
 
 ### Credits and other resources 
 
@@ -144,35 +144,30 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
 
 Here are some thoughts that I believe are essential to consider. **Why**, with **Whom**, **Where**, and in **What** should I do a PhD (in that order). I know, I know, it's  strange to put the topic last but let me explain.
 
-### Why should you do a PhD?
+### 1. Why should you do a PhD?
 
-A PhD is not a shortcut to success. If anything, aiming directly at success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This echoes ideas from [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai) (Strong recommend on checking them out!). Ideally, you shouldn't chase outcomes. You start with **why**. When the problem matters to you, progress and success follows. I think research works the same way. Focus on the idea. If it’s meaningful, the papers and the PhD tend to come.
+**A PhD is not a shortcut to success.** Aiming directly for success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This idea echoes [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Ideally, you shouldn’t chase outcomes. You start with **why**. When the problem matters to you, progress and success follow. Research works the same way: focus on the idea, and the papers and PhD tend to come.
 
-That’s why knowing why you want to do a PhD is so important. Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
-
-A PhD is also a long exercise in focus. Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, datasets and even required skills will change. The underlying problems you care about probably won’t. The best advice I got from my MSc supervisor was simple: "*Work on something that you like because ultimately it’s your project*". That responsibility does not disappear in a PhD. If anything, it becomes heavier. Something my PhD supervisor said in our first meeting reinforced that idea. He was genuinely excited and said, "*It may not be easy, but it will be so cool!*". That level of enthusiasm mattered to me. It made the challenge feel worth it. That’s the kind of "why" I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
-
-<!-- --- 
+**Knowing your why is essential.** Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
 
 
-Why should you do it? New cool people and topics and time. You are often your own boss and you go to new places. For me I can really highlight travel. Learn culture. Enjoy the time. Dont work all the time because its the down time and fun that alows the mind to rest properly for cool new ideas later. You can get a job anyday and earn money but this is rare, self improving time.
-
-WHY DO A PhD. Make sure you know this. Ikigai, Golden circle from simon sinek. It will give you the grit when the gind of phD goes.
-
-For me: It was to focus on something technical and strentch my mind. Thats important in my work of my 8 hour day. Growth. It was to be in switzerland and connect with my roots and family culture. It was to expand my experiences and travel learn bout things outside of South Africa. ALso needed to be self supporting. My family didnt come from enough money to support this. Does it have longevity? Useful questions to ask yourself before going in.  My MSc was in something I thought was so cool and useful. Biomedical engineering and statistics but it was entry level deep learning and bayesian nonparametrics. My undergraduate project was in NLP and statistics. So this actually aligned well. -->
+**A PhD is a long exercise in focus.** Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, datasets and even required skills will change. The underlying problems you care about probably won’t. The best advice I got from my MSc supervisor was simple: "*Work on something that you like because ultimately it’s your project*". That responsibility does not disappear in a PhD. If anything, it becomes heavier. Something my PhD supervisor said in our first meeting reinforced that idea. He was genuinely excited and said, "*It may not be easy, but it will be so cool!*". That level of enthusiasm mattered to me. It made the challenge feel worth it. That’s the kind of "why" I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
 
 
-### With whom should you do a PhD?
+### 2. With whom should you do a PhD?
 
-With whom you do your PhD *may* matter more than the topic itself. I see a parallel between a supervision relationship and a romantic relationship. Consider a romantic partner that you do not gel with. Now imagine being stuck in that relationship for four years... Yea.. not great. You need someone who has your back, trusts you, willing to grow with you, and you can communicate with when times get hard. You need the same with a supervisor. If you trust your supervisor and their vision, the topic tends to follow more naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.
+**Who you do your PhD with may matter more than the topic.** I see a supervision relationship as similar to a romantic one. Imagine being stuck in that relationship for four years... Yea.. not great. In any relationship, you need someone who has your back, trusts you, is willing to grow with you, and who you can talk to when times get hard. The same applies to a supervisor. If you trust them and their vision, the topic tends to follow naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.
 
-There is often an inverse relationship between seniority and time. The more famous the professor and the larger the group, the less day-to-day guidance you get. If you are a maverick and enjoy figuring things out alone, a big lab with a well-known name can work very well. The reputation will open doors, but you will need to steer and build collaborations yourself. If you are newer to research and still building confidence, a younger supervisor willing to go through the trenches with you can make all the difference. The structure you choose should match the researcher you are.
+**Supervisor seniority comes at the cost of attention.** More famous professors with larger groups provide less day-to-day guidance. Sometimes postdocs or senior group members are more available. If you are a maverick and enjoy figuring things out alone, a big lab with a well-known name can work. The reputation opens doors, but you have to steer your research and build collaborations yourself. If you are newer to research and still building confidence, a younger career supervisor willing to go through the trenches with you can make all the difference. Choosing the right supervision style matters as much as choosing the right person.
 
-The supervision routine also matters more than people admit. I valued my weekly one-to-one meetings even if there was not much to speak about. They reduced procrastination and forced clarity. They were a reality check for half-formed ideas. I also appreciated our weekly group meetings. They created shared momentum and reminded me that I was not alone. Those small structures shaped my PhD experience as much as the research itself.
+**Routine matters** My supervisors’ group had a regular routine. I valued weekly one-to-one meetings even when there was little to discuss. They reduced procrastination, forced clarity, and offered a reality check for half-formed ideas. Weekly group meetings, where we presented papers and shared ideas, reminded me I was not alone. Those small structures for sure improved my PhD experience.
 
-### Where should you do a PhD? 
 
-I’ll take a strong stance on this one. Switzerland is one of the best places to do a PhD.
+### 3. Where should you do a PhD? 
+
+I’ll take a strong stance on this one. Switzerland 🇨🇭 is one of the best places to do a PhD.
+
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/swiss_cow.png" alt="Swiss cow with headphones doing AI research in the Alps" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">The Swiss PhD in a nutshell: world-class AI research, mountain views, solid funding and compute, and a collaborative international community. </figcaption> </figure> </div>
 
 **Quality**, Swiss universities consistently rank near the top (I was at EPFL), especially in technical fields. For me, it was also personal. I’m a Swiss national, with family there, so it felt natural. But even without that connection, I’d still strongly recommend Switzerland as a place to do a PhD. Why Idiap. Small but big enough. Experts in AI for 30 years (built off the back of artichoke liquor money and famous for work in speech processing). The institute had labs in robotics, biometrics, speech, vision, NLP, AI with a variety of applications such as computational creativity, genomics, emotion modelling, graphs, and privacy.
 
@@ -184,34 +179,21 @@ I’ll take a strong stance on this one. Switzerland is one of the best places t
 
 If you’re choosing where to do a PhD, don’t underestimate the environment. You’ll live there for years. It will shape how well you work, and how well you live.
 
-### In what topic should you do a PhD?
+### 4. In what topic should you do a PhD?
 
-<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+<In what topic should you do a PhD?
 
-TODO: Plane with bullet holes. This is research. Where is no one looking. Simpler and easy to use code enables! Low pressure high interest This is the best environment. Look at why greatness cant be planned. Start with roach papers. Get the safety net. Then low pressure shoot high. Look for places and gaps that are the engine. WHere is no one publishing and why... Poke there. Survivorship bias. Look at the test of time awards at conferences. What has stuck around and why? Read why greatness cant be planned. The computational steam roller and the bitter lesson about computation.
-LINK to the publishing. THE computational steamer and bitter lesson about computation. Look at the test of time awards at conferences. What has stuck around and why? Read why greatness cant be planned. The computational steam roller and the bitter lesson about computation.
+**What topic should you work on?** Start with a simple question: *does the topic genuinely matter to you?* I applied broadly (jobs, tech, studies) and ended up choosing between a PhD in microbiome forensics at UniL and one in core machine learning at EPFL and Idiap. Turning down UniL was tough. It was interesting and I would likely have been the most technical person in the team. But I asked myself a harder question. At the end of four years, do I want to be the expert in this very specific application, or do I want to work on more general problems? I realised I would rather be the dumbest in the room and stretch upwards than be the local expert too early. The topic you choose will shape how you think, so it must connect to a deeper curiosity, not just a short-term opportunity.
 
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/Survivorship-bias.png" alt="WWII plane bullet-hole survivorship bias diagram" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">[The survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias): The planes that didn't make it back had holes in different places. Research works the same way. Often the important questions are where no one is publishing yet, or where the field has overlooked simpler approaches.</figcaption> </figure> </div>
 
-**What topic should you work on?**  Start with a simple question: does the topic genuinely matter to you? I applied broadly and ended up choosing between a PhD in microbiome forensics at UniL and one in core machine learning at EPFL and Idiap. Turning down UniL was tough. It was interesting and I would likely have been the most technical person in the team. But I asked myself a harder question. At the end of four years, do I want to be the expert in this very specific application, or do I want to work on more general problems in learning and representation? I realised I would rather be the dumbest in the room and stretch upwards than be the local expert too early. The topic you choose will shape how you think, so it must connect to a deeper curiosity, not just a short-term opportunity.
+**Where is no one looking?** Research is rarely evenly distributed. The questions that get attention are the ones that “made it back”, a bit like planes returning from battle. Some areas are neglected for reasons that may be arbitrary, technical, or simply unfashionable. These gaps are often fertile. Start small, test ideas quickly to fail fast to see potential. Look at patterns in *test-of-time awards* at conferences: what stuck around, and why? Often the ideas that endure were not flashy, but solved something fundamental and scalable. This is why, as *Why Greatness Cannot Be Planned* argues, you cannot reliably predict which research will have lasting impact. Focus on curiosity, experimentation, and neglected niches.
 
-<div style="display: flex; justify-content: center; margin: 4px 0;">
-  <figure style="margin: 0; text-align: center; max-width: 480px;">
-    <img src="images/idiap/Survivorship-bias.png" alt="WWII plane bullet-hole survivorship bias diagram" style="width: 100%; border-radius: 8px; display: block;">
-    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;"> [The survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias): The planes that didn't make it back had holes in different places. Research works the same way. The important research is where no one is publishing (yet).</figcaption>
-  </figure>
-</div>
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Over time, the ability to scale computation often beats clever model-building or inductive bias. Effective research works with this reality, not against it.</figcaption> </figure> </div>
 
-**Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? (see previous section on with whom). A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational.
+**Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational. Think strategically: the neglected areas you are curious about may be fertile, but you need a base that allows you to explore them without fighting physics or infrastructure. Simple, usable tools and early experiments often become the engine of bigger discoveries.
 
-<div style="display: flex; justify-content: center; margin: 4px 0;">
-  <figure style="margin: 0; text-align: center; max-width: 480px;">
-    <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;">
-    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Through time the ability to scale in computation has beaten clever model building and inductive bias. There is no stopping the computational steamroller, think of ways of working with it.</figcaption>
-  </figure>
-</div>
-
-**Where to next?** Finally, think about where this leaves you after four years. The world will change. In 2021 it was embeddings. Then 2023 was diffusion and shortly after large language models and now in 2025-2026 it is agents. The fast fashion of AI moves quickly. If you chase the hottest topic, you risk being outpaced by large labs with deeper pockets. If you choose something too narrow, you risk being boxed in. The balance is to stay general in the problems you care about, but niche and technical enough to build depth without being crushed by competition. You are making a four-year bet on yourself. Choose a problem that will still make sense to you when the trend cycle moves on.
-
+**Where to next?** Finally, think about where this leaves you after four years. The world will change. In 2021 it was embeddings, 2023 was diffusion, and shortly after large language models, now in 2025–2026 it is agents. The fast fashion of AI moves quickly. If you chase the hottest topic, you risk being outpaced by large labs with deeper pockets. If you choose something too narrow, you risk being boxed in. The balance is to stay general in the problems you care about, but niche and technical enough to build depth without being crushed by competition. You are making a four-year bet on yourself. Choose a problem that will still make sense when the trend cycle moves on.
 
 
 
@@ -265,7 +247,7 @@ Make thumbnails bigger and the images
   <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
       <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="SYNTH*IA*">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="SYNTHIA">
       </div>
       <h4 class="phd-card-title">2025 SYNTH*IA*</h4>
       <p class="phd-card-desc">Idiap Create Challenge Hackathon</p>
@@ -276,140 +258,136 @@ Make thumbnails bigger and the images
 
 ## Collaborations
 
-PhDs are, by design, insular and individual contributions to knowledge. You work alone, you own your problem, and collaboration can feel optional, or even like a distraction. I think that’s a darn shame.
+A PhD is designed to be individual. You own the problem, you defend the thesis, your name sits first. Collaboration can feel optional, sometimes even like a distraction from the “real” work.  I think that’s a darn shame. Done well, collaboration is one of the strongest accelerators in a PhD. You borrow strengths you do not have. You contribute strengths others lack. When ownership is clear and incentives align, progress compounds. But this does not happen automatically. 
 
-Done well, collaborations are one of the most underrated accelerators in a PhD. You get to learn skills from others, offer skills others don’t, and everyone moves faster when the division of labour is clear. It’s mutually beneficial, and when it works, the productivity compounds.
+I was lucky to do my PhD at Idiap Research Institute, a place small enough to talk to almost anyone over coffee, but broad enough to span NLP, speech, vision, graphs and more. The environment made collaboration easy, but ease alone is not enough. Some projects thrived because the structure was right. Others struggled as they scaled. 
 
-For people who thrive in social environments (like myself), collaboration felt natural. Places like Idiap Research Institute worked especially well for this: small enough to connect easily with people, aligned enough to intersect on AI, but cross-disciplinary enough to make the collaborations interesting. Here are a few fun examples of collaborations at Idiap (some I was part of) and the lessons learned along the way.
+**Overview** I want to show a few examples, from small, tight teams to large, flat collaborations, and what each taught me. The lesson is not that collaboration is always good. It is that its effectiveness changes with scale, structure, and clarity of ownership.
 
 ### Torch
 
-[**Torch**](http://torch.ch/torch3/) is one of Idiap’s old and famous collaborations which predates most modern PhDs: the precursor to [**PyTorch**](https://github.com/pytorch/pytorch). The Idiapers [Ronan Collobert](https://scholar.google.com/citations?user=32w7x1cAAAAJ&hl=en), [Samy Bengio](https://scholar.google.com/citations?user=Vs-MdPcAAAAJ&hl=en), and [Johnny Mariéthoz](https://dblp.org/pid/26/2004.html) built an open-source machine learning library that would later evolve into PyTorch, now a foundational tool for AI research and deployment worldwide.
+[**Torch**](http://torch.ch/torch3/) is one of Idiap’s older collaborations, a project that predates most modern PhDs and later evolved into what we now know as [**PyTorch**](https://github.com/pytorch/pytorch). Ronan Collobert, Samy Bengio, Johnny Mariéthoz and others built an open-source machine learning library that quietly became foundational to AI research and deployment worldwide. The technical impact is obvious.
 
-The technical impact is obvious. What I found more telling were their team photos. You don’t see a formal product team. You see friends building something together. They never lost their sense of humour. They were able to be silly *and* technically rigorous! Now that is rare and inspiring. Do good work, but enjoy the process. That’s something that I really resonate with and Idiap was the perfect place to foster this.
+**Rigour and Joy** What stuck with me more were the team photos. You do not see a polished product team or corporate branding. You see friends building something together. They look relaxed. Slightly chaotic. Happy. They never lost their sense of humour. At the same time, they were producing work of serious technical depth.
+
+That combination is rare and beautiful! Rigour without joy burns people out. Joy without rigour produces little. Torch showed me that collaboration can (should?) hold both. Before structure and division of labour, there is culture. Culture is what makes people want to build together in the first place. That’s something that I really resonate with and Idiap was the perfect place to foster this.
 
 
 <figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
   <img src="images/idiap/torch_meme.png" alt="Torch Team" style="width: 100%; border-radius: 8px; display: block;">
-  <figcaption style="text-align: center; font-size: 14px; color: gray;">Torch founders from Idiap [Torch Library](http://torch.ch/torch3/) (top), and Idiapers of 2025 recreating for fun (bottom). [Original Torch paper.](https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content)</figcaption>
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Torch founders from Idiap [Torch Library](http://torch.ch/torch3/) (top), and Idiapers of 2025 recreating for fun (bottom). [Torch paper (2002)](https://infoscience.epfl.ch/server/api/core/bitstreams/7513f344-91b6-427d-a020-7836b150a150/content)</figcaption>
 </figure>
 
 ### Linear Transformers
 
-Linear transformers came just before my time at Idiap, but they carry an important message.
+Torch showed what collaboration can build, Linear Transformers highlights the important of careful engineering. The project started in a course at EPFL, by a small group of friends. From what I heard, the first submission actually got rejected! The idea was interesting, but the practical impact was not convincing. They could not demonstrate real speedups, and without that, the contribution felt incomplete.
 
-The project started in a course at EPFL, by a small group of friends. If I got the story right, they didn’t manage to publish the idea on the first attempt. The method was interesting, but the practical impact wasn’t clear yet. They couldn’t show convincing speedups.
+Instead of moving on, they doubled down. Apoorv and Angelos rewrote the linear attention module in custom CUDA kernels to achieve actual GPU speedups! Anyone who has written CUDA knows this is not glamorous work. It is slow, brittle, slightly painful. This was before AI assistants. Just careful engineering and persistence. It was a serious commitment, and it changed the trajectory of the project.
 
-Instead of moving on, Apoorv and Angelos doubled down. They rewrote the linear attention module in custom CUDA kernels to get real speedups on GPUs. As anyone who has tried to write CUDA knows, this kinda sucks. It also explains, in part, why NVIDIA has such a strong moat. And this was all before AI assistants. Just slow and careful engineering. It was a serious commitment, and it paid off.
+**Impact follows good engineering** They packaged the project properly. Clean code. Clear documentation. Simple benchmarks. A proper website. You could run it. You could compare it. You could build on it. That part is easy to underestimate in research.
 
-Once that work was done, they packaged it beautifully. Clean code. Clear documentation. Easy to run. Easy to benchmark against. This is something many people miss in research.
-
-Making your code reusable matters. If your code is usable, people will try it. If they can build on it, your idea will gain traction. It improves adoption, citations, and ultimately the community. We’re not engineers by default, and that’s fine. But during a PhD, you have the chance to learn these skills. Even basic engineering can go a long way. It makes you a stronger researcher. Go check out Apoorv and Angelos today they are likely to still be crushing it!
-
-This collaboration is a great example of theory meeting engineering, and being shared in a way the community could actually use. **Good ideas matter, but clean, usable code creates traction.**
-
-* The paper: ICML 2020. Well cited, for good reason.
-  [https://proceedings.mlr.press/v119/katharopoulos20a.html](https://proceedings.mlr.press/v119/katharopoulos20a.html)
-
-* A proper website.
-  [https://linear-transformers.com/](https://linear-transformers.com/)
-
-* Clean, usable code.
-  [https://github.com/idiap/fast-transformers](https://github.com/idiap/fast-transformers)
-
-* A video explaining it.
-  [https://www.youtube.com/watch?v=hAooAOFRsYc](https://www.youtube.com/watch?v=hAooAOFRsYc)
-
+Making code reusable changes everything. If people can try your method without fighting your repository, they will. If they can extend it, your idea gains traction. We are not trained as engineers by default, and that is fine. But a PhD is a rare chance to learn those skills. Even modest engineering discipline can multiply the impact of a good idea.
 
 
 <figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
   <img src="images/idiap/lineartransformers-batmanRobin.png" alt="Apoorv and Angelos" style="width: 100%; border-radius: 8px; display: block;">
-  <figcaption style="text-align: center; font-size: 14px; color: gray;">I made this depiction of Apoorv and Angelos. I am fairly certain this was how it looked when they were working on Linear Transformers. [Paper (ICML 2020).](https://proceedings.mlr.press/v119/katharopoulos20a.html)</figcaption>
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">I made this depiction of Apoorv and Angelos. I am fairly certain this was how it looked when they were working on Linear Transformers. [Paper](https://proceedings.mlr.press/v119/katharopoulos20a.html), [Website](https://linear-transformers.com/), [Code](https://github.com/idiap/fast-transformers), [Video](https://www.youtube.com/watch?v=hAooAOFRsYc).</figcaption>
 </figure>
-
 
 
 ### Hypermixer
 
+Torch showed culture. Linear Transformers showed engineering. Hypermixer was the first time I felt both come together. 
 
-We were inspired by MLP-Mixer. A clean idea. Mixing across and within tokens using only MLPs and transposition. No attention. It worked well for fixed-size images. The question was whether the same idea could work for language.
+We were inspired by [MLP-Mixer](TODO cite). A s clean idea. Mix across tokens *and* mix within tokens. Only MLPs and transposition. No attention. It worked for fixed-size images and the obvious question was whether the same simplicity could survive in language. Spoiler... Nope. Language has variable sequence lengths. Fixed mixing meant padding everything to a constant size. That does not scale. What looked elegant in vision became awkward in NLP. 
 
-At first, it didn’t. Language has variable sequence lengths. Fixed mixing meant padding everything to a constant size. That didn’t scale.
+**The breakthrough was not adding complexity, but preserving simplicity** Let hypernetworks generate the right-sized matrices on the fly. And boom! The mixing across tokens is dynamic, similar in spirit to attention. The same function could handle any input length. The model stays fully MLP-based and linear in sequence length rather than quadratic. In that sense, HyperMixer became a natural complement to linear transformers. 
 
-The solution was to make the mixing dynamic, like attention. The same function works for any input size. We used hypernetworks to generate the right-sized parameters on the fly. The model remained fully MLP-based, and linear in the input dimension instead of quadratic like attention. In that sense, HyperMixer became a nice complement to linear transformers.
-
-What stayed with me was how far a simple idea can go with the right group of people. Just curiosity and iteration. That eventually led to my first publication. ACL 2023. My first paper and collaboration.
-
-Keep ideas as simple as possible, but no simpler.
-
-paper - https://aclanthology.org/2023.acl-long.871/
+What stayed with me was not just the approach of simplicity, but the team dynamic. A small group, short time-frame, simple idea and fun curious ethos. That process led to my first published paper! My first real collaborative win.
 
 <figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
   <img src="images/idiap/hypermixer-avengers.png" alt="Hypermixer Team" style="width: 100%; border-radius: 8px; display: block;">
   <figcaption style="text-align: center; font-size: 14px; color: gray;">The Hypermixer team assemble. [Paper (ACL 2023).](https://aclanthology.org/2023.acl-long.871/)</figcaption>
 </figure>
 
+"*Make everything as simple as possible, but not simpler.*" - Apparently Einstein.
+
 ### Abstraction with NVIB
 
-This collaboration came out of the momentum from earlier projects. Once I saw how much ground you can cover with the right setup, I wanted to test it.
+Hypermixer taught me that small teams can take a simple idea far. This project was the first time I tried to design that dynamic deliberately.
 
-I initiated this project with Melika as a one-month experiment. The goal was simple. Could we use the explainability properties of NVIB to induce useful abstract representations? We split the work cleanly. I focused on modelling, training, and design. Melika handled the data, evaluations, and interpretation. Clear ownership. Minimal overlap. Very little friction.
+I initiated it with Melika as a one-month experiment. The question was focused: could we use the explainability properties of NVIB to induce useful abstract representations? We agreed on the scope early and split the work cleanly. I handled modelling, training, and design. She owned the data, evaluations, and interpretation. Clear ownership. Minimal overlap. Very little friction.
 
-That structure made all the difference. In one month, we published a short paper at EMNLP showing that NVIB can induce useful, sparse abstract representations. We shared first authorship. A small but meaningful contribution to explainability and representation learning.
+The structure made the difference. Because responsibilities were explicit, we did not step on each other’s toes. Decisions were fast. Feedback loops were short. In one month, we had a short paper accepted at EMNLP showing that NVIB can induce useful, sparse abstract representations. We shared first authorship. A small paper, but tightly executed.
 
-What stood out to me was how effective a small team can be. Complementary skills. Clear responsibilities. We moved quickly, learned from each other, and both benefited from the collaboration.
+What stayed with me was how powerful constraint can be. Two people. One month. Clear roles. Complementary skills. No ambiguity about who does what. **Clear division of labour lets small teams move fast and go deep.**
 
-Clear division of labour lets small teams move fast.
-
-<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
-  <img src="images/idiap/abstractNVIB-nemo.png" alt="AbstractNVIB Nemo" style="width: 100%; border-radius: 8px; display: block;">
-  <figcaption style="text-align: center; font-size: 14px; color: gray;">Abstract NVIB Nemo. [Paper (EMNLP Findings 2023).](https://aclanthology.org/2023.findings-emnlp.106/)</figcaption>
-</figure>
-
+<figure class="collab-figure" style="max-width: 600px; margin: 20px auto;"> <img src="images/idiap/abstractNVIB-nemo.png" alt="AbstractNVIB Nemo" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="text-align: center; font-size: 14px; color: gray;"> Two researchers. One mission. Just keep collaborating. Finding NVIB [Paper (EMNLP Findings 2023).](https://aclanthology.org/2023.findings-emnlp.106/)</figcaption> </figure>
 
 ### Fine-Tuning with NVIB
 
+Abstraction with NVIB showed me how powerful small, tightly designed teams can be. **This project was my attempt to scale that idea across the research institute**.
 
-After seeing how well small collaborations worked, I wanted to scale the idea up.
+Idiap made that possible. Multiple research groups, spanning NLP, speech, and vision. I proposed a institution-wide collaboration around NVIB (my PhD project haha), applying the same core idea across modalities. I was first author and coordinator, connecting the method to each model, while each student owned one experiment. On paper, the division of labour was clear.
 
-Idiap made this possible. It has multiple research groups with strengths across AI domains. NLP, speech, graphs, vision. I proposed a lab-wide collaboration around my PhD topic, NVIB, applied across modalities. I acted as first author and coordinator, connecting the core idea to each model, while each student owned one experiment.
+**What worked was the collective learning**. People helped each other across domains. Tools were shared. Pipelines were explained. We all learned a lot! I gained exposure to new areas, especially speech, and learned what different communities value. We produced a unified multiple modality paper, accepted as an ICLR workshop paper. The breadth was real, and so was the collective growth.
 
-In practice, the flat structure was hard to manage. There were eight PhD students and three supervisors, with no hierarchy or sub-teams. I became the central point for communication and technical integration. Every new insight had to flow through me, be reimplemented across pipelines, and passed back out. The overhead added up quickly.
+**What did not work was the structure.** There were eight PhD students and three supervisors, but no hierarchy or sub-teams. I became the central node for communication and technical integration. Every insight flowed through me, had to be adapted across each pipeline, and passed back out. Remember no agents for this. The coordination overhead grew quickly. Clear ownership was not enough at this scale. Depth suffered, and focus diluted. **As teams grow, structure must grow with them. Without hierarchy, coordination becomes the bottleneck.**
 
-The project still worked. We produced a unified paper spanning multiple modalities, and it was accepted as an ICLR workshop paper. But the cost was depth. With so many moving pieces and a flat structure, it was hard to go deep in any single domain.
-
-That said, the experience was valuable. I gained exposure to new domains, especially speech, and learned what different communities care about. I also learned a lot about leadership, coordination, and communication under pressure. I had to move fast just to avoid becoming the bottleneck.
-
-What I loved most was seeing people help each other across domains. Sharing tools. Explaining pipelines. Building on each other’s strengths. The project may not have produced a single dramatic breakthrough, but the individual growth was real, and the collaboration itself was genuinely rewarding.
-
-Large collaborations can work, but they need structure as they scale. Clear division of labour is not enough. Without hierarchy, coordination becomes the hardest problem.
 
 <figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
   <img src="images/idiap/justiceLeagueNVIB.png" alt="Justice League" style="width: 100%; border-radius: 8px; display: block;">
   <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles. [Paper (ICLR Workshop 2024).](https://openreview.net/forum?id=eX0VFgG4IS)</figcaption>
 </figure>
 
+
+### SYNTH*IA* 
+
+**This collaboration felt like a synthesis of everything I had learned.** Torch had shown me that rigour and silliness belong together. Linear Transformers and Hypermixer reinforced that clever engineering works best when the idea stays simple. The NVIB projects taught me that small teams with clear roles move fast and go deep. With SYNTH*IA*, an entrepreneurial hackathon project, it all of that came together. But this time the fuel was different. It was passion, fun, and cool.
+
+**The idea itself was deliberately simple.** Model live music generation as a conversation. Use current current language modeling technology to perform a musical dialogue with MIDI tokens. That framing allowed us to reduce the problem complexity and make it faster. Using keyboard MIDI to keyboard MIDI allowed for low latency and a clean pipeline. No audio or background noise modelling. No unnecessary complexity. To keep latency low and the demo stable, we simplified even further. The demo was not even a true language model or next token predictor but actually just some clever rules syntheized by Laurent! A tight loop we could actually play live. Simplicity made it buildable and playable.
+
+**What made it work was the team.** Three friends aligned by passion, with complementary strengths and high trust. Laurent brought technical pragmatism and serious musicianship. He grounded ambitious ideas and turned them into our working prototype. Karl has unmistakable “Steve Jobs” energy, obsessed with product feel, design, and the nostalgic retro-electro-synth aesthetic. His room was a studio in both senses of the word. I took the role of glue and storyteller, shaping the pitch, keeping us aligned, and maintaining momentum. I brought homemade lasagne, lava lamps, and ridiculous speedy sunglasses to keep the vibes high. There was no ego. We trusted each other. We took breaks and played music together. It felt less like a startup and more like a band.
+
+<figure class="collab-figure" style="max-width: 500px; margin: 20px auto;">
+  <img src="images/idiap/AlbumCover.png" alt="SYNTHIA band album cover" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">SYNTH*IA* Album Cover: The first AI band member that JAMS with you. On Demand. Interactive. Creative.</figcaption>
+</figure>
+
+**ICC ‘appiness.** This happened inside the entrepreneurial Idiap Create Challenge (ICC), a ten-day sprint to build an AI startup from scratch. Build the product. Test it. Pitch it. Demo it. The pressure was electric! Retro synths. Gameboy nostalgia. *Jump* and *Hey Jude* reborn through AI and MIDI generation. We approached it with a “*yes, and*” improv attitude. I met with a mentor and asked how to sell this idea? “*It’s easyyy,*” he said in a French accent, “*you are sel-ling ‘appiness!*” Then I asked why it should be in Valais, Switzerland? “*It’s obvious,*” he said while my face was blank, not finding it obvious at all. “Valais is the ‘eart of cul-ture, and music is cul-ture.” I remember standing there, slightly stunned, thinking he might actually be right. During the final demo, the room felt it. So did we.
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+  <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="Speaking and Presentation">
+      </div>
+      <h4 class="phd-card-title"> H2025 SYNTH*IA*</h4>
+      <p class="phd-card-desc">Demo: Idiap Create Challenge</p>
+    </div>
+  </a>
+</div>
+
+**We did not optimise for winning. We optimised for joy.** And we won first place! The cash prize of 15,000 CHF was secondary (and nice). What I am most proud of is how it felt. *It gave me shivers while writing this.* Friends doing something we genuinely loved, under pressure, without losing the fun. Silly and simple, yet effective. Viktor Frankl wrote that success, like happiness, cannot be pursued, it must ensue. This collaboration made that concrete for me. When the work is energising and meaningful, success tends to follow quietly (but with funky retro synths) behind.
+
+<figure class="collab-figure" style="max-width: 500px; margin: 20px auto;">
+  <img src="images/idiap/synthia_winning.jpeg" alt="SYNTH*IA* team winning the Idiap Create Challenge" style="width: 100%; border-radius: 8px; display: block;">
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Idiap Create Challenge 2025 winners.</figcaption>
+</figure>
+
+
 ### Takeaways
 
-<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+A PhD is designed to be individual, but the most meaningful parts of mine were collaborative. Collaboration does not work by accident; it requires clear ownership, shared incentives, and deliberate design. Small teams thrive on trust, complementary strengths, and a genuine “yes, and” energy. As teams grow, structure must grow with them, or coordination quickly becomes the bottleneck. And in the end, the collaborations that mattered most were the ones driven by passion and curiosity rather than output metrics.
 
+**What collaboration taught me:**
 
-THMS take home messages
-
-Clear ownership + structure
-
-Clear timeline
-
-Keep teams small
-2-3 PhDs
-Lower communication
-Greater depth on the project
-
-I learned that collaboration needs to be designed, just like models do. 
-
-Small teams thrive on simplicity, trust, and clear ownership. They move fast and go deep. Larger teams can scale ideas across domains, but only if structure scales with them. Without hierarchy, communication becomes the bottleneck. Without usable code, ideas stall. These projects taught me more than how to publish papers. I learned how to work with people, engineer for others, and lead without authority.
-
-Done well, collaboration doesn’t distract from research. It multiplies it.
+- Design ownership early and make roles explicit.
+- Engineer for usability if you want ideas to spread.
+- Keep teams small for depth and speed.
+- Add structure and hierarchy as you scale.
+- Work with people you admire and trust.
+- Optimise for meaning; success tends to ensue.
 
 ## Tools, Coding Tips and AI assistants
 
@@ -781,6 +759,10 @@ What is unique to this story. (Mine is coming from a more 3rd world country outs
 
 
 Futures so bright I gotta wear shades. kid glasses gifs
+
+<div style=”display: flex; justify-content: center; margin: 12px 0;”>
+  <img src=”images/idiap/sunglasses.gif” alt=”Speedy sunglasses” style=”width: 160px; border-radius: 8px; display: block;”>
+</div>
 
 PhD of the year award
 

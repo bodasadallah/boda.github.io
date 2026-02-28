@@ -1,0 +1,10 @@
+# Playwright MCP screenshots (saved to project root)
+/*.png
+/*.jpeg
+/*.jpg
+
+# OS
+.DS_Store
+
+# Claude 
+.playwright*

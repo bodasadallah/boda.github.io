@@ -6,11 +6,7 @@ thumbnail: "blogs/images/idiap/Fabio-Jamie.jpeg"
 permalink: /fablogio/surviving-a-phd/
 ---
 
-TODO: I want a way to say how many minutes this takes to read. 
-
 **TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at [EPFL](https://www.epfl.ch/about/) and [Idiap Research Institute](https://www.idiap.ch/en/) in Martigny Switzerland between the years of 2021-2025.
-
-
 
 
 ## Who is this for?
@@ -150,7 +146,6 @@ Here are some thoughts that I believe are essential to consider. **Why**, with *
 
 **Knowing your why is essential.** Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.
 
-
 **A PhD is a long exercise in focus.** Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about the skills you’re acquiring. Methods, models, datasets and even required skills will change. The underlying problems you care about probably won’t. The best advice I got from my MSc supervisor was simple: "*Work on something that you like because ultimately it’s your project*". That responsibility does not disappear in a PhD. If anything, it becomes heavier. Something my PhD supervisor said in our first meeting reinforced that idea. He was genuinely excited and said, "*It may not be easy, but it will be so cool!*". That level of enthusiasm mattered to me. It made the challenge feel worth it. That’s the kind of "why" I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.
 
 
@@ -189,7 +184,7 @@ If you’re choosing where to do a PhD, don’t underestimate the environment. Y
 
 **Where is no one looking?** Research is rarely evenly distributed. The questions that get attention are the ones that “made it back”, a bit like planes returning from battle. Some areas are neglected for reasons that may be arbitrary, technical, or simply unfashionable. These gaps are often fertile. Start small, test ideas quickly to fail fast to see potential. Look at patterns in *test-of-time awards* at conferences: what stuck around, and why? Often the ideas that endure were not flashy, but solved something fundamental and scalable. This is why, as *Why Greatness Cannot Be Planned* argues, you cannot reliably predict which research will have lasting impact. Focus on curiosity, experimentation, and neglected niches.
 
-<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Over time, the ability to scale computation often beats clever model-building or inductive bias. Effective research works with this reality, not against it.</figcaption> </figure> </div>
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Over time, the ability to scale computation often beats clever model-building or inductive bias. The computational steamroller is coming, don't fight against it.</figcaption> </figure> </div>
 
 **Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational. Think strategically: the neglected areas you are curious about may be fertile, but you need a base that allows you to explore them without fighting physics or infrastructure. Simple, usable tools and early experiments often become the engine of bigger discoveries.
 
@@ -221,39 +216,7 @@ This changes fast in ML so the topic is likely to morph as you go but the bigger
 -->
 
 
-## All the other things
 
-<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
-
-
-- Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, learning to drive and driving a car in Switzerland The license is international and never expires!, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
-
-
-Make thumbnails bigger and the images
-
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
-  <!-- Most Uncertainly -->
-  <a href="https://www.youtube.com/watch?v=Gm_JDGQxTdQ&t=684" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-    <div class="phd-card">
-      <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Gm_JDGQxTdQ/hqdefault.jpg" alt="Most Uncertainly">
-      </div>
-      <h4 class="phd-card-title">2021 Most Uncertainly</h4>
-      <p class="phd-card-desc">SciFilmIt Hackathon</p>
-    </div>
-  </a>
-
-  <!-- SYNTH*IA* -->
-  <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-    <div class="phd-card">
-      <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="SYNTHIA">
-      </div>
-      <h4 class="phd-card-title">2025 SYNTH*IA*</h4>
-      <p class="phd-card-desc">Idiap Create Challenge Hackathon</p>
-    </div>
-  </a>
-</div>
 
 
 ## Collaborations
@@ -337,7 +300,7 @@ Idiap made that possible. Multiple research groups, spanning NLP, speech, and vi
 
 <figure class="collab-figure" style="max-width: 600px; margin: 20px auto;">
   <img src="images/idiap/justiceLeagueNVIB.png" alt="Justice League" style="width: 100%; border-radius: 8px; display: block;">
-  <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles. [Paper (ICLR Workshop 2024).](https://openreview.net/forum?id=eX0VFgG4IS)</figcaption>
+  <figcaption style="text-align: center; font-size: 14px; color: gray;">Justice League assembles. [Paper (ICLR Workshop 2025).](https://openreview.net/forum?id=eX0VFgG4IS)</figcaption>
 </figure>
 
 
@@ -389,24 +352,6 @@ A PhD is designed to be individual, but the most meaningful parts of mine were c
 - Work with people you admire and trust.
 - Optimise for meaning; success tends to ensue.
 
-## Tools, Coding Tips and AI assistants
-
-<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
-
-TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance.
-
-**Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
-
-**AI Coding Assistants** Coding is changing. Higher levels of abstraction are emerging, from assembly to C to Python, and now to prompting ([Software 3.0 and vibe-coding by Andrej Karparthy](https://www.youtube.com/watch?v=LCEmiRjPEtQ)). The level of abstraction keeps rising and the barrier to building is getting lower. This is incredible, but I believe understanding the fundamentals will become increasingly important. AI assistants are tools that accelerate writing, scaffold code or challenge/review your reasoning. **Do not let them replace your thinking**. Form your own hypotheses. Do the maths. Design the strategy. Whatever you put out there is ultimately your responsibility. Use these tools to do more, but not to think less.
-<!--
- Release code. Make it use the biggest most widely adopted libraries and tools. During my time Think huggingface, transformers, pytorch. Pytorch lightning. Make sure its use is easy to change, and compare. This will make your idea adoptions easier. Being new to coding myself this took me some time to get going and i still try and improve on this each iteration.
-Each paper is an iteration. Get better learn and move forward.
-- Take time to learn the systems. Get excited about how to get more compute. We all created our own submitters to the grid. Mine had emojis.
-    - Visualise your models training. Visualise the gradients. Visualise the maps, dive deep into what the hell this thing is doing
-    - Debugging! -  Visualise. Also print everything show everything gradients, wandb for training. Pytorch lightning. DOnt reinvent
-    - Make things simply usable - get good at the software engineering. If people can use it. they may not be able to understand like a cars engine they will build it forward, more citations  more impact more success as a researcher. Hopefully your writing too is good and visuals so people grasp it soon.
-AI assistants - This only came in at the tail end of my PhD but it is now a defacto. I would say they are tools. But do not let them replace your skills. Writing word for word. Thats great. brain storming great. But they are no replacement for your thought. I believe you should generate hypothesis and opinions and ideas. These things help you bring it to life from a code or writing perspective. Ie reviewing. Read the paper. Make your own notes then form your judgements and ideas use llms to help you find biases or structure your thoughts but the thoughts are your own. Same with code. Your idea to code soemthing. DO the math do the high level stragy but the model can help you speed up implementation and back and forth with you for robustness. Whatever it generates I think you are liable. Make sure you know whats going on. 
--->
 
 ## Paper writing 
 
@@ -484,6 +429,58 @@ I also kept a theme for all my figures, graphs and plots. SO this is why the pal
 
 Thesis writing: stressful more experiments. Start writing. Decide structure. Keep writing. Easy to edit not easy to start. -->
 
+## All the other things
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
+- Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, learning to drive and driving a car in Switzerland The license is international and never expires!, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
+
+
+Make thumbnails bigger and the images
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+  <!-- Most Uncertainly -->
+  <a href="https://www.youtube.com/watch?v=Gm_JDGQxTdQ&t=684" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Gm_JDGQxTdQ/hqdefault.jpg" alt="Most Uncertainly">
+      </div>
+      <h4 class="phd-card-title">2021 Most Uncertainly</h4>
+      <p class="phd-card-desc">SciFilmIt Hackathon</p>
+    </div>
+  </a>
+
+  <!-- SYNTH*IA* -->
+  <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Vhwi-pR9_wg/hqdefault.jpg" alt="SYNTHIA">
+      </div>
+      <h4 class="phd-card-title">2025 SYNTH*IA*</h4>
+      <p class="phd-card-desc">Idiap Create Challenge Hackathon</p>
+    </div>
+  </a>
+</div>
+
+## Tools, Coding Tips and AI assistants
+
+<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance.
+
+**Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
+
+**AI Coding Assistants** Coding is changing. Higher levels of abstraction are emerging, from assembly to C to Python, and now to prompting ([Software 3.0 and vibe-coding by Andrej Karparthy](https://www.youtube.com/watch?v=LCEmiRjPEtQ)). The level of abstraction keeps rising and the barrier to building is getting lower. This is incredible, but I believe understanding the fundamentals will become increasingly important. AI assistants are tools that accelerate writing, scaffold code or challenge/review your reasoning. **Do not let them replace your thinking**. Form your own hypotheses. Do the maths. Design the strategy. Whatever you put out there is ultimately your responsibility. Use these tools to do more, but not to think less.
+<!--
+ Release code. Make it use the biggest most widely adopted libraries and tools. During my time Think huggingface, transformers, pytorch. Pytorch lightning. Make sure its use is easy to change, and compare. This will make your idea adoptions easier. Being new to coding myself this took me some time to get going and i still try and improve on this each iteration.
+Each paper is an iteration. Get better learn and move forward.
+- Take time to learn the systems. Get excited about how to get more compute. We all created our own submitters to the grid. Mine had emojis.
+    - Visualise your models training. Visualise the gradients. Visualise the maps, dive deep into what the hell this thing is doing
+    - Debugging! -  Visualise. Also print everything show everything gradients, wandb for training. Pytorch lightning. DOnt reinvent
+    - Make things simply usable - get good at the software engineering. If people can use it. they may not be able to understand like a cars engine they will build it forward, more citations  more impact more success as a researcher. Hopefully your writing too is good and visuals so people grasp it soon.
+AI assistants - This only came in at the tail end of my PhD but it is now a defacto. I would say they are tools. But do not let them replace your skills. Writing word for word. Thats great. brain storming great. But they are no replacement for your thought. I believe you should generate hypothesis and opinions and ideas. These things help you bring it to life from a code or writing perspective. Ie reviewing. Read the paper. Make your own notes then form your judgements and ideas use llms to help you find biases or structure your thoughts but the thoughts are your own. Same with code. Your idea to code soemthing. DO the math do the high level stragy but the model can help you speed up implementation and back and forth with you for robustness. Whatever it generates I think you are liable. Make sure you know whats going on. 
+-->
 
 
 ## Publishing and dealing with reviews

@@ -113,7 +113,10 @@
 function parseMarkdown(markdown) {
     // Remove frontmatter (YAML between ---)
     markdown = markdown.replace(/^---[\s\S]*?---\n/, '');
-    
+
+    // Replace {{TOC}} placeholder with a DOM anchor the TOC generator will find
+    markdown = markdown.replace(/\{\{TOC\}\}/g, '<div id="toc-placeholder"></div>');
+
     let html = markdown;
     
     // Parse headings
@@ -170,9 +173,9 @@ function parseMarkdown(markdown) {
         }
         
         // Don't wrap if it's already an HTML tag
-        if (block.startsWith('<h') || block.startsWith('<figure') || 
+        if (block.startsWith('<h') || block.startsWith('<figure') ||
             block.startsWith('<ul') || block.startsWith('<ol') ||
-            block.startsWith('</')) {
+            block.startsWith('<div') || block.startsWith('</')) {
             return block;
         }
         return '<p>' + block + '</p>';
@@ -818,6 +821,13 @@ async function loadBlogPost() {
         
         if (titleElement) titleElement.textContent = blog.title;
         if (pageTitleElement) pageTitleElement.textContent = `🤘 Fablogio`;
+        const headerTitleElement = document.getElementById('blog-header-title');
+        if (headerTitleElement) {
+            headerTitleElement.textContent =
+                (window.BLOG_POST_DATA && window.BLOG_POST_DATA.short_title)
+                    ? window.BLOG_POST_DATA.short_title
+                    : blog.title;
+        }
         if (dateElement) {
             dateElement.textContent = formatDate(blog.date);
         }
@@ -884,68 +894,117 @@ async function loadBlogPost() {
  */
 function generateTableOfContents() {
     const blogBody = document.getElementById('blog-body');
-    const tocList = document.getElementById('toc-list');
-    const blogToc = document.getElementById('blog-toc');
-    
-    if (!blogBody || !tocList) return;
-    
+    const headerNav = document.getElementById('blog-header-nav');
+    if (!blogBody) return;
+
     const headings = blogBody.querySelectorAll('h2, h3');
-    
     if (headings.length === 0) {
-        if (blogToc) {
-            blogToc.style.display = 'none';
-        }
+        const tocBtn = document.getElementById('blog-toc-btn');
+        if (tocBtn) tocBtn.style.display = 'none';
         return;
     }
-    
+
+    // Assign IDs and group by h2
+    const groups = [];
+    let currentGroup = null;
     headings.forEach((heading, index) => {
-        // Add ID to heading for anchor linking
-        const id = `section-${index}`;
-        heading.id = id;
-        
-        // Create TOC item
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = `#${id}`;
-        link.textContent = heading.textContent;
-        
-        // Indent h3 items
-        if (heading.tagName === 'H3') {
-            listItem.style.paddingLeft = '12px';
-            link.style.fontSize = '13px';
+        heading.id = `section-${index}`;
+        if (heading.tagName === 'H2') {
+            currentGroup = { h2: heading, h3s: [] };
+            groups.push(currentGroup);
+        } else {
+            if (!currentGroup) { currentGroup = { h2: null, h3s: [] }; groups.push(currentGroup); }
+            currentGroup.h3s.push(heading);
         }
-        
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            window.history.pushState(null, '', `#${id}`);
-        });
-        
-        listItem.appendChild(link);
-        tocList.appendChild(listItem);
     });
-    
-    // Highlight active section on scroll
-    let activeLink = null;
-    window.addEventListener('scroll', () => {
-        let current = '';
-        headings.forEach(heading => {
-            const rect = heading.getBoundingClientRect();
-            if (rect.top <= 100) {
-                current = heading.id;
-            }
+
+    // --- INLINE TOC (h2s only, prepended to blog body) ---
+    const h2Headings = [...headings].filter(h => h.tagName === 'H2');
+    if (h2Headings.length > 0) {
+        const inlineToc = document.createElement('div');
+        inlineToc.className = 'blog-inline-toc';
+        inlineToc.id = 'blog-inline-toc';
+        inlineToc.innerHTML = '<h3 class="blog-toc-heading">Table of Contents</h3>';
+        const ul = document.createElement('ul');
+        h2Headings.forEach(h2 => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `#${h2.id}`;
+            a.textContent = h2.textContent;
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                window.history.pushState(null, '', `#${h2.id}`);
+            });
+            li.appendChild(a);
+            ul.appendChild(li);
         });
-        
-        if (current && current !== activeLink) {
-            tocList.querySelectorAll('a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
+        inlineToc.appendChild(ul);
+        const tocPlaceholder = blogBody.querySelector('#toc-placeholder');
+        if (tocPlaceholder) {
+            tocPlaceholder.replaceWith(inlineToc);
+        } else {
+            blogBody.insertBefore(inlineToc, blogBody.firstChild);
+        }
+
+        // Fix TOC button scroll: account for sticky header height
+        const tocBtn = document.getElementById('blog-toc-btn');
+        if (tocBtn) {
+            tocBtn.addEventListener('click', e => {
+                e.preventDefault();
+                const header = document.querySelector('.site-header, .blog-header, header');
+                const headerHeight = header ? header.getBoundingClientRect().height : 0;
+                const tocTop = inlineToc.getBoundingClientRect().top + document.body.scrollTop - headerHeight - 16;
+                document.body.scrollTo({ top: tocTop, behavior: 'smooth' });
+            });
+        }
+    }
+
+    // --- READING PROGRESS PILL ---
+    const progressPill = document.createElement('div');
+    progressPill.className = 'blog-progress';
+    progressPill.id = 'blog-progress';
+    document.body.appendChild(progressPill);
+
+    // --- CURRENT SECTION INDICATOR ---
+    if (headerNav) {
+        const h2Indicator = document.createElement('span');
+        h2Indicator.className = 'blog-current-h2';
+        h2Indicator.id = 'blog-current-section'; // keep for any external refs
+
+        const h3Indicator = document.createElement('span');
+        h3Indicator.className = 'blog-current-h3';
+
+        headerNav.appendChild(h2Indicator);
+        headerNav.appendChild(h3Indicator);
+
+        document.body.addEventListener('scroll', () => {
+            let currentH2 = null;
+            let currentH3 = null;
+            headings.forEach(h => {
+                if (h.getBoundingClientRect().top <= 120) {
+                    if (h.tagName === 'H2') {
+                        currentH2 = h;
+                        currentH3 = null; // reset subsection when entering a new section
+                    } else if (h.tagName === 'H3') {
+                        currentH3 = h;
+                    }
                 }
             });
-            activeLink = current;
-        }
-    });
+            h2Indicator.textContent = currentH2 ? currentH2.textContent : '';
+            h3Indicator.textContent = currentH3 ? currentH3.textContent : '';
+            headerNav.style.display = currentH2 ? '' : 'none';
+
+            const pct = Math.round(
+                document.body.scrollTop / (document.body.scrollHeight - document.body.clientHeight) * 100
+            );
+            progressPill.textContent = pct + '%';
+            progressPill.classList.toggle('visible', pct > 0);
+        });
+
+        // Set initial state (hidden until scrolling begins)
+        headerNav.style.display = 'none';
+    }
 }
 
 /**

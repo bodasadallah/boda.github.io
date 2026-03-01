@@ -31,8 +31,8 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
     border: 2px solid var(--border-color, #e0e0e0);
     border-radius: 6px;
     overflow: hidden;
-    width: 180px;
-    height: 160px;
+    width: 240px;
+    height: auto;
     text-align: center;
     transition: all 0.2s ease;
     background-color: var(--bg-color, #fff);
@@ -53,8 +53,25 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
-
+  .phd-card-img-container::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(80, 80, 80, 0.55);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    pointer-events: none;
+  }
+ 
   .phd-card-img {
     width: 100%;
     height: 100%;
@@ -66,7 +83,7 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
   
   .phd-card-title {
     margin: 0;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-color, #0a0a0a);
     padding: 6px 6px 2px 6px;
@@ -79,7 +96,7 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
   
   .phd-card-desc {
     margin: 0;
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted-color, #666);
     padding: 2px 6px 6px 6px;
     flex-shrink: 0;
@@ -87,16 +104,23 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-
+ 
   .paper-figure {
     transition: all 0.2s ease;
     border: 2px solid transparent;
   }
-
+ 
   .paper-figure:hover {
     background-color: var(--hover-bg, #ffe4cc);
     border-color: var(--border-color, #e0e0e0);
     transform: translateY(-2px);
+  }
+ 
+  @media (max-width: 600px) {
+    .phd-card {
+      width: 100%;
+      height: auto;
+    }
   }
 </style>
 
@@ -104,7 +128,7 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
   figure img { border-radius: 8px; }
 </style>
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+<div class="phd-card-group">
   <!-- Karpathy Blog -->
   <a href="https://karpathy.github.io/2016/09/07/phd/" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
@@ -328,7 +352,7 @@ Idiap made that possible. Multiple research groups, spanning NLP, speech, and vi
 
 **ICC ‘appiness.** This happened inside the entrepreneurial Idiap Create Challenge (ICC), a ten-day sprint to build an AI startup from scratch. Build the product. Test it. Pitch it. Demo it. The pressure was electric! Retro synths. Gameboy nostalgia. *Jump* and *Hey Jude* reborn through AI and MIDI generation. We approached it with a “*yes, and*” improv attitude. I met with a mentor and asked how to sell this idea? “*It’s easyyy,*” he said in a French accent, “*you are sel-ling ‘appiness!*” Then I asked why it should be in Valais, Switzerland? “*It’s obvious,*” he said while my face was blank, not finding it obvious at all. “Valais is the ‘eart of cul-ture, and music is cul-ture.” I remember standing there, slightly stunned, thinking he might actually be right. During the final demo, the room felt it. So did we.
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+<div class="phd-card-group">
   <a href="https://www.youtube.com/watch?v=Vhwi-pR9_wg" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
       <div class="phd-card-img-container">
@@ -439,17 +463,140 @@ I also kept a theme for all my figures, graphs and plots. SO this is why the pal
 
 Thesis writing: stressful more experiments. Start writing. Decide structure. Keep writing. Easy to edit not easy to start. -->
 
-## All the other things
+
+## Speaking and Presentation
+
+
+**Promise** By the end of this section, you will consider talks, posters, slides and communication differently. Look at these two posters side by side. Which one do you like more? Which one would you ignore? Why?
+
+<div style="display: flex; gap: 16px; justify-content: center; align-items: flex-start; margin: 24px 0; flex-wrap: wrap;">
+  <figure style="flex: 1; min-width: 260px; margin: 0; text-align: center;">
+    <a href="images/idiap/posters/NVIB_poster1.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="images/idiap/posters/NVIB_poster1-1.jpg" alt="Dense NVIB poster (early PhD)" style="width: 100%; border-radius: 6px; border: 1px solid var(--border-color); display: block;">
+    </a>
+    <figcaption style="font-size: 13px; color: var(--muted-color); margin-top: 6px;"> My first conference poster ICLR2023</figcaption>
+  </figure>
+  <figure style="flex: 1; min-width: 260px; margin: 0; text-align: center;">
+    <a href="images/idiap/posters/Coret_poster4.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="images/idiap/posters/Coret_poster4-1.jpg" alt="Simple CoRet poster (later PhD)" style="width: 100%; border-radius: 6px; border: 1px solid var(--border-color); display: block;">
+    </a>
+    <figcaption style="font-size: 13px; color: var(--muted-color); margin-top: 6px;">My last conference poster ACL2025 </figcaption>
+  </figure>
+</div>
+
+**The two posters** The first was from the beginning of my PhD. Dense blocks of text. Small fonts. Every corner filled. I was trying to summarise the entire paper into the poster. Maybe I was trying to prove I was intelligent or maybe I wanted every detail there in case someone asked a difficult question. The second came years later. One central message. Large type. Space to breathe. A clear visual hierarchy. What actually matters at a conference is simpler. Do they look, skim, and think “*that’s interesting, let’s talk*”? Or do they snap a picture and say “*thanks, I’ll read the paper*”? Thats what really matters for that audience. A QR code to make the next step effortless. I was no smarter when I designed the second one. The research had not suddenly become revolutionary. What changed was some simple design. The quality of my ideas did not change dramatically, but the way I communicated them did.
+
+**In the next sections, I will show why communication is not cosmetic but survival.** We will zoom out from posters to interviews, talks and industry. Then we will look at the structural principles behind great speaking, the psychology of persuasion, and the practical design rules that reduce cognitive overload. 
+
+
+### Communication is everywhere
+
+**Communication is leverage, and you feel its absence immediately.** Have you ever fumbled an interview and walked out thinking, “that is not what I meant”? Sent an email that landed badly? Tried to explain how you felt to someone close to you and watched them misunderstand you completely? You ask a question and they look at you as if it is obvious, then answer something entirely different... Yup, I see you. We have all been there. Its most likely communication. Posters were simply my most visible example, but this is not a conference problem. It is a human one.
+
+The scientist in me would like to believe good ideas win on merit. In practice they might, but often slowly and painfully. Clear, well framed ideas travel faster. Ideas that are easy to grasp, repeat and explain to someone else are the ones that move. This is less about theatrics or charisma and more about reducing friction between your thinking and someone else’s understanding. Machine learning conferences just make this brutally obvious. Hundreds of posters. Ten minute talks. Reviewers skimming at speed. If they do not understand what you are doing and why it matters within seconds, they move on. And they will not come back.
+
+
+### How to speak
+
+**Great speaking is designed, not improvised.** I only realised this after watching Patrick Winston’s talk *How to Speak*. It is possibly one of the greatest showcases of talk design I have ever seen. He is not a charismatic showman or a stand-up comedian, though he knows exactly when to use those elements. He treats a talk like an engineered system. Start with a promise. Tell people what they will gain. Answer the elephant in every room… *Why should I care?* Failure to situate the problem is failure before you begin. Make them care about the problem before you show them the solution. Then cycle your main idea so it cannot be missed. Build a fence around it so it is not confused with nearby ideas. Design the ending so your contribution is the last thing left in the room. The best performance is great architecture.
+
+
+<div class="phd-card-group">
+  <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Speaking and Presentation">
+      </div>
+      <h4 class="phd-card-title"> How to Speak</h4>
+      <p class="phd-card-desc">Professor Patrick Winston (MIT)</p>
+    </div>
+  </a>
+</div>
+
+**The job of a talk is to reduce cognitive friction.** Fewer words. Larger fonts. Think of white space as garlic 🧄 more is usually better. Slides expose ideas, they do not teach them. Boards are for teaching. One genuinely hard idea per talk. That’s it. More and people drown. Use verbal punctuation. Tell them there are three things. Say the three things. Then remind them what the three things were. When talks are long, show the outline. Let people know where they are. People fog out and come back in waves, so design for that reality. Machine learning talks are perfect examples. Many start broad and gentle, then whoops, you fall off a mathematical cliff and half the room is lost. Structure keeps your idea intact long enough for someone to actually understand it. But structure alone is not enough.
+
+**If your idea does not have a handle, it will not travel.** In a sea of papers, posters and talks, abstraction blurs. People remember what they can name. Patrick Winston captured this in the “5 S’s” of a strong intellectual brand:
+
+- **Symbol** – a visual anchor  
+- **Slogan** – a repeatable handle  
+- **Salient idea** – clearly distinct from near misses  
+- **Surprise** – something memorable  
+- **Story** – how it works and why it matters  
+
+Think “one-shot learning” or “attention is all you need”. They stick because they are graspable. If your work cannot be summarised cleanly in a sentence, it will struggle to survive outside your lab notebook. Salience is compression. A symbol to anchor the idea. A slogan to repeat it. A clear difference. A memorable example. A story that carries it forward. Five clear words often travel further than fifty clever ones.
+
+When I worked on [CoRet: Improved Retriever for Code Editing](https://aclanthology.org/2025.acl-short.62/), I experimented with this. I originally used a golden retriever as the symbol. Gold suggests first place. A retriever dog is loyal and fetches things. The slogan: “A dev's best friend.” The story writes itself. Cody fetches the right code for you. Branches, files, functions... brought back faithfully. It did not survive internal branding discussions, but the exercise mattered. It forced my clarity, colour palete and design. Funnily enough, they all remember Cody. Few remember CoRet.
+
+ <figure style="max-width: 280px; margin: 20px auto; text-align: center;">
+    <img src="images/idiap/Cody.png" alt="Cody the golden retriever" style="width: 100%;
+   border-radius: 8px; display: block;">
+    <figcaption style="font-size: 13px; color: var(--muted-color); margin-top:
+  6px;">Cody the golden code retriever. “A dev’s best friend”. People still remembered the dog. </figcaption>
+  </figure>
+
+When people can repeat your idea accurately, it begins to live independently of you. That is when it travels.
+
+
+<div class="phd-card-group">
+  <a href="https://www.youtube.com/watch?v=hopcdZLD2ek" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/hopcdZLD2ek/hqdefault.jpg" alt="Coret presentation">
+      </div>
+      <h4 class="phd-card-title"> CoRet: Improved Retriever for Code Editing</h4>
+      <p class="phd-card-desc">Fabio Fehr </p>
+    </div>
+  </a>
+</div>
+
+
+### How to Win Friends and Influence People
+
+**People care about their world more than they care about your problem.** I said it. It’s there. Soak that in. You might have spent three years on a question that keeps you awake at night. The person in front of you is thinking about their deadlines, their work, their dinner tonight, and that silly cat video they watched. If you do not translate your idea into their world, it will not land. Frame your work in terms of what they care about. Cite generously. Acknowledge the shoulders you stand on. Remember names. Smile when you meet someone. These are not soft skills. They reduce resistance. Once someone feels seen and respected, they are far more willing to listen.
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <a href="https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People" target="_blank" rel="noopener noreferrer">
+    <img src="images/idiap/dale_carnegie_book.jpg" alt="How to Win Friends and Influence People — Dale Carnegie" style="width: 160px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  </a>
+</div>
+
+**Influence is not manipulation. It is empathy applied to ideas.** Carnegie’s core message is simple: arouse an eager want. Show what becomes possible. And care about it. People are attracted to conviction. If you are not genuinely interested in your own work, it is very hard to convince anyone else to be. Passion does not mean theatrics. It means you believe the problem matters. In a job talk, that means vision before detail. In a conference talk, it means situating your contribution clearly. Do not attack related work to make yourself look stronger. Extend it. Clarify it. Let people save face in discussion. Curiosity beats ego. You get used to criticism. You never get used to being ignored. If you care about your ideas surviving in the real world, read *How to Win Friends and Influence People* and think about how it applies to your research life, and the rest of your life.
+
+### Posters and slide design
+
+**Design is respect for human attention.** A poster is not a paper shrunk to A0. It is an invitation. One central message. Clear visual hierarchy. Large fonts that can be read from a distance. Space to breathe. (The garlic 🧄 whitespace). Remove decorative clutter. If something is there, it should earn its place. Print it out. Step back. Squint. What survives? That is your message.
+
+**Your job is to lower cognitive load.** One genuinely hard idea. That’s enough. Everything else either supports it or gets removed. In practice, this means graphics over paragraphs. Short phrases over dense blocks of text. A QR code for depth so people can snap and read later. Boards teach. Slides expose ideas. But, posters are magnets. They pull people into conversation or toward your paper. People have limited bandwidth, especially in a conference hall at 4pm. Design for that reality. The “Better Poster” movement captures this well: clarity first, hierarchy second, detail on demand. Respect human cognitive overhead, and your ideas will travel further.
+
+<div class="phd-card-group">
+  <a href="https://www.youtube.com/watch?v=SYk29tnxASs" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/SYk29tnxASs/hqdefault.jpg" alt="Better Poster">
+      </div>
+      <h4 class="phd-card-title">Better Poster</h4>
+      <p class="phd-card-desc">Mike Morrison</p>
+    </div>
+  </a>
+</div>
+
+
+### Criticism and responsibility
+
+**Criticism is engagement.** If someone takes the time to question your assumptions, challenge your results, or push back on your framing, they are spending cognitive energy on you. That is not hostility. That is attention. Indifference is far worse. You get used to criticism. You never really get used to being ignored. Separate your ego from the idea. The idea can be refined. The idea can be sharpened. Drink that juicy feedback nectar.
+
+**You are responsible for how your ideas enter the world.** Do not hide behind dense slides and then blame the audience. Do not end with a weak “thank you” and hope they remember your contribution. Summarise it. Stand behind it. Make it clear enough that someone else could explain it after you leave the room. Share it properly. Build on others generously. Communication is not decoration added at the end of research. It is part of the research. If your ideas matter, design how they travel.
+
+## What was it like doing a PhD in Martigny at Idiap?
 
 <span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
 
 
+This section goes deep and personal.
+
 - Language learning, skiing, friends and community, coffee breaks, ICC, Scifilmit, marathon running, swimming, playing squash, Hiking, learning to drive and driving a car in Switzerland The license is international and never expires!, local culture. Friends. Silly jokes, Productivse procrastination-  MEDS gardening in the office. cooking. sports. organsising social events braai bowling lazer tag. this is me but not necessary what works for everyone.
 
-
-Make thumbnails bigger and the images
-
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+<div class="phd-card-group">
   <!-- Most Uncertainly -->
   <a href="https://www.youtube.com/watch?v=Gm_JDGQxTdQ&t=684" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
@@ -499,272 +646,6 @@ AI assistants - This only came in at the tail end of my PhD but it is now a defa
 
 
 Reviews. Can feel random, unfair, dont take it personally
-
-## Speaking and Presentation
-
-<span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
-
-
-**Promise** By the end of this section, you will consider talks, posters, slides and communication differently. Look at these two posters side by side. Which one do you like more? Which one would you ignore? Why?
-
-[POSTERS GO HERE]
-
-**The two posters** The first was from the beginning of my PhD. Dense blocks of text. Small fonts. Every corner filled. I was trying to summarise the entire paper into the poster. Maybe I was trying to prove I was intelligent or maybe I wanted every detail there in case someone asked a difficult question. The second came years later. One central message. Large type. Space to breathe. A clear visual hierarchy. What actually matters at a conference is simpler. Do they look, skim, and think “*that’s interesting, let’s talk*”? Or do they snap a picture and say “*thanks, I’ll read the paper*”? Thats what really matters for that audience. A QR code to make the next step effortless. I was no smarter when I designed the second one. The research had not suddenly become revolutionary. What changed was some simple design. The quality of my ideas did not change dramatically, but the way I communicated them did.
-
-**In the next sections, I will show why communication is not cosmetic but survival.** We will zoom out from posters to interviews, talks and industry. Then we will look at the structural principles behind great speaking, the psychology of persuasion, and the practical design rules that reduce cognitive overload. 
-
-
-### Communication is everywhere
-
-**Communication is leverage, and you feel its absence immediately.** Have you ever fumbled an interview and walked out thinking, “that is not what I meant”? Sent an email that landed badly? Tried to explain how you felt to someone close to you and watched them misunderstand you completely? You ask a question and they look at you as if it is obvious, then answer something entirely different... Yup, I see you. We have all been there. Its most likely communication. Posters were simply my most visible example, but this is not a conference problem. It is a human one.
-
-The scientist in me would like to believe good ideas win on merit. In practice they might, but often slowly and painfully. Clear, well framed ideas travel faster. Ideas that are easy to grasp, repeat and explain to someone else are the ones that move. This is less about theatrics or charisma and more about reducing friction between your thinking and someone else’s understanding. Machine learning conferences just make this brutally obvious. Hundreds of posters. Ten minute talks. Reviewers skimming at speed. If they do not understand what you are doing and why it matters within seconds, they move on. And they will not come back.
-
-
-### How to speak
-
-**Great speaking is designed, not improvised.** I only realised this after watching Patrick Winston’s talk *How to Speak*. It is possibly one of the greatest showcases of talk design I have ever seen. He is not a charismatic showman or a stand-up comedian, though he knows exactly when to use those elements. He treats a talk like an engineered system. Start with a promise. Tell people what they will gain. Answer the elephant in every room... *Why should I care?* If you fail at this, you have lost them before you begin. Make them care about the problem before you show them the solution. Then cycle your main idea so it cannot be missed. Build a fence around it so it is not confused with other ideas nearby. Design the ending so your contribution is the last thing left in the room. The best performance is great architecture.
-
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
-  <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-    <div class="phd-card">
-      <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Speaking and Presentation">
-      </div>
-      <h4 class="phd-card-title"> How to Speak</h4>
-      <p class="phd-card-desc">Professor Patrick Winston (MIT)</p>
-    </div>
-  </a>
-</div>
-
-**The job of a talk is to reduce cognitive friction.** Fewer words. Larger fonts. Think of white space as garlic… more is usually better. Slides expose ideas, they do not teach them. Boards are for teaching, slides are for clarity and speed. One genuinely hard idea per talk. That’s it. More and people drown. Use verbal punctuation. For example: tell them there are three things. Say those three things. Then remind them what the three things were. People fog out and come back in waves, so design for that reality. Machine learning talks are lovely examples. How many start broad and gentle, then whoops, you fall off a mathematical cliff and half the room is lost. Structure keeps your idea intact long enough for someone to actually understand it. 
-
-TODO Fix the thumbnail. What are posters for? above?
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
-  <a href="https://www.youtube.com/watch?v=hopcdZLD2ek" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-    <div class="phd-card">
-      <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Coret presentation">
-      </div>
-      <h4 class="phd-card-title"> CoRet: Improved Retriever for Code Editing</h4>
-      <p class="phd-card-desc">Fabio Fehr </p>
-    </div>
-  </a>
-</div>
-
-
-
-### How to Win Friends and Influence People
-
-**People care about themselves more than they care about your problem.** I said it. It’s there. Soak that in. You might have spent three years on a question that keeps you awake at night. The person in front of you is thinking about their deadlines, their work, their dinner tonight, and that silly cat video they watched. If you do not translate your idea into their world, it will not land. Frame your work in terms of what they care about. Cite generously. Acknowledge the shoulders you stand on. Remember names. Smile when you meet someone. These silly soft skills lower resistance. Once someone feels seen and respected, they are more willing to listen to you.
-
-[INCLUDE HOW TO WIN FRIENDS BOOK LINK]
-
-**Influence is not manipulation. It is empathy applied to ideas.** Carnegie’s core message is simple: arouse an eager want. Show what becomes possible. And care about it. People are attracted to conviction. If you are not interested in your own work, it is very hard to convince anyone else to be. Passion does not mean theatrics. It means you genuinely think this problem matters. In a job talk, that means vision before detail. In a conference talk, it means explaining why this changes something that matters. Do not attack related work to make yourself look stronger. Extend it. Clarify it. Let people save face in discussion. Curiosity beats ego every time. Recognition matters. Being ignored is far worse than being challenged. If you care about your ideas surviving in the real world, read *How to Win Friends and Influence People* and think about how it applies to your research life (also rest of you life).
-
-### Posters and slide design
-
-**Design is respect for human attention.** A poster is not a paper shrunk to A0. It is an invitation to explore your work further. One central message with a clear visual hierarchy. Some tricks for this are to use large fots that can be read from a distance. Space to breathe (The garlic). Remove the logos, the decorative clutter, the background noise. Well.. use it sparingly with intention. If it cannot be understood in ten seconds, it will not be understood in ten minutes. Print it out. Step back. Squint. What survives? That is your message.
-
-
-**Your job is to lower cognitive load.** One hard idea. That’s enough. Everything else supports it or gets removed. Some tricks: use Graphics over paragraphs. Short phrases over blocks of text. A QR code for depth so people can snap and read it later. Boards teach, Slides expose ideas, posters are magnets to bring people to you to chat or to read your work later. People have limited bandwidth, especially in a conference hall at 4pm. Design for that reality. The “Better Poster” movement captures this well: clarity first, hierarchy second, detail on demand. Respect human cognitive overhead, and your ideas will travel further!
-
-TODO: [BETTER POSTER LINK] make it a thumbnail and link to the video.
-https://www.youtube.com/watch?v=SYk29tnxASs
-
-### Posters and slide design
-
-**Design is respect for human attention.** A poster is not a paper shrunk to A0. It is an invitation to explore your work further. One central message with a clear visual hierarchy. Large fonts that can be read from a distance. Space to breathe. White space is like garlic... more is usually better. Remove logos and decorative clutter. If you use them, use them with intention. If your poster cannot be understood in ten seconds, it will not be understood in ten minutes. Print it out. Step back. Squint. What survives? That is your message.
-
-**Your job is to lower cognitive load.** One genuinely hard idea. That’s enough. Everything else either supports it or gets removed. In practice, this means graphics over paragraphs. Short phrases over dense blocks of text. A QR code for depth so people can snap and read later. Boards teach. Slides expose ideas. Posters are magnets. They pull people into conversation or toward your paper. People have limited bandwidth, especially in a conference hall at 4pm. Design for that reality. The “Better Poster” movement captures this well: clarity first, hierarchy second, detail on demand. Respect human cognitive overhead, and your ideas will travel further.
-
-TODO: Add Better Poster thumbnail linking to  
-https://www.youtube.com/watch?v=SYk29tnxASs
-
-
-TALKS
-
-Something I am really passionate about. 
-
-what you did in your paper. This is incorrect.  1) get the audience really excited about the **problem** you worked on otherwise they will not care about your solution otherwise! 2 Teach them something 3 entertain. If its not fun they will glaze over and not listen.
-
-- Pictures. lloads
-- Do: make the talk actionable - talk about something someone can *do* after your talk. Demos!
-- Story
-- Cite and acknowledge your authors. You are humble of your contributions
-- Practice the talk. You wont run out of time then
-- Less text.
-- Problem: Too general then too technical. SO people get bored then confused.
-- I like outline slides when the talk is long. WHen its short we can move
-- Last slide is the most important It will be up for longest. No thank you. A summary of the talk. Imprint your message into their head.
-- What do great speakers do? Break it down. How do they stand, where do they stand, what time of day? What lighting, what slides, how do they pause, when do they joke, when are they serious. SO IMPORTANT.
-
-Speak, write and the quality of your ideas
-
-Quality = knowledge K, practice P and talent T (least important) - Whats important is what you know.
-
-- Better at skiing because of K, P over T
-- This is a skill. Look at people you admire who speak. What is their style and what do they do. Then you can build.
-- Notice there was an outline that was always visable.
-
-How to start
-
- Promise
-
-Start with an empowerment **promise**  Something here will help you in communication and it will make a difference. What will you know at the end. Reason for being here.  
-
-4 samples
-
-1. Cycle on the idea
-
-Tell them 3 times. Increase probability.
-
-2. Build a fence
-
-This is my idea. Not to be confused with close alternatives. 
-
-3. Verbal punctuation
-
-People fog out and come back. Tell them this is about time they will come back. Like an outline. I will tell you 3 things and then reiterate them.
-
-4. Ask a question
-
-7 seconds pause. Careful. If its too obvious no one will answer as its embarassing. If its too hard no one will have anything to say….
-
-The tools
-
-Time and place
-
-- Time: 11 am. People are awake and not gone back to sleep. Not after lunch as people are digesting.
-- Place:
-    - Well lit, full up. sleepy in low light.
-    - Understand the place, go first.
-    - More than half full. Adjust the size.
-    
-
-Boards
-
-is for informing, slides are for exposing. Graphics! Speed is good for understanding. Target - point at stuff something to do 
-
-Props
-
-Playwrites -There is stove in the corner that at the end you know the book is going in the stove.
-
-Ductape on a wheel. Blow on the wheel and which direction do you think the wheel will turn? Engineers have fancy math. He uses a prop and shows it nicely.
-
-Job talks
-
-Empathetic mirroring - you can feel yourself writing, metal ball on a pendulim and props are effective.
-
-Slides
-
-Exposing ideas and not teaching them. Too many slides and too many words. Its always true. A slide full of text.
-
-Dont read your slides. People can read them already and it drives them mad. Few words that are easy to read.
-
-You are far away from the slides
-
-No background junk
-
-Few words 
-
-No logos
-
-No title! - I will tell you the title.
-
-Eliminate clutter. No need for bullets.
-
-Big sizes
-
-Break the pointer. no eye contact. (Think the cat with pingpong good prop) in you slides you can point directly with an arrow.
-
-Print it out and put on the table. Whitespace, graphics, imagery too heavy. Needs some air. Like garlic.  
-
-hapax legomenon  - only one instance or use. This is used in Zipfs law haha. But think its important to only have one complex thing in a paper or talk. Only one.
-
-Hands in the pocket crime.
-
-Make it easy to access. Light.
-
-Informing
-
-Promise. start (Cycling back)
-
-**Inspiration**. How to inspire people. Highschool (you can do it), University (new way of seeing), common thread is passion!
-
-What I work on is AI. If you arent passionate or interested then you arent interested in interesting things. Talk about what you think is cool!
-
-- He gives an example. Algorithm that takes lifetime of the solar system to seconds. With a visual example. Isnt that cool?
-
-**How to think** is what I teach people. Then they ask: “How do you do that…” you give a blank stare… They then think!
-
-- We are story telling animals. This is how people learn to think. Provide them with:
-    - The stories they need to know
-    - What should we ask about those stories?
-    - Mechanisms to analyse those stories
-    - Ways to put together those stories
-    - Evaluating how reliable a story is.
-
-**Persuading** Oral exams. 
-
-Failure to situate (Your search and context) - Motivate and why should we care
-
-Practice - You need fresh eyes. If you cant make me cry I wont value you.
-
-Job talks - (5 mins)
-
-Vision - Problem someone cares + new in your approach
-
-Done something - What are the steps. Some of them not all.
-
-Then contributions - Mirrors we have done soemthing
-
-Get famous - Need to be recognised for what you do. 
-
-Why? - You get used to being famous, you never get used to being ignored. Your ideas are like children. If you make sure you communicate them correctly they will be recognised for their value.
-
-How ? - 
-
-Symbol - Symbol with the work. “The arch” 
-
-Slogan - Handle on the work “One shot learning”
-
-Salient - salient idea novelty it sticks out. Near miss idea.
-
-Surprise - One example and you could learn something from
-
-Story - How you did it, how it works and why it important.
-
-**How to stop? -** The final slide
-
-Collaborators - Thank you etc First slides not last slides
-
-Questions - Squanders real estaete
-
-For details - link… 
-
-The end.
-
-Thank you (WEAK - polite to be there. Thats bullshit)
-
-- WASTES an opportunties
-- IT SHOULD BE YOUR CONTRIBUTIONS - Wait for people to read it. Then what do we get out of all of it.
-- Tell a joke at the end? - If you finish with a joke people think they have fun the whole time.
-- ITE MISSA EST
-- Salute - Its been great fun being here. and Presenting to you. Stimulated by the questions you have been asked its been great.
-    - Im glad you are here. Im glad you have engaged with me and I salute you for that. DONT SAY THANK YOU.
-
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
-  <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-    <div class="phd-card">
-      <div class="phd-card-img-container">
-        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Speaking and Presentation">
-      </div>
-      <h4 class="phd-card-title"> How to Speak</h4>
-      <p class="phd-card-desc">Professor Patrick Winston (MIT)</p>
-    </div>
-  </a>
-</div>
 
 
 ## Reviewing 
@@ -854,7 +735,7 @@ PhD of the year award
 
 
 
-<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+<div class="phd-card-group">
   <a href="https://www.youtube.com/watch?v=wEDG70-SO0A" target="_blank" style="text-decoration: none; flex-shrink: 0;">
     <div class="phd-card">
       <div class="phd-card-img-container">

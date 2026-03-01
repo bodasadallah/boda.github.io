@@ -130,6 +130,16 @@ def create_blog_id(title, publication_date):
     return f"{cleaned_title}-{year}"
 
 
+def calculate_reading_time(content, wpm=200):
+    """Estimate reading time from raw markdown content."""
+    text = re.sub(r"```[\s\S]*?```", "", content)   # fenced code blocks
+    text = re.sub(r"`[^`]+`", "", text)              # inline code
+    text = re.sub(r"<[^>]+>", "", text)              # HTML tags
+    words = len(text.split())
+    minutes = max(1, round(words / wpm))
+    return f"{minutes} min read"
+
+
 def clean_text_for_excerpt(raw_content, max_length=DEFAULT_EXCERPT_LENGTH):
     """
     Extract a clean, readable excerpt from markdown content.
@@ -229,6 +239,7 @@ def generate_blog_html(blog_metadata, blog_content, output_directory=DEFAULT_BLO
                 "title": blog_metadata["title"],
                 "short_title": blog_metadata.get("short_title", ""),
                 "date": blog_metadata["date"],
+                "reading_time": blog_metadata.get("reading_time", ""),
                 "content": blog_content,
             },
             ensure_ascii=False,
@@ -327,6 +338,7 @@ def convert_markdown_to_json(markdown_file_path, output_directory=None):
         "date": post_date,
         "excerpt": post_excerpt,
         "thumbnail": post_thumbnail,
+        "reading_time": calculate_reading_time(markdown_content),
     }
 
     # Generate standalone HTML file with OG tags and embedded content (save to blogs/ directory)

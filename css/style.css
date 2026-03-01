@@ -947,3 +947,24 @@ footer {
     transform: none;
   }
 }
+
+/* ====== PHD CARD GROUP ====== */
+.phd-card-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .phd-card-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .phd-card {
+    width: 100%;
+    height: auto;
+  }
+}

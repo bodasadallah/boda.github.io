@@ -621,7 +621,8 @@ async function loadBlogs() {
         
         const blogCards = blogs.map(blog => {
             const formattedDate = formatDate(blog.date);
-            
+            const dateLine = formattedDate + (blog.reading_time ? ' · ' + blog.reading_time : '');
+
             return `
             <a href="blogs/${blog.id}.html" style="text-decoration:none;">
             <div class="blog-post">
@@ -630,7 +631,7 @@ async function loadBlogs() {
                 </div>
                 <div class="blog-description">
                     <h2>${blog.title}</h2>
-                    <p class="blog-date">${formattedDate}</p>
+                    <p class="blog-date">${dateLine}</p>
                     <p>${blog.excerpt}</p>
                 </div>
             </div>
@@ -829,7 +830,8 @@ async function loadBlogPost() {
                     : blog.title;
         }
         if (dateElement) {
-            dateElement.textContent = formatDate(blog.date);
+            const readingTime = blog.reading_time || (window.BLOG_POST_DATA && window.BLOG_POST_DATA.reading_time);
+            dateElement.textContent = formatDate(blog.date) + (readingTime ? ' · ' + readingTime : '');
         }
         
         // Load and parse content
@@ -999,6 +1001,7 @@ function generateTableOfContents() {
                 document.body.scrollTop / (document.body.scrollHeight - document.body.clientHeight) * 100
             );
             progressPill.textContent = pct + '%';
+            progressPill.style.setProperty('--fill', pct + '%');
             progressPill.classList.toggle('visible', pct > 0);
         });
 

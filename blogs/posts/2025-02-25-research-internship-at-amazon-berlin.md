@@ -1,6 +1,7 @@
 ---
 title: 'Interning at Amazon Berlin 2024: the Grind, Growth, and Gratitude'
 date: 2025-02-25
+short_title: 'Amazon Berlin Internship'
 excerpt: "My time living in Berlin and working with Amazon was tough but really fulfilling and rewarding. I have a huge appreciation for the team for the opportunity!"
 thumbnail: "blogs/images/berlin/wall.jpeg"
 permalink: /fablogio/research-internship-at-amazon-berlin/
@@ -12,6 +13,8 @@ permalink: /fablogio/research-internship-at-amazon-berlin/
 </figure>
 
 **TL;DR** My time living in Berlin and working with Amazon was tough but really fulfilling and rewarding. I have a huge appreciation for the team for the opportunity!
+
+{{TOC}}
 
 I will write this in 3 parts: the **grind**, my **growth**, and finally, my **gratitude** for the team.
 

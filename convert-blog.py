@@ -227,6 +227,7 @@ def generate_blog_html(blog_metadata, blog_content, output_directory=DEFAULT_BLO
         blog_data_json = json.dumps(
             {
                 "title": blog_metadata["title"],
+                "short_title": blog_metadata.get("short_title", ""),
                 "date": blog_metadata["date"],
                 "content": blog_content,
             },
@@ -315,12 +316,14 @@ def convert_markdown_to_json(markdown_file_path, output_directory=None):
     post_date = frontmatter_data.get("date", datetime.now().strftime("%Y-%m-%d"))
     post_excerpt = frontmatter_data.get("excerpt", "")
     post_thumbnail = frontmatter_data.get("thumbnail", "")
+    post_short_title = frontmatter_data.get("short_title", "")
     unique_blog_id = create_blog_id(post_title, post_date)
 
     # Return metadata for blogs index
     blog_metadata = {
         "id": unique_blog_id,
         "title": post_title,
+        "short_title": post_short_title,
         "date": post_date,
         "excerpt": post_excerpt,
         "thumbnail": post_thumbnail,

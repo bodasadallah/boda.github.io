@@ -1,11 +1,13 @@
 - id: a-phd-survival-guide-2025-epfl-idiap-and-martigny-2025
   title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
+  short_title: A PhD Survival Guide
   date: '2025-09-05'
   excerpt: A personal survival guide for a PhD in Machine Learning at EPFL, Idiap,
     and Martigny
   thumbnail: blogs/images/idiap/Fabio-Jamie.jpeg
 - id: interning-at-amazon-berlin-2024-the-grind-growth-and-gratitude-2025
   title: 'Interning at Amazon Berlin 2024: the Grind, Growth, and Gratitude'
+  short_title: ''
   date: '2025-02-25'
   excerpt: My time living in Berlin and working with Amazon was tough but really fulfilling
     and rewarding. I have a huge appreciation for the team for the opportunity!

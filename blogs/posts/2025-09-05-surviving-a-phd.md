@@ -3,6 +3,7 @@ title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
 date: 2025-09-05
 excerpt: "A personal survival guide for a PhD in Machine Learning at EPFL, Idiap, and Martigny"
 thumbnail: "blogs/images/idiap/Fabio-Jamie.jpeg"
+short_title: 'A PhD Survival Guide'
 permalink: /fablogio/surviving-a-phd/
 ---
 
@@ -16,6 +17,8 @@ This is no manifesto. It’s more of a reflection. You do not need to read it al
 This blog is for the prospective or current PhD students who want a practical perspective from someone in the trenches. Maybe it’s also for a younger version of myself who would have valued honest advice before starting. At its core, this is a personal account of what worked, what did not, and what I would consider more carefully if I had to choose again. If you are somewhere along that path, parts of this may resonate.
 
 Sorry it’s long, it started small but as I got going I realised there was loads to say. Oops haha.
+
+{{TOC}}
 
 ### Credits and other resources 
 
@@ -140,6 +143,8 @@ Writing this I watched, read and synthesized the following blogs, videos and dis
 
 Here are some thoughts that I believe are essential to consider. **Why**, with **Whom**, **Where**, and in **What** should I do a PhD (in that order). I know, I know, it's  strange to put the topic last but let me explain.
 
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/goldencircle_phd.jpeg" alt="Concentric circles" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">The Golden Circle of PhD Decision Making: Start with *Why?* and work your way out. Side quest: 4 concentric circle with text is massively hard to generate with current models - paper was easier haha </figcaption> </figure> </div>
+
 ### 1. Why should you do a PhD?
 
 **A PhD is not a shortcut to success.** Aiming directly for success usually backfires. As Viktor Frankl wrote, success and happiness are side effects. They emerge when you dedicate yourself to something meaningful. This idea echoes [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Ideally, you shouldn’t chase outcomes. You start with **why**. When the problem matters to you, progress and success follow. Research works the same way: focus on the idea, and the papers and PhD tend to come.
@@ -188,7 +193,7 @@ If you’re choosing where to do a PhD, don’t underestimate the environment. Y
 
 **Where is no one looking?** Research is rarely evenly distributed. The questions that get attention are the ones that “made it back”, a bit like planes returning from battle. Some areas are neglected for reasons that may be arbitrary, technical, or simply unfashionable. These gaps are often fertile. Start small, test ideas quickly to fail fast to see potential. Look at patterns in *test-of-time awards* at conferences: what stuck around, and why? Often the ideas that endure were not flashy, but solved something fundamental and scalable. This is why, as *Why Greatness Cannot Be Planned* argues, you cannot reliably predict which research will have lasting impact. Focus on curiosity, experimentation, and neglected niches.
 
-<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Over time, the ability to scale computation often beats clever model-building or inductive bias. The computational steamroller is coming, don't fight against it.</figcaption> </figure> </div>
+<div style="display: flex; justify-content: center; margin: 4px 0;"> <figure style="margin: 0; text-align: center; max-width: 480px;"> <img src="images/idiap/bitter_lesson_meme.png" alt="Rich Sutton's Bitter Lesson meme about computation winning in the long run" style="width: 100%; border-radius: 8px; display: block;"> <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Scale computation beats model-building and inductive bias. The computational steamroller is coming, don't fight against it.</figcaption> </figure> </div>
 
 **Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational. Think strategically: the neglected areas you are curious about may be fertile, but you need a base that allows you to explore them without fighting physics or infrastructure. Simple, usable tools and early experiments often become the engine of bigger discoveries.
 
@@ -223,7 +228,7 @@ This changes fast in ML so the topic is likely to morph as you go but the bigger
 
 
 
-## Collaborations
+## Collaborations during PhD
 
 A PhD is designed to be individual. You own the problem, you defend the thesis, your name sits first. Collaboration can feel optional, sometimes even like a distraction from the “real” work.  I think that’s a darn shame. Done well, collaboration is one of the strongest accelerators in a PhD. You borrow strengths you do not have. You contribute strengths others lack. When ownership is clear and incentives align, progress compounds. But this does not happen automatically. 
 
@@ -365,7 +370,8 @@ A PhD is designed to be individual, but the most meaningful parts of mine were c
 
 **One Contribution** A strong paper revolves around one clear contribution. *What is that single idea that was not obvious before?* Your job is to argue that it is important, novel and supported by rigorous experiments. The introduction does most of the heavy lifting. First, explain why the problem matters. Second, explain how previous work approached it and what is still missing. Build the *moat* around why it is hard. Third, state clearly what you do. Fourth, show what properties this gives you and what your experiments demonstrate. Avoid the laundry list of “we do X, then Y, then Z”. Your paper should be a story. Every design choice should be motivated. *Why this method?* *What are the alternatives?* *What has been tried before?*You are not just describing what you did. You are teaching your reader why it makes sense.
 
-**Publishing Strategy** Build a safety net 🪳 then shoot for the stars 🚀. During PhD shooting for a spectacular 8 out of 10 research paper is nice in theory but could be risky at first. I recommend the '*Cockroach Paper*' strategy to start. This allows you to get enough papers to secure your graduation and then provides a low pressure safety net for big moonshot ideas. The *Roach* paper is hard to kill which will get consistent 5s and 6s. It is solid work with careful ablations and no overclaiming. Reviewers in general are incentivised to find reasons to reject, so don't make it easy. Make sure your claims are precise and backed by evidence. A nice trick is to read papers in your niche and read their reviews if you can. Notice what reviewers praise and what they criticise. Different venues have different styles, so learn to *chameleon* your paper accordingly. Put extra analysis and anticipated objections in the appendix. Set internal deadlines and let your group review your draft as if it were a conference submission. Then you submit.. and you will likely be rejected. This is normal. But listen to reasonable feedback, make the obvious fixes, ignore the other noise and **resubmit**. Its not worth waiting for perfection as its a competitive game and there is luck involved. Your job is to remove any avoidable weaknesses and keep moving. Now that you have a few papers supporting you 🪳, its time to take-some-time and think about the starship big ideas. What ideas will stand the test of time? If they work you're famous! If not, who knows, you might miss and get to the moon? 🚀
+### Publishing Strategy 
+Build a safety net 🪳 then shoot for the stars 🚀. During PhD shooting for a spectacular 8 out of 10 research paper is nice in theory but could be risky at first. I recommend the '*Cockroach Paper*' strategy to start. This allows you to get enough papers to secure your graduation and then provides a low pressure safety net for big moonshot ideas. The *Roach* paper is hard to kill which will get consistent 5s and 6s. It is solid work with careful ablations and no overclaiming. Reviewers in general are incentivised to find reasons to reject, so don't make it easy. Make sure your claims are precise and backed by evidence. A nice trick is to read papers in your niche and read their reviews if you can. Notice what reviewers praise and what they criticise. Different venues have different styles, so learn to *chameleon* your paper accordingly. Put extra analysis and anticipated objections in the appendix. Set internal deadlines and let your group review your draft as if it were a conference submission. Then you submit.. and you will likely be rejected. This is normal. But listen to reasonable feedback, make the obvious fixes, ignore the other noise and **resubmit**. Its not worth waiting for perfection as its a competitive game and there is luck involved. Your job is to remove any avoidable weaknesses and keep moving. Now that you have a few papers supporting you 🪳, its time to take-some-time and think about the starship big ideas. What ideas will stand the test of time? If they work you're famous! If not, who knows, you might miss and get to the moon? 🚀
 
 <div style="display: flex; justify-content: center; margin: 4px 0;">
   <figure style="margin: 0; text-align: center; max-width: 420px;">
@@ -471,7 +477,7 @@ Make thumbnails bigger and the images
 
 <span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
 
-TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance.
+TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance. Something cool I did while writing this was to use assistants to help me build system prompts to other systems. This then built in planning and editting modes. I also gave it my writings to help with my style and voice and preserve this. I think our voice and thoughts are the unique juice of the communication. If we lose that the writing becomes stale. Less authentic. No groovy fun of personality that they so desperately need. It should be fun to write. 
 
 **Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
 
@@ -497,6 +503,83 @@ Reviews. Can feel random, unfair, dont take it personally
 ## Speaking and Presentation
 
 <span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
+
+
+**Promise** By the end of this section, you will consider talks, posters, slides and communication differently. Look at these two posters side by side. Which one do you like more? Which one would you ignore? Why?
+
+[POSTERS GO HERE]
+
+**The two posters** The first was from the beginning of my PhD. Dense blocks of text. Small fonts. Every corner filled. I was trying to summarise the entire paper into the poster. Maybe I was trying to prove I was intelligent or maybe I wanted every detail there in case someone asked a difficult question. The second came years later. One central message. Large type. Space to breathe. A clear visual hierarchy. What actually matters at a conference is simpler. Do they look, skim, and think “*that’s interesting, let’s talk*”? Or do they snap a picture and say “*thanks, I’ll read the paper*”? Thats what really matters for that audience. A QR code to make the next step effortless. I was no smarter when I designed the second one. The research had not suddenly become revolutionary. What changed was some simple design. The quality of my ideas did not change dramatically, but the way I communicated them did.
+
+**In the next sections, I will show why communication is not cosmetic but survival.** We will zoom out from posters to interviews, talks and industry. Then we will look at the structural principles behind great speaking, the psychology of persuasion, and the practical design rules that reduce cognitive overload. 
+
+
+### Communication is everywhere
+
+**Communication is leverage, and you feel its absence immediately.** Have you ever fumbled an interview and walked out thinking, “that is not what I meant”? Sent an email that landed badly? Tried to explain how you felt to someone close to you and watched them misunderstand you completely? You ask a question and they look at you as if it is obvious, then answer something entirely different... Yup, I see you. We have all been there. Its most likely communication. Posters were simply my most visible example, but this is not a conference problem. It is a human one.
+
+The scientist in me would like to believe good ideas win on merit. In practice they might, but often slowly and painfully. Clear, well framed ideas travel faster. Ideas that are easy to grasp, repeat and explain to someone else are the ones that move. This is less about theatrics or charisma and more about reducing friction between your thinking and someone else’s understanding. Machine learning conferences just make this brutally obvious. Hundreds of posters. Ten minute talks. Reviewers skimming at speed. If they do not understand what you are doing and why it matters within seconds, they move on. And they will not come back.
+
+
+### How to speak
+
+**Great speaking is designed, not improvised.** I only realised this after watching Patrick Winston’s talk *How to Speak*. It is possibly one of the greatest showcases of talk design I have ever seen. He is not a charismatic showman or a stand-up comedian, though he knows exactly when to use those elements. He treats a talk like an engineered system. Start with a promise. Tell people what they will gain. Answer the elephant in every room... *Why should I care?* If you fail at this, you have lost them before you begin. Make them care about the problem before you show them the solution. Then cycle your main idea so it cannot be missed. Build a fence around it so it is not confused with other ideas nearby. Design the ending so your contribution is the last thing left in the room. The best performance is great architecture.
+
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+  <a href="https://www.youtube.com/watch?v=Unzc731iCUY" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Speaking and Presentation">
+      </div>
+      <h4 class="phd-card-title"> How to Speak</h4>
+      <p class="phd-card-desc">Professor Patrick Winston (MIT)</p>
+    </div>
+  </a>
+</div>
+
+**The job of a talk is to reduce cognitive friction.** Fewer words. Larger fonts. Think of white space as garlic… more is usually better. Slides expose ideas, they do not teach them. Boards are for teaching, slides are for clarity and speed. One genuinely hard idea per talk. That’s it. More and people drown. Use verbal punctuation. For example: tell them there are three things. Say those three things. Then remind them what the three things were. People fog out and come back in waves, so design for that reality. Machine learning talks are lovely examples. How many start broad and gentle, then whoops, you fall off a mathematical cliff and half the room is lost. Structure keeps your idea intact long enough for someone to actually understand it. 
+
+TODO Fix the thumbnail. What are posters for? above?
+<div style="display: flex; gap: 12px; justify-content: center; align-items: center; margin: 20px 0; flex-wrap: wrap;">
+  <a href="https://www.youtube.com/watch?v=hopcdZLD2ek" target="_blank" style="text-decoration: none; flex-shrink: 0;">
+    <div class="phd-card">
+      <div class="phd-card-img-container">
+        <img class="phd-card-img" src="https://img.youtube.com/vi/Unzc731iCUY/hqdefault.jpg" alt="Coret presentation">
+      </div>
+      <h4 class="phd-card-title"> CoRet: Improved Retriever for Code Editing</h4>
+      <p class="phd-card-desc">Fabio Fehr </p>
+    </div>
+  </a>
+</div>
+
+
+
+### How to Win Friends and Influence People
+
+**People care about themselves more than they care about your problem.** I said it. It’s there. Soak that in. You might have spent three years on a question that keeps you awake at night. The person in front of you is thinking about their deadlines, their work, their dinner tonight, and that silly cat video they watched. If you do not translate your idea into their world, it will not land. Frame your work in terms of what they care about. Cite generously. Acknowledge the shoulders you stand on. Remember names. Smile when you meet someone. These silly soft skills lower resistance. Once someone feels seen and respected, they are more willing to listen to you.
+
+[INCLUDE HOW TO WIN FRIENDS BOOK LINK]
+
+**Influence is not manipulation. It is empathy applied to ideas.** Carnegie’s core message is simple: arouse an eager want. Show what becomes possible. And care about it. People are attracted to conviction. If you are not interested in your own work, it is very hard to convince anyone else to be. Passion does not mean theatrics. It means you genuinely think this problem matters. In a job talk, that means vision before detail. In a conference talk, it means explaining why this changes something that matters. Do not attack related work to make yourself look stronger. Extend it. Clarify it. Let people save face in discussion. Curiosity beats ego every time. Recognition matters. Being ignored is far worse than being challenged. If you care about your ideas surviving in the real world, read *How to Win Friends and Influence People* and think about how it applies to your research life (also rest of you life).
+
+### Posters and slide design
+
+**Design is respect for human attention.** A poster is not a paper shrunk to A0. It is an invitation to explore your work further. One central message with a clear visual hierarchy. Some tricks for this are to use large fots that can be read from a distance. Space to breathe (The garlic). Remove the logos, the decorative clutter, the background noise. Well.. use it sparingly with intention. If it cannot be understood in ten seconds, it will not be understood in ten minutes. Print it out. Step back. Squint. What survives? That is your message.
+
+
+**Your job is to lower cognitive load.** One hard idea. That’s enough. Everything else supports it or gets removed. Some tricks: use Graphics over paragraphs. Short phrases over blocks of text. A QR code for depth so people can snap and read it later. Boards teach, Slides expose ideas, posters are magnets to bring people to you to chat or to read your work later. People have limited bandwidth, especially in a conference hall at 4pm. Design for that reality. The “Better Poster” movement captures this well: clarity first, hierarchy second, detail on demand. Respect human cognitive overhead, and your ideas will travel further!
+
+TODO: [BETTER POSTER LINK] make it a thumbnail and link to the video.
+https://www.youtube.com/watch?v=SYk29tnxASs
+
+### Posters and slide design
+
+**Design is respect for human attention.** A poster is not a paper shrunk to A0. It is an invitation to explore your work further. One central message with a clear visual hierarchy. Large fonts that can be read from a distance. Space to breathe. White space is like garlic... more is usually better. Remove logos and decorative clutter. If you use them, use them with intention. If your poster cannot be understood in ten seconds, it will not be understood in ten minutes. Print it out. Step back. Squint. What survives? That is your message.
+
+**Your job is to lower cognitive load.** One genuinely hard idea. That’s enough. Everything else either supports it or gets removed. In practice, this means graphics over paragraphs. Short phrases over dense blocks of text. A QR code for depth so people can snap and read later. Boards teach. Slides expose ideas. Posters are magnets. They pull people into conversation or toward your paper. People have limited bandwidth, especially in a conference hall at 4pm. Design for that reality. The “Better Poster” movement captures this well: clarity first, hierarchy second, detail on demand. Respect human cognitive overhead, and your ideas will travel further.
+
+TODO: Add Better Poster thumbnail linking to  
+https://www.youtube.com/watch?v=SYk29tnxASs
 
 
 TALKS
@@ -734,6 +817,8 @@ Interviewing: I think this is likely to change quite soon, but what it was like 
 
 You are first told to solve some silly coding problem with data structures no where close to your skillset for PhD. Feels like a tangential hard task that you are meant to learn to get past the gatekeepers of big tech. Its like a test of grit and determination. Ie can you learn how to do this other task which is solving puzzles as a part time thing while you are already busy with a PhD so that we see you are committed to get into these jobs. At first I didnt know this. I had interviews with Apple (classic code KNN and Kmeans from scratch. It floored me. I was so flustered that Kmeans I forgot to average to aggregate clusters doh its means haha funny how the brain works in these zones), meta, cohere (nice approach they are an online company so their tests were online. I submitted a work book of a cool analysis I did but never heard back. Thats how ), Microsoft (this went well I though, I solved the problems, showed my expertise and logically handled their problems of unstrucutred mail organising.)  ... others. They were were hard, my worst interview with amazon actually was the one that landed me the internship. In amazon theory they destroyed me on good ol fashioned theory on kernel trick to get nonlinearlity in a linear regression. Aleph alpha was more targeted on NLP which was nice as I knew what was going on but couldnt get why we we would assume a gaussian distribution give loads of data. It was the CLT theorem=, first year statistics slaps me in the face. Something I am a master of... Such a funny experience. I dont think this representative of how you solve problems. I might have access to the best answers on the spot. but I work hard and find a solution and dont give up. Ie with time I can make progress. Isnt that more important? hey ho, thats more important to me.  Tough times never last only tough people last meme.
 
+
+Also everyone wants something thats wanted. Weird phenomenon I saw in job application and dating. When you have options you give off a confidence that oozes attraction. In my world when I applied to jobs after my internship I said I had an offer (even though I didnt reallly I thoyght I could get one if I wanted) But then I spoke in the interviews confidently and honestly and startwed with why. Then people wanted me. I got 2 offers from start ups and also a postdoc offer. No desperation. Green lights from mathew mcconhey. Happened when I started on hinge to date. Thats a story for another time haha. 
 
 Confidence is the most impressive thing. A bit like dating. No one wants someone who is desperate and its unattractive in the job world too. Only when I applied things with a lack of desperation did I get more offers than before. It shows I dont need you but I want you. If others want something then we feel we should to. Having other offers in hand are super powerful for negotiation. Negotiation is always possible and recommended when you have been given the tick of approval. This standard practice and benefits the brave. Hav some gutspa. 
 

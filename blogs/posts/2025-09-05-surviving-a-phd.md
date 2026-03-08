@@ -10,7 +10,7 @@ permalink: /fablogio/surviving-a-phd/
 **TL;DR** A personal survival guide for a PhD in Machine Learning. I'll share what worked for me at [EPFL](https://www.epfl.ch/about/) and [Idiap Research Institute](https://www.idiap.ch/en/) in Martigny Switzerland between the years of 2021-2025.
 
 
-## Who is this for?
+### Who is this for?
 
 This is no manifesto. It’s more of a reflection. You do not need to read it all, maybe just skim what is useful for you and ignore the rest.
 
@@ -625,6 +625,10 @@ This section goes deep and personal.
 <span style="display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px;">🚧 Work in Progress</span>
 
 TODO: Coding assistents are great. You need to be using them as best as you can to be giving yourself the best chance. Something cool I did while writing this was to use assistants to help me build system prompts to other systems. This then built in planning and editting modes. I also gave it my writings to help with my style and voice and preserve this. I think our voice and thoughts are the unique juice of the communication. If we lose that the writing becomes stale. Less authentic. No groovy fun of personality that they so desperately need. It should be fun to write. 
+
+Interesting the same things apply to coding assistants. pick the most common one. Become a master and know your tool well. I then used writing this blog as a way to experiment and try different things.
+https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/lesson/vvq28/creating-web-app-based-on-a-figma-mockup
+
 
 **Coding Tips** Code is part of your research contribution. If you want your work to be reproducible, release it and do not reinvent the wheel. Use widely adopted libraries such as [PyTorch](https://github.com/pytorch/pytorch), [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [HuggingFace](https://huggingface.co/) so others can run, compare and extend your ideas easily. I treated each project as an iteration. With every release I tried to improve structure, documentation and reproducibility. At the same time, treat engineering as a skill. Understand your compute, clusters and tooling. Take debugging seriously. Print and plot activations and gradients. Do some unit tests, I used [pytest](https://docs.pytest.org/en/stable/). Do simple sanity checks like "*Can my model overfit?*". Use experiment trackers such as [WandB](https://github.com/wandb/wandb) and visualise training whenever possible. Build small demos with tools like [Gradio](https://github.com/gradio-app/gradio) to make ideas tangible. Good software engineering is how nice research ideas move to real useability.
 

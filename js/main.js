@@ -822,6 +822,7 @@ async function loadBlogPost() {
         
         if (titleElement) titleElement.textContent = blog.title;
         if (pageTitleElement) pageTitleElement.textContent = `🤘 Fablogio`;
+        wireShareButtons(blog.title);
         const headerTitleElement = document.getElementById('blog-header-title');
         if (headerTitleElement) {
             headerTitleElement.textContent =
@@ -900,11 +901,6 @@ function generateTableOfContents() {
     if (!blogBody) return;
 
     const headings = blogBody.querySelectorAll('h2, h3');
-    if (headings.length === 0) {
-        const tocBtn = document.getElementById('blog-toc-btn');
-        if (tocBtn) tocBtn.style.display = 'none';
-        return;
-    }
 
     // Assign IDs and group by h2
     const groups = [];
@@ -920,9 +916,12 @@ function generateTableOfContents() {
         }
     });
 
-    // --- INLINE TOC (h2s only, prepended to blog body) ---
+    // --- INLINE TOC (h2s only, only when {{TOC}} placeholder present) ---
     const h2Headings = [...headings].filter(h => h.tagName === 'H2');
-    if (h2Headings.length > 0) {
+    const tocPlaceholder = blogBody.querySelector('#toc-placeholder');
+    const tocBtn = document.getElementById('blog-toc-btn');
+
+    if (tocPlaceholder && h2Headings.length > 0) {
         const inlineToc = document.createElement('div');
         inlineToc.className = 'blog-inline-toc';
         inlineToc.id = 'blog-inline-toc';
@@ -942,15 +941,9 @@ function generateTableOfContents() {
             ul.appendChild(li);
         });
         inlineToc.appendChild(ul);
-        const tocPlaceholder = blogBody.querySelector('#toc-placeholder');
-        if (tocPlaceholder) {
-            tocPlaceholder.replaceWith(inlineToc);
-        } else {
-            blogBody.insertBefore(inlineToc, blogBody.firstChild);
-        }
+        tocPlaceholder.replaceWith(inlineToc);
 
-        // Fix TOC button scroll: account for sticky header height
-        const tocBtn = document.getElementById('blog-toc-btn');
+        // Button scrolls to TOC
         if (tocBtn) {
             tocBtn.addEventListener('click', e => {
                 e.preventDefault();
@@ -958,6 +951,17 @@ function generateTableOfContents() {
                 const headerHeight = header ? header.getBoundingClientRect().height : 0;
                 const tocTop = inlineToc.getBoundingClientRect().top + document.body.scrollTop - headerHeight - 16;
                 document.body.scrollTo({ top: tocTop, behavior: 'smooth' });
+            });
+        }
+    } else {
+        // No {{TOC}} — remove orphaned placeholder if present, make button scroll to top
+        if (tocPlaceholder) tocPlaceholder.remove();
+        if (tocBtn) {
+            tocBtn.textContent = '↑ Top';
+            tocBtn.setAttribute('aria-label', 'Back to top');
+            tocBtn.addEventListener('click', e => {
+                e.preventDefault();
+                document.body.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
     }
@@ -1008,6 +1012,22 @@ function generateTableOfContents() {
         // Set initial state (hidden until scrolling begins)
         headerNav.style.display = 'none';
     }
+}
+
+/**
+ * Wire share buttons with the current page URL and post title
+ */
+function wireShareButtons(title) {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(title);
+
+    const li = document.getElementById('share-linkedin');
+    const x  = document.getElementById('share-x');
+    const em = document.getElementById('share-email');
+
+    if (li) li.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    if (x)  x.href  = `https://x.com/intent/tweet?url=${url}&text=${text}`;
+    if (em) em.href = `mailto:?subject=${text}&body=${url}`;
 }
 
 /**

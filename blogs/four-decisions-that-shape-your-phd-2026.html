@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="page-title">Blog Post</title>
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Four Decisions That Shape Your PhD" />
+    <meta property="og:description" content="Part of the PhD survival series. Choosing a PhD is not just about the topic. It is about why you are doing it, who you work with, where you live, and what problem you commit to." />
+    <meta property="og:url" content="https://fjfehr.github.io/blogs/four-decisions-that-shape-your-phd-2026.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://fjfehr.github.io/blogs/images/idiap/goldencircle_phd.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-container {
+            max-width: var(--maxw);
+            margin: var(--blog-margin-top, 40px) auto var(--blog-margin-bottom, 40px);
+            padding: 0 var(--padding-horizontal, 40px);
+        }
+
+        .blog-content {
+            min-width: 0;
+        }
+
+        .blog-title {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .blog-date {
+            color: var(--muted-color);
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .blog-body {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-color);
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .blog-body h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .blog-body h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+        }
+
+        .blog-body p {
+            margin-bottom: 20px;
+        }
+
+        .blog-body ul, .blog-body ol {
+            margin-bottom: 20px;
+            padding-left: 28px;
+        }
+
+        .blog-body ul {
+            list-style-type: disc;
+        }
+
+        .blog-body ol {
+            list-style-type: decimal;
+        }
+
+        .blog-body li {
+            margin-bottom: 8px;
+        }
+
+        .blog-body a {
+            color: var(--link-color, #0066cc);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .blog-body a:hover {
+            border-bottom-color: currentColor;
+        }
+
+        .blog-body code {
+            background: var(--code-bg, #f5f5f5);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+
+        .blog-body pre {
+            background: var(--code-bg, #f5f5f5);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .blog-body pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-body blockquote {
+            border-left: 3px solid var(--muted-color);
+            padding-left: 20px;
+            margin-left: 0;
+            font-style: italic;
+            color: var(--muted-color);
+        }
+
+        .blog-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        /* === BLOG HEADER: two-row sticky === */
+        .blog-header {
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0 auto !important;
+            padding-top: 10px;
+            padding-bottom: 0;
+            gap: 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .blog-header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 6px;
+        }
+        .blog-header-title {
+            font-size: clamp(13px, 2vw, 16px);
+            font-weight: 600;
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-color);
+            text-align: center;
+            padding: 0 8px;
+        }
+        .blog-header-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .blog-toc-btn, .blog-back-link {
+            text-decoration: none;
+            color: var(--muted-color);
+            font-size: 13px;
+            white-space: nowrap;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: color 0.2s, background-color 0.2s;
+        }
+        .blog-toc-btn:hover, .blog-back-link:hover {
+            color: var(--text-color);
+            background-color: var(--hover-bg);
+        }
+
+        /* Section nav row: current-section breadcrumb */
+        .blog-header-nav {
+            display: flex;
+            align-items: baseline;
+            gap: 0;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .blog-current-h2 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 3px 0 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+            flex-shrink: 1;
+        }
+
+        .blog-current-h3 {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--muted-color);
+            padding: 3px 0 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+            flex-shrink: 2;
+        }
+
+        .blog-current-h3:not(:empty)::before {
+            content: ' › ';
+            color: var(--muted-color);
+        }
+
+        @media (max-width: 720px) {
+            .blog-header-nav {
+                flex-direction: column;
+                gap: 0;
+            }
+            .blog-current-h2 {
+                padding-bottom: 1px;
+            }
+            .blog-current-h3 {
+                font-size: 11px;
+                padding: 0 0 5px;
+            }
+            .blog-current-h3:not(:empty)::before {
+                content: '';
+            }
+        }
+
+        /* === INLINE TOC (auto-inserted at top of blog body) === */
+        .blog-inline-toc {
+            border-left: 3px solid var(--link-color);
+            padding: 12px 0 12px 20px;
+            margin-bottom: 36px;
+        }
+        .blog-inline-toc .blog-toc-heading {
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        .blog-inline-toc ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .blog-inline-toc li { margin-bottom: 6px; }
+        .blog-inline-toc a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .blog-inline-toc a:hover { text-decoration: underline; }
+
+        /* Headings need scroll offset for taller sticky header */
+        .blog-body h2, .blog-body h3 { scroll-margin-top: 110px; }
+
+        @media (max-width: 720px) {
+            .blog-container {
+                padding: 0 20px;
+            }
+
+            .blog-title {
+                font-size: 28px;
+            }
+
+            .blog-body {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #site-name { display: none; }
+            .blog-back-link { padding: 4px; }
+        }
+
+        /* === READING PROGRESS PILL === */
+        .blog-progress {
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            background: linear-gradient(
+                to right,
+                var(--border-color) var(--fill, 0%),
+                var(--bg-color) var(--fill, 0%)
+            );
+            color: var(--muted-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.2s, background 0.15s ease-out;
+            pointer-events: none;
+        }
+        .blog-progress.visible {
+            opacity: 1;
+        }
+        /* === SHARE BUTTONS === */
+        .blog-share {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 48px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .blog-share-label {
+            font-size: 14px;
+            color: var(--muted-color);
+            font-weight: 500;
+            margin-right: 2px;
+        }
+        .blog-share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-color);
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+            white-space: nowrap;
+        }
+        .blog-share-btn:hover {
+            background-color: var(--hover-bg);
+            border-color: var(--text-color);
+            transform: translateY(-1px);
+        }
+    </style>
+
+    <script>
+        // Auto-load this specific blog post
+        window.BLOG_POST_ID = 'four-decisions-that-shape-your-phd-2026';
+        
+        // Embedded blog data (no need for separate JSON file!)
+        window.BLOG_POST_DATA = {"title": "Four Decisions That Shape Your PhD", "short_title": "Four Decisions for PhD", "date": "2026-03-08", "reading_time": "10 min read", "content": "**TL;DR** A PhD is shaped by four decisions: **why** you are doing it, **whom** you work with, **where** you live, and **what** problem you want to solve. The order matters. Start with your purpose. Then choose your mentor and environment carefully. Finally pick a topic that excites you and realistic in your lab.\n\n## Four decisions that shape your PhD:\n\nHere are some thoughts that I believe are essential to consider. **Why**, with **Whom**, **Where**, and in **What** should I do a PhD (in that order). I know, I know, it's  strange to put the topic last but let me explain.\n\n<div style=\"display: flex; justify-content: center; margin: 4px 0;\"> <figure style=\"margin: 0; text-align: center; max-width: 480px;\"> <img src=\"images/idiap/goldencircle_phd.jpeg\" alt=\"Concentric circles\" style=\"width: 100%; border-radius: 8px; display: block;\"> <figcaption style=\"font-size: 13px; color: gray; margin-top: 6px;\">The Golden Circle of PhD Decision Making: Start with *Why* and work your way out. </figcaption> </figure> </div>\n\n### 1. Why should you do a PhD?\n\n**A PhD is not a shortcut to success.** Aiming directly for success usually backfires. As Viktor Frankl wrote \"*For success, like happiness, cannot be pursued; it must ensue, and it only does so as the unintended side-effect of one's dedication to a cause greater than oneself*\". They emerge when you dedicate yourself to something meaningful. This idea echoes [Simon Sinek’s Golden Circle](https://youtu.be/fMOlfsR7SMQ?si=B4ddiicEDsckWx5X), [Why Greatness Cannot Be Planned](https://youtu.be/lhYGXYeMq_E?si=yDhof255NzmJ2uh4&t=386), and [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Ideally, you shouldn’t chase outcomes. You start with **why**. When the problem matters to you, progress and success follow. Research works the same way: focus on the idea, and the papers and PhD tend to come.\n\n**Knowing your why is essential.** Passion isn’t a nice-to-have. It’s fuel. A PhD is full of confusion, failure, impostor syndrome and late nights.  Without a clear reason, it’s very hard to keep going. That “why” becomes your anchor. For me, there were several. I wanted to learn deeply and contribute to knowledge. I wanted to build specialised technical skills that would let me work on impactful problems. But also stay financially independent, and keep my options open internationally. Switzerland also mattered. It let me reconnect with my family roots and experience a culture beyond South Africa. A PhD in machine learning in Switzerland happened to sit at the intersection of all of that.\n\n**A PhD is an exercise in focus and resilience.** Roughly four years. Around 10,000 hours. If that really is enough time to become an expert, the real question is whether you’re excited about what you're experting yourself in. Methods, models, datasets and even required skills will change. The underlying problems you care about probably won’t. The best advice I got from my MSc supervisor was simple: \"*Work on something that you like because ultimately it’s your project*\". That responsibility does not disappear in a PhD. If anything, it becomes heavier. Something my PhD supervisor said in our first meeting reinforced that idea. He was genuinely excited and said, \"*I can't guarentee it will be easy, but it will be so cool!*\". That level of enthusiasm mattered to me. It made the challenge feel worth it. That’s the kind of \"why\" I needed. Not one borrowed from metrics or prestige, but one that still holds when things get hard.\n\n<figure class=\"collab-figure\" style=\"max-width: 600px; margin: 20px auto;\">\n  <img src=\"images/idiap/HendersonInterview.png\" alt=\"Henderson interview COVID 2020\" style=\"width: 100%; border-radius: 8px; display: block;\">\n  <figcaption style=\"text-align: center; font-size: 14px; color: gray;\">Real footage of my first meeting with my supervisor Dr. James Henderson, during COVID over Zoom in 2020.</figcaption>\n</figure>\n\n### 2. With whom should you do a PhD?\n\n**Who you do your PhD with may matter more than the topic.** I see a supervision relationship as similar to a romantic one. Imagine being stuck in a romantic relationship that you do not gel with for four years... Yea.. not great. In any relationship, you need someone who has your back, trusts you, is willing to grow with you, and who you can talk to when times get hard. The same applies to a supervisor. If you trust them and their vision, the topic tends to follow naturally. I am grateful to [Jamie](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en) for being that person for me.\n\n**Supervisor seniority comes at the cost of attention.** More famous professors with larger groups provide less day-to-day guidance. Sometimes postdocs or senior group members are more available. If you are a maverick and enjoy figuring things out alone, a big lab with a well-known name can work. The reputation opens doors, but you have to steer your research and build collaborations yourself. If you are newer to research and still building confidence, a younger career supervisor willing to go through the trenches with you can make all the difference. Choosing the right supervision style matters as much as choosing the right person.\n\n**Routine matters** My supervisors’ group had a regular routine. I valued weekly one-to-one meetings even when there was little to discuss. They reduced procrastination, forced clarity, and offered a reality check for half-formed ideas. Weekly group meetings, where we presented papers and shared ideas, reminded me I was not alone. Those small structures for sure improved my PhD experience.\n\n\n### 3. Where should you do a PhD? \n\nWhere you do a PhD matters more than people admit. Switzerland, [EPFL](https://www.epfl.ch/about/) and [Idiap Research Institute](https://www.idiap.ch/en/) 🇨🇭 was one of the best places to do a PhD in ML and here is why.\n\n**Quality** The quality of the institution matters, but I would encourage you to take a more macro view of the region and country. Are there other universities nearby that are consistently strong in your field? That concentration creates a healthy ecosystem for knowledge sharing. In my case, Swiss universities (I was at EPFL) consistently rank near the top in technical fields. Then zoom in to the lab itself. At Idiap, it was small but big enough, with over 30 years of experience in AI (built off the back of artichoke liquor and known for work in speech processing and machine learning, including [torch](http://torch.ch/torch3/)). The institute spans robotics, biometrics, speech, vision, NLP and other applied AI areas. I’m a Swiss national, with family there, so it felt natural. Even without that connection, I think the strength of the surrounding ecosystem makes it a solid place to do a PhD. More broadly, pay attention to who surrounds you, whether there are adjacent problems, genuine interdisciplinary exchange, and nearby institutes or seminars you can learn from. Those small interactions compound over time. I like to think of it as building an intellectual neighbourhood.\n\n\n**Financial** The structure of funding matters. In Switzerland, PhD salaries are relatively high compared to the cost of living. In my case, rent was about a quarter of my income after tax. I could pay rent, eat well, ski on the weekend, and not constantly worry about money. That stability makes a difference. If you can’t afford to do a PhD, it becomes much harder to focus on the work. In computational fields like machine learning, you should also consider whether the lab has enough resources for compute and experiments. Financial security and infrastructure are not glamorous topics, but they often shape the quality of your research more than rankings do.\n\n**Lifestyle** When research gets tough, you need ways to reset. Switzerland made that easy. Mountains, nature, skiing on winter weekends, and an international community of people going through similar challenges. That helped more than I expected. Being in the centre of Europe, with a strong currency, also made it easier to explore other countries during holidays. Those small escapes matter more than they seem. \n\n**Its not all roses** I lived in a small town, Martigny, which can feel very quiet if you’re used to big cities. For my PhD, that focus was a benefit, but it’s not for everyone. It’s also intimidatingly French-speaking. If you don’t speak French (like I didn’t), it becomes a side project to learn and immerse yourself. Swiss culture can also be hard to crack, even for me, Swiss on paper, especially as a foreigner. I ended up spending most of my time with the international crowd at Idiap, and those bonds became some of the closest I made.\n  \n<div style=\"display: flex; justify-content: center; margin: 4px 0;\"> <figure style=\"margin: 0; text-align: center; max-width: 480px;\"> <img src=\"images/idiap/swiss_cow.png\" alt=\"Swiss cow with headphones doing AI research in the Alps\" style=\"width: 100%; border-radius: 8px; display: block;\"> <figcaption style=\"font-size: 13px; color: gray; margin-top: 6px;\">The Swiss PhD. World-class AI research, mountain views, solid funding and compute, and a collaborative international community. </figcaption> </figure> </div>\n\nIf you’re choosing where to do a PhD, don’t underestimate the environment. You’ll live there for years. It will shape how well you work, and how well you live.\n\n### 4. In what topic should you do a PhD?\n\n**What topic should you work on?** Start with a simple question: *does the topic genuinely matter to you?*  Before PhD, I applied broadly (jobs, tech, studies) and ended up choosing between a PhD in microbiome forensics at UniL and one in core machine learning at EPFL and Idiap. Turning down UniL was tough. It was interesting and I would likely have been the most technical person in the team. But I asked myself a harder question. At the end of four years, do I want to be the expert in this very specific application, or do I want to work on more general problems? I realised I would rather be the dumbest in the room and stretch upwards than be the local expert too early. The topic you choose will shape how you think, so it must connect to a deeper curiosity, not just a short-term opportunity.\n\n**Where is no one looking?** Research is rarely evenly distributed. The papers that get attention in conferences are the ones that \"made it back\", a bit like planes returning from battle (see below). Some areas are neglected for reasons that may be arbitrary, technical, or simply unfashionable. These gaps are often fertile. Start small, test ideas quickly to fail fast to see potential. Look at patterns in *test-of-time awards* at conferences: what stuck around, and why? Often the ideas that endure were not flashy, but solved something fundamental and scalable. This is why, as *Why Greatness Cannot Be Planned* argues, you cannot reliably predict which research will have lasting impact. Focus on curiosity, experimentation, and neglected niches.\n\n<div style=\"display: flex; justify-content: center; margin: 4px 0;\"> <figure style=\"margin: 0; text-align: center; max-width: 480px;\"> <img src=\"images/idiap/Survivorship-bias.png\" alt=\"WWII plane bullet-hole survivorship bias diagram\" style=\"width: 100%; border-radius: 8px; display: block;\"> <figcaption style=\"font-size: 13px; color: gray; margin-top: 6px;\">[The survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias): The planes that didn't make it back had holes in different places. Research works the same way. Often the important questions are where no one is publishing yet, or where the field has overlooked simpler approaches.</figcaption> </figure> </div>\n\n**Can this topic be done at this lab?** Be pragmatic about whether you can actually research the topic well. Some areas in machine learning demand enormous compute and specific data. If you cannot realistically train models or run competitive experiments, you will constantly feel behind. Resources matter. So do communities. What does this lab and your supervisor actually excel in, and are there people around you working on adjacent problems? Those strengths shape the conversations you can have and the ideas you can grow. Are there conferences and journals that publish consistently in this space? Are there people around you with experience who can guide you? A topic may be exciting in theory, but if you cannot test ideas properly, it will become frustrating. Feasibility is not glamorous, but it is foundational. Think strategically: the neglected areas you are curious about may be fertile, but you need a base that allows you to explore them without fighting physics or infrastructure. Simple, usable tools and early experiments often become the engine of bigger discoveries.\n\n<div style=\"display: flex; justify-content: center; margin: 4px 0;\"> <figure style=\"margin: 0; text-align: center; max-width: 480px;\"> <img src=\"images/idiap/bitter_lesson_meme.png\" alt=\"Rich Sutton's Bitter Lesson meme about computation winning in the long run\" style=\"width: 100%; border-radius: 8px; display: block;\"> <figcaption style=\"font-size: 13px; color: gray; margin-top: 6px;\">Rich Sutton's [Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html): Scale computation beats model-building and inductive bias. The computational steamroller is coming, don't fight against it.</figcaption> </figure> </div>\n\n**Where to next?** Finally, think about where this leaves you after four years. The world will change. In 2021 it was embeddings, 2023 was diffusion, and shortly after large language models, now in 2025–2026 it is all about agents. The fast fashion of AI moves quickly. If you chase the hottest topic, you risk being outpaced by large labs with deeper pockets. If you choose something too narrow, you risk being boxed in. The balance is to stay general in the problems you care about, but niche and technical enough to build depth without being crushed by competition. Remember, you are making a four-year bet on yourself. Choose a problem that will still make sense when the trend cycle moves on."};
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    
+    <main>
+        <header class="header blog-header">
+            <div class="blog-header-top">
+                <a href="../index.html#top" class="blog-back-link">← <span id="site-name">Home</span></a>
+                <div class="blog-header-title" id="blog-header-title"></div>
+                <div class="blog-header-controls">
+                    <a href="#blog-inline-toc" class="blog-toc-btn" id="blog-toc-btn" aria-label="Jump to TOC">↑ TOC</a>
+                    <nav class="nav-links" id="nav-links">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                    </nav>
+                </div>
+            </div>
+            <nav class="blog-header-nav" id="blog-header-nav" aria-label="Current section">
+                <!-- JS populates single current-section indicator -->
+            </nav>
+        </header>
+        
+        <div class="blog-container">
+            <article class="blog-content">
+                <h1 class="blog-title" id="blog-title">Loading…</h1>
+                <div class="blog-date" id="blog-date">Loading…</div>
+                <div class="blog-body" id="blog-body">
+                    <!-- Blog content will be loaded here -->
+                </div>
+                
+                <div class="blog-share" id="blog-share">
+                    <span class="blog-share-label">Share:</span>
+                    <a href="#" id="share-linkedin" class="blog-share-btn" target="_blank" rel="noopener noreferrer">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="#" id="share-x" class="blog-share-btn" target="_blank" rel="noopener noreferrer">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.733-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        X
+                    </a>
+                    <a href="#" id="share-email" class="blog-share-btn">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Email
+                    </a>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <a href="../index.html#blog" class="back-link" style="font-size: 16px;">← Let's escape the rabbit hole 🐰🕳️</a>
+                </div>
+            </article>
+        </div>
+        
+        <footer class="footer">
+        <p style="margin-top: 8px; font-size: 0.9em;">&copy; <span id="footer-year">2025</span> <span id="footer-name">Loading…</span> • <a href="#" id="footer-license" target="_blank" rel="noopener noreferrer">Loading…</a></p>
+    </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -9,6 +9,14 @@
 
     /**
      * ===================================================================
+     *                    SUPABASE CONFIGURATION
+     * ===================================================================
+     */
+    const SUPABASE_URL  = 'https://YOUR_PROJECT_ID.supabase.co';
+    const SUPABASE_ANON = 'YOUR_ANON_KEY_HERE';
+
+    /**
+     * ===================================================================
      *                    CONFIGURATION LOADING
      * ===================================================================
      */
@@ -881,7 +889,10 @@ async function loadBlogPost() {
         
         // Generate table of contents
         generateTableOfContents();
-        
+
+        // Initialize like button
+        await initSunLike(blogId);
+
     } catch (error) {
         console.error('Error loading blog post:', error);
         const blogBodyElement = document.getElementById('blog-body');
@@ -1028,6 +1039,81 @@ function wireShareButtons(title) {
     if (li) li.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
     if (x)  x.href  = `https://x.com/intent/tweet?url=${url}&text=${text}`;
     if (em) em.href = `mailto:?subject=${text}&body=${url}`;
+}
+
+/**
+ * ===================================================================
+ *                    SUN LIKE BUTTON
+ * ===================================================================
+ */
+
+/**
+ * Initialize the sun like button for a blog post.
+ * Fetches current like count, handles click (increment + optimistic UI),
+ * and persists liked state in localStorage.
+ * @param {string} postId - The blog post ID
+ */
+async function initSunLike(postId) {
+    const btn   = document.getElementById('sun-like-btn');
+    const count = document.getElementById('sun-like-count');
+    if (!btn || !count) return;
+
+    const storageKey = `liked:${postId}`;
+    const alreadyLiked = localStorage.getItem(storageKey) === '1';
+
+    // Fetch current count
+    try {
+        const res = await fetch(
+            `${SUPABASE_URL}/rest/v1/blog_stats?post_id=eq.${encodeURIComponent(postId)}&select=likes`,
+            { headers: { apikey: SUPABASE_ANON, Authorization: `Bearer ${SUPABASE_ANON}` } }
+        );
+        if (res.ok) {
+            const rows = await res.json();
+            const likes = rows.length > 0 ? rows[0].likes : 0;
+            count.textContent = likes > 0 ? likes : '';
+        }
+    } catch (_) { /* network error — show no count */ }
+
+    if (alreadyLiked) {
+        btn.classList.add('liked');
+        btn.disabled = true;
+    }
+
+    btn.addEventListener('click', async () => {
+        if (btn.disabled) return;
+        btn.disabled = true;
+        btn.classList.add('liked');
+        localStorage.setItem(storageKey, '1');
+
+        // Optimistic increment
+        const prev = parseInt(count.textContent, 10) || 0;
+        count.textContent = prev + 1;
+
+        try {
+            const res = await fetch(
+                `${SUPABASE_URL}/rest/v1/rpc/increment_like`,
+                {
+                    method: 'POST',
+                    headers: {
+                        apikey: SUPABASE_ANON,
+                        Authorization: `Bearer ${SUPABASE_ANON}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ p_post_id: postId }),
+                }
+            );
+            if (res.ok) {
+                const newCount = await res.json();
+                count.textContent = newCount > 0 ? newCount : prev + 1;
+            }
+        } catch (_) {
+            // Silent rollback on network failure
+            count.textContent = prev || '';
+            btn.classList.remove('liked');
+            btn.disabled = false;
+            localStorage.removeItem(storageKey);
+        }
+    });
 }
 
 /**

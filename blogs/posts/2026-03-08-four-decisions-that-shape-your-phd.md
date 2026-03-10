@@ -1,7 +1,7 @@
 ---
 title: 'Four Decisions That Shape Your PhD'
 date: 2026-03-08
-excerpt: "Part of the PhD survival series. Choosing a PhD is not just about the topic. It is about why you are doing it, who you work with, where you live, and what problem you commit to."
+excerpt: "Part 1 of the PhD survival series. PhDeciding: Choosing a PhD is not just about the topic. It is about why you are doing it, who you work with, where you live, and what problem you commit to."
 thumbnail: "blogs/images/idiap/goldencircle_phd.jpeg"
 short_title: 'Four Decisions for PhD'
 permalink: /fablogio/four-decisions-that-shape-your-phd/

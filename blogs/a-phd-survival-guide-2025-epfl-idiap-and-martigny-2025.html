@@ -343,6 +343,56 @@
             border-color: var(--text-color);
             transform: translateY(-1px);
         }
+        /* === SUN LIKE BUTTON === */
+        .blog-sun-like {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        .sun-like-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 28px;
+            line-height: 1;
+            padding: 0;
+            transition: transform 0.15s, filter 0.2s;
+            position: relative;
+        }
+        .sun-like-btn:hover {
+            transform: scale(1.2);
+        }
+        .sun-like-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-color);
+            color: var(--bg-color);
+            font-size: 12px;
+            font-family: inherit;
+            white-space: nowrap;
+            padding: 4px 8px;
+            border-radius: 5px;
+            pointer-events: none;
+        }
+        .sun-like-btn.liked {
+            filter: drop-shadow(0 0 6px #f5a623) brightness(1.1);
+        }
+        .sun-like-btn:disabled {
+            cursor: default;
+        }
+        .sun-like-count {
+            font-size: 13px;
+            color: var(--muted-color);
+            font-weight: 500;
+            min-height: 1em;
+            text-align: center;
+        }
     </style>
 
     <script>
@@ -396,8 +446,9 @@
                         Email
                     </a>
                 </div>
-                <div style="margin-bottom: 24px;">
-                    <a href="../index.html#blog" class="back-link" style="font-size: 16px;">← Let's escape the rabbit hole 🐰🕳️</a>
+                <div class="blog-sun-like" id="blog-sun-like">
+                    <button class="sun-like-btn" id="sun-like-btn" aria-label="Toast this post" data-tooltip="Toast this post">🌞</button>
+                    <span class="sun-like-count" id="sun-like-count"></span>
                 </div>
             </article>
         </div>

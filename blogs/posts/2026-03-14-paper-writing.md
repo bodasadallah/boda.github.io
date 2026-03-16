@@ -2,7 +2,7 @@
 title: 'Research Writing'
 date: 2026-03-15
 excerpt: "Part 2 of the PhD survival series. PhDying: Research is not only about writing papers. It is about developing a palate for problems, explaining ideas clearly, strategic publishing for your PhD and connecting it together into a coherent thesis."
-thumbnail: "blogs/images/idiap/pyramid.png"
+thumbnail: "blogs/images/idiap/palate_of_problems.png"
 short_title: 'Research Writing'
 permalink: /fablogio/paper-writing/
 ---
@@ -47,7 +47,7 @@ Definitely recommend diving into [How to win a best paper award](https://nichola
 <div style="display: flex; justify-content: center; margin: 4px 0;">
   <figure style="margin: 0; text-align: center; max-width: 420px;">
     <img src="images/idiap/pyramid.png" alt="pyramid" style="width: 100%; border-radius: 8px; display: block;">
-    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Distilling many ideas into one clear contribution. All in all, it's not just another paper in the draw. </figcaption>
+    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Distilling your many ideas into one clear contribution. All in all, it's not just another paper in the draw. </figcaption>
   </figure>
 </div>
 

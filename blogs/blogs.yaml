@@ -6,7 +6,7 @@
     writing papers. It is about developing a palate for problems, explaining ideas
     clearly, strategic publishing for your PhD and connecting it together into a coherent
     thesis.'
-  thumbnail: blogs/images/idiap/pyramid.png
+  thumbnail: blogs/images/idiap/palate_of_problems.png
   reading_time: 10 min read
 - id: four-decisions-that-shape-your-phd-2026
   title: Four Decisions That Shape Your PhD
@@ -17,14 +17,14 @@
     live, and what problem you commit to.'
   thumbnail: blogs/images/idiap/goldencircle_phd.jpeg
   reading_time: 10 min read
-# - id: a-phd-survival-guide-2025-epfl-idiap-and-martigny-2025
-#   title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
-#   short_title: A PhD Survival Guide
-#   date: '2025-09-05'
-#   excerpt: A personal survival guide for a PhD in Machine Learning at EPFL, Idiap,
-#     and Martigny
-#   thumbnail: blogs/images/idiap/Fabio-Jamie.jpeg
-#   reading_time: 42 min read
+- id: a-phd-survival-guide-2025-epfl-idiap-and-martigny-2025
+  title: 'A PhD survival guide 2025: EPFL, Idiap, and Martigny 🇨🇭'
+  short_title: A PhD Survival Guide
+  date: '2025-09-05'
+  excerpt: A personal survival guide for a PhD in Machine Learning at EPFL, Idiap,
+    and Martigny
+  thumbnail: blogs/images/idiap/Fabio-Jamie.jpeg
+  reading_time: 42 min read
 - id: interning-at-amazon-berlin-2024-the-grind-growth-and-gratitude-2025
   title: 'Interning at Amazon Berlin 2024: the Grind, Growth, and Gratitude'
   short_title: Amazon Berlin Internship

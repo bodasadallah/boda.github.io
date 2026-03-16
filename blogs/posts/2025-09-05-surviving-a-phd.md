@@ -254,6 +254,15 @@ This changes fast in ML so the topic is likely to morph as you go but the bigger
 
 ## Collaborations during PhD
 
+
+<!-- COLAB
+TODO
+Almost all researchers are trying to write great papers; if you have an idea they could help with, you'd be surprised how often a simple email works: "Hi [person], I am working on [project] and have done [steps 1-3]. I am now working on [problem] and believe [your work] would help. Would you be open to meeting to discuss?" Or, another format, "Hi [person], I saw that in your [paper] you proposed [problem]. I have solved [steps 1-3] and believe that with your help we could address [step 4,5]. Would you be open to meeting to discuss?"
+
+Very actionable. SHow that you have done some work and show you acknowledfe their work. No one wants to work with someone who is going to waste their time or not do any work. But everyone is happy to jump on a collaboration while its near the end. email someone a solution to a problem they appear interested in, you're far more likely to get a reply (or even a paper) than if you just send an email "I love your work can we collaborate". Send only when you have something to ask. Not just lets collab
+ -->
+
+
 A PhD is designed to be individual. You own the problem, you defend the thesis, your name sits first. Collaboration can feel optional, sometimes even like a distraction from the “real” work.  I think that’s a darn shame. Done well, collaboration is one of the strongest accelerators in a PhD. You borrow strengths you do not have. You contribute strengths others lack. When ownership is clear and incentives align, progress compounds. But this does not happen automatically. 
 
 I was lucky to do my PhD at Idiap Research Institute, a place small enough to talk to almost anyone over coffee, but broad enough to span NLP, speech, vision, graphs and more. The environment made collaboration easy, but ease alone is not enough. Some projects thrived because the structure was right. Others struggled as they scaled. 

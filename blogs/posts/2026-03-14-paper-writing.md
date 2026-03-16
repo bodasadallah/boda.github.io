@@ -16,13 +16,13 @@ permalink: /fablogio/paper-writing/
 Great research starts with choosing the right problems. Before thinking about papers or theses it is worth asking a simpler question: *what problems are actually worth working on?* The goal isn't (well... shouldn't be) publishing papers. The goal is discovering something new and communicating it clearly. A conference paper is just the container. In a PhD this can be conflated, but a well known starting point is: [*What is the most important problem in my field, and why am I not working on it?*](https://www.lesswrong.com/posts/P5k3PGzebd5yYrYqd/the-hamming-question) - Richard Hamming
 
 
-**A palate for problems.** Some researchers publish a lot with little impact, while others publish fewer papers that shape the field. The difference is often their palate for problems. Ilya Sutskever, for example, has multiple “test of time” papers. Truly great researchers seem able to taste the important problems in one area and then able move to a new area when that becomes more important. So how do we develop this taste?
+**A palate for problems 🍷.** Some researchers publish a lot with little impact, while others publish fewer papers that shape the field. The difference is often their palate for problems . Ilya Sutskever, for example, has multiple “test of time” papers. Truly great researchers seem able to taste the important problems in one area and then able move to a new area when that becomes more important. So how do we develop this taste?
 
 
 <div style="display: flex; justify-content: center; margin: 4px 0;">
   <figure style="margin: 0; text-align: center; max-width: 420px;">
     <img src="images/idiap/palate_of_problems.png" alt="palate of problems" style="width: 100%; border-radius: 8px; display: block;">
-    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Develop your palate for problems.</figcaption>
+    <figcaption style="font-size: 13px; color: gray; margin-top: 6px;">Develop your palate for problems 🍷.</figcaption>
   </figure>
 </div>
 
@@ -71,7 +71,7 @@ Of course, writing good papers is only part of the story. During a PhD you also 
 
 **Build a safety net 🪳 then shoot for the stars 🚀**. During a PhD, aiming for a spectacular 8/10 research paper sounds great in theory but can be risky early on. I recommend starting with the *Cockroach Paper* strategy, suggested by [Yannic Kilchner’s PhD survival guide](https://www.youtube.com/watch?v=rHQPBqMULXo). The idea is simple: secure enough solid papers to graduate, and then use that safety net to explore bigger moonshot ideas.
 
-**The Roach paper.** These papers are gaps in research that are a bit more incremental. Good for learning the ropes. A roach paper is hard to kill by reviewer and tends to get consistent scores 5s and 6s. It is solid work with careful ablations and no overclaiming. Reviewers are often incentivised to find reasons to reject, so don't make it easy for them. Make sure your claims are precise and backed by evidence. A useful trick is to read papers in your niche and, if possible, read their reviews. Notice what reviewers praise and what they criticise. Different venues have slightly different expectations, so learn to *chameleon* your roach paper accordingly. Put extra analysis and anticipated objections in the appendix.
+**The Roach paper.** These papers are gaps in research that are a bit more incremental. Good for learning the ropes. A roach paper is hard to squashed by reviewers and tends to get consistent scores 5s and 6s. It is solid work with careful ablations and no overclaiming. Reviewers are often incentivised to find reasons to reject, so don't make it easy for them. Make sure your claims are precise and backed by evidence. A useful trick is to read papers in your niche and, if possible, read their reviews. Notice what reviewers praise and what they criticise. Different venues have slightly different expectations, so learn to *chameleon* your roach paper accordingly. Put extra analysis and anticipated objections in the appendix.
 
 An ideal process is to set internal deadlines (this rarely happens) and let your group review your draft as if it were a conference submission. Then you submit… aaand you will likely be rejected. This is normal. Listen to reasonable feedback, make the obvious fixes, ignore the noise, and **resubmit**.
 

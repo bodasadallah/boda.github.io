@@ -48,6 +48,30 @@ DEFAULT_EXCERPT_LENGTH = 200
 BLOG_INDEX_FILENAME = "blogs.yaml"
 
 
+def get_site_base_url(default_url="https://example.github.io"):
+    """Load base site URL from content/site/config.yaml, falling back to default."""
+    try:
+        config_path = Path("content/site/config.yaml")
+        if not config_path.exists():
+            return default_url
+
+        with open(config_path, "r", encoding="utf-8") as file:
+            config_data = yaml.safe_load(file) or {}
+
+        site_name = config_data.get("site", {}).get("name", "")
+        explicit_url = config_data.get("site", {}).get("url", "")
+
+        if explicit_url:
+            return explicit_url.rstrip("/")
+
+        if "Sadallah" in site_name:
+            return "https://bodasadallah.github.io"
+
+        return default_url
+    except Exception:
+        return default_url
+
+
 def parse_yaml_frontmatter(markdown_content):
     """
     Extract YAML frontmatter from the beginning of a markdown file.
@@ -203,6 +227,7 @@ def generate_blog_html(blog_metadata, blog_content, output_directory=DEFAULT_BLO
             template_content = file.read()
 
         # Extract blog metadata
+        site_base_url = get_site_base_url("https://bodasadallah.github.io")
         blog_id = blog_metadata["id"]
         title = blog_metadata["title"]
         excerpt = blog_metadata.get("excerpt", "")
@@ -210,13 +235,13 @@ def generate_blog_html(blog_metadata, blog_content, output_directory=DEFAULT_BLO
 
         # Ensure thumbnail is an absolute URL
         if not thumbnail.startswith("http"):
-            thumbnail = f"https://fjfehr.github.io/{thumbnail}"
+            thumbnail = f"{site_base_url}/{thumbnail}"
 
         # Create OG meta tags for this specific blog post
         og_tags = f"""    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="{title}" />
     <meta property="og:description" content="{excerpt}" />
-    <meta property="og:url" content="https://fjfehr.github.io/blogs/{blog_id}.html" />
+    <meta property="og:url" content="{site_base_url}/blogs/{blog_id}.html" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{thumbnail}" />
     <meta property="og:image:width" content="1200" />
@@ -436,7 +461,10 @@ def batch_convert_all_markdown_files(posts_directory=DEFAULT_POSTS_DIR):
         return
 
     # Find all markdown files
-    markdown_files = list(posts_path.glob("*.md"))
+    markdown_files = [
+        file_path for file_path in posts_path.glob("*.md")
+        if not file_path.name.startswith("_")
+    ]
 
     if not markdown_files:
         print(f"📝 No markdown files found in {posts_directory}")
@@ -524,3 +552,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

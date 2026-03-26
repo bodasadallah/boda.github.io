@@ -1,0 +1,16 @@
+[
+{{- $posts := where .Site.RegularPages "Section" "posts" -}}
+{{- range $i, $p := $posts.ByDate.Reverse -}}
+{{- if $i}},{{ end }}
+{
+  "id": {{ $p.Slug | jsonify }},
+  "title": {{ $p.Title | jsonify }},
+  "short_title": {{ (or $p.Params.short_title $p.Title) | jsonify }},
+  "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
+  "excerpt": {{ (or $p.Params.summary $p.Summary) | plainify | jsonify }},
+  "thumbnail": {{ (or $p.Params.thumbnail "") | jsonify }},
+  "reading_time": {{ printf "%d min read" $p.ReadingTime | jsonify }},
+  "url": {{ $p.RelPermalink | jsonify }}
+}
+{{- end -}}
+]

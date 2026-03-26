@@ -1,0 +1,101 @@
+baseURL = "https://bodasadallah.github.io/blogs/"
+defaultContentLanguage = "en"
+title = "Random Thoughts"
+theme = "LoveIt"
+publishDir = "../blogs"
+
+[permalinks]
+  posts = "/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "BLOGS"]
+
+[outputFormats.BLOGS]
+  mediaType = "application/json"
+  baseName = "blogs-index"
+  isPlainText = true
+  notAlternative = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  title = "Random Thoughts"
+  description = "Blog posts"
+
+  [params.author]
+    name = "Boda Sadallah"
+    email = ""
+    link = "/"
+
+  [params.app]
+    title = "Random Thoughts"
+
+[params.home]
+  rss = 10
+
+  [params.home.profile]
+    enable = true
+    subtitle = "Blog posts"
+    typeit = false
+
+[params.header]
+  desktopMode = "sticky"
+  mobileMode = "auto"
+
+  [params.header.title]
+    name = "Random Thoughts"
+    pre = ""
+    post = ""
+    typeit = false
+    homeURL = "/"
+
+[params.footer]
+  enable = true
+  hugo = false
+  copyright = true
+  author = true
+  since = 2021
+
+[params.page]
+  hiddenFromHomePage = false
+  hiddenFromSearch = false
+  twemoji = false
+  lightgallery = false
+  ruby = false
+  fraction = true
+  fontawesome = false
+
+  [params.page.toc]
+    enable = true
+    keepStatic = false
+    auto = true
+
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    pre = ""
+    post = ""
+    name = "Posts"
+    url = "/"
+    title = ""
+
+  [[menu.main]]
+    weight = 2
+    identifier = "home"
+    pre = ""
+    post = ""
+    name = "Home"
+    url = "/"
+    title = ""

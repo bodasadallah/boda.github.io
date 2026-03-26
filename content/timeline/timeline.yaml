@@ -1,76 +1,68 @@
 # Timeline Events
 # Chronological list of work experience and education
-# Displayed on the homepage in the Timeline section
 
-- id: "oxford"
-  type: "work"
-  title: "Postdoctoral Researcher"
-  organization: "University of Oxford"
-  location: "Oxford, UK"
-  url: "https://eng.ox.ac.uk/"
+- id: "usi-phd"
+  type: "education"
+  title: "PhD in Informatics"
+  organization: "Università della Svizzera italiana (USI)"
+  location: "Lugano, Switzerland"
+  url: "https://www.usi.ch/"
   start_date: "2026-01"
   end_date: "present"
-  description: "**Postdoctoral Researcher** at the [University of Oxford](https://eng.ox.ac.uk/) in the [Torr Vision Group](https://torrvision.com/), working with [Prof. Philip Torr](https://scholar.google.com/citations?user=kPxa2w0AAAAJ&hl=en). I am focusing on agentic frameworks for modelling legal reasoning, retrieval and verifiable generation."
-  logo: "content/timeline/logos/oxford.svg"
+  description: "**PhD Student** at [USI](https://www.usi.ch/), supervised by [Prof. Lonneke van der Plas](https://sites.google.com/site/lonnekenlp/). Teaching Assistant for [Responsible Use of AI in Communication](https://search.usi.ch/en/courses/35275893/responsible-use-of-ai-in-communication) and [Natural Language Processing for Business and Finance](https://search.usi.ch/en/courses/35272197/natural-language-processing-for-business-and-finance-project)."
+  logo: "content/timeline/logos/usi.svg"
 
-- id: "amazon-intern"
+- id: "ifm-ai-engineer"
   type: "work"
-  title: "Applied Data Scientist Intern"
-  organization: "Amazon"
-  location: "Berlin, Germany"
-  url: "https://www.amazon.science/"
-  start_date: "2024-07"
-  end_date: "2024-12"
-  description: |
-    **Applied Data Scientist Internship** at [Amazon](https://www.amazon.science/). Focused on enhancing retrieval in the Retrieval Augmented Generation (RAG) pipeline for code generation using Large Language Models (LLMs). Designed and trained a lightweight retrieval model that integrated code semantics with dense embeddings, file directory hierarchy, and call graph structure.
+  title: "AI Engineer"
+  organization: "Institute of Foundational Models (IFM), MBZUAI"
+  location: "Abu Dhabi, UAE"
+  url: "https://ifm.ai/"
+  start_date: "2025-06"
+  end_date: "2025-12"
+  description: "AI Engineer at [IFM](https://ifm.ai/). Contributed to the build and release of the **[Jais2 Model](https://mbzuai.ac.ae/news/inception-cerebras-and-mbzuai-release-jais-2-the-next-generation-of-the-worlds-leading-arabic-open-weight-llm/)**. Developed evaluation pipelines for large language models, built high-quality language identification pipelines for Arabic, and worked on scalable data curation pipelines for foundation model training."
+  logo: "content/timeline/logos/ifm.svg"
 
-    *Publication:* [CoRet: Improved Retriever for Code Editing](https://aclanthology.org/2025.acl-short.62/) - ACL 2025.
-  logo: "content/timeline/logos/Amazon.svg"
-
-- id: "epfl-phd"
+- id: "mbzuai-msc"
   type: "education"
-  title: "PhD in Machine Learning"
-  organization: "EPFL"
-  location: "Lausanne, Switzerland"
-  url: "https://www.epfl.ch/"
-  start_date: "2021-01"
-  end_date: "2025-09"
-  description: |
-    **PhD in Machine Learning** at [EPFL](https://www.epfl.ch/) and [Idiap Research Institute](https://www.idiap.ch/). Published 6 papers in leading AI/ML conferences. My PhD thesis explores designing and improving attention-based language models using information-theory and nonparametric methods. I have worked on interpretability, out-of-distribution generalisation, architectural efficiency, and deep learning applications across text, graphs, speech, and vision, in collaboration and leading large research teams.
+  title: "MSc in Natural Language Processing"
+  organization: "Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)"
+  location: "Abu Dhabi, UAE"
+  url: "https://mbzuai.ac.ae/"
+  start_date: "2023-08"
+  end_date: "2025-05"
+  description: "Graduated with GPA **3.95/4.0** and received the **Best Academics Award**. Supervised by [Prof. Ted Briscoe](https://www.cl.cam.ac.uk/~ejb1/) and [Dr. Ekaterina Kochmar](https://ekochmar.github.io/about/). Conducted research on peer review analysis, LLM evaluation, and Arabic NLP."
+  logo: "content/timeline/logos/mbzuai.svg"
 
-    *Thesis:* [Nonparametric Variational Information Bottleneck: Attention-based Architectures as Latent Variable Models](https://infoscience.epfl.ch/entities/publication/dad86ab3-09eb-48bf-b6d4-8c3d903eb94d)
+- id: "ukp-visit"
+  type: "work"
+  title: "Visiting Researcher"
+  organization: "UKP Lab, Technical University of Darmstadt"
+  location: "Darmstadt, Germany"
+  url: "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp"
+  start_date: "2024-05"
+  end_date: "2024-08"
+  description: "Visited [Prof. Iryna Gurevych's](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp) lab to work on automatic peer-review evaluation. Research published at EMNLP 2025."
+  logo: "content/timeline/logos/ukp_logo.png"
 
-    *Supervisor:* [Dr. James Henderson](https://scholar.google.com/citations?user=CSib0ooAAAAJ&hl=en).
-  logo: "content/timeline/logos/EPFL.svg"
+- id: "aic-nlp-engineer"
+  type: "work"
+  title: "R&D NLP Engineer"
+  organization: "Applied Innovation Center, Ministry of Communications and IT"
+  location: "Cairo, Egypt"
+  url: "https://mcit.gov.eg/"
+  start_date: "2021-10"
+  end_date: "2023-07"
+  description: "Developed audio normalization module for text-to-speech systems. Built and optimized TorchServe deployment server, reducing latency by **50%**. Developed Rasa chatbot assisting farmers with crop information. Implemented distributed training pipelines for Tacotron2 in PyTorch. Trained and optimized UnivNet vocoder, improving inference time by **10x**."
+  logo: "content/timeline/logos/aic_logo.png"
 
-- id: "uct-msc"
+- id: "asu-beng"
   type: "education"
-  title: "MSc in Statistics"
-  organization: "University of Cape Town"
-  location: "Cape Town, South Africa"
-  url: "https://www.uct.ac.za/"
-  start_date: "2019-01"
-  end_date: "2020-12"
-  description: |
-    **MSc in Statistics** at the [University of Cape Town](https://www.uct.ac.za/). Fully funded by the South African Statistical Association (SASA) during COVID. My thesis bridged the Biomedical Engineering and Statistics departments. I compared deep learning and statistical nonparametric methods for 3D biomedical reconstuction. 
-
-    *Thesis:* [Modelling non-linearity in 3D shapes: A comparative study of Gaussian Process Morphable Models and Variational Autoencoders (VAE) for 3D shape data](https://open.uct.ac.za/handle/11427/35725) 
-
-    *Supervisors:* [Assoc. Prof. Allan Clark](https://science.uct.ac.za/department-statistics/contacts/allan-e-clark) and [Prof. Tinashe Mutsvangwa](https://scholar.google.com/citations?user=Rrcp2eUAAAAJ&hl=en).
-  logo: "content/timeline/logos/UCT.svg"
-
-- id: "uct-bbusci"
-  type: "education"
-  title: "BBusSci in Analytics"
-  organization: "University of Cape Town"
-  location: "Cape Town, South Africa"
-  url: "https://www.uct.ac.za/"
-  start_date: "2015-01"
-  end_date: "2018-12"
-  description: |
-    **BBusSci in Analytics** at the [University of Cape Town](https://www.uct.ac.za/), broad business degree graduating with Honours in Statistics. My thesis focused on natural language processing using statistical methods. 
-
-    *Thesis:* [Text content classification on News Articles](content/publications/files/honours_thesis_FHRFAB001_STRSEA001.pdf)
-
-    *Advisor:* [Stefen Britz](https://science.uct.ac.za/department-statistics/contacts/stefan-britz)
-  logo: "content/timeline/logos/UCT.svg"
+  title: "BEng in Computer and Systems Engineering"
+  organization: "Ain Shams University"
+  location: "Cairo, Egypt"
+  url: "https://eng.asu.edu.eg/"
+  start_date: "2016-07"
+  end_date: "2021-07"
+  description: "Graduated with **Very Good with Honors (81%)**. Graduation project awarded **Excellent**. Thesis on **Named Entity Recognition in Arabic and Arabizi**, which led to the [ANER publication](https://arxiv.org/abs/2308.14669) at IMSA (IEEE 2023)."
+  logo: "content/timeline/logos/eng-asu.jpg"

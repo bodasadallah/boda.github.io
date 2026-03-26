@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Scribbles - Random Thoughts</title><meta name="Description" content="Blog posts"><meta property="og:url" content="https://bodasadallah.github.io/blogs/scribbles-2021/">
+  <meta property="og:site_name" content="Random Thoughts">
+  <meta property="og:title" content="Scribbles">
+  <meta property="og:description" content="A bunch of very different topics scribbles">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-10-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-10-27T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scribbles">
+  <meta name="twitter:description" content="A bunch of very different topics scribbles">
+<meta name="application-name" content="Random Thoughts">
+<meta name="apple-mobile-web-app-title" content="Random Thoughts">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bodasadallah.github.io/blogs/scribbles-2021/" /><link rel="prev" href="https://bodasadallah.github.io/blogs/tts-research-2021/" /><link rel="next" href="https://bodasadallah.github.io/blogs/python-2021/" /><link rel="stylesheet" href="/blogs/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Scribbles",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bodasadallah.github.io\/blogs\/scribbles-2021\/"
+        },"genre": "posts","wordcount":  4282 ,
+        "url": "https:\/\/bodasadallah.github.io\/blogs\/scribbles-2021\/","datePublished": "2021-10-27T00:00:00+00:00","dateModified": "2021-10-27T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Boda Sadallah"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="sticky" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Random Thoughts">Random Thoughts</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/blogs/"> Posts </a><a class="menu-item" href="/"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Random Thoughts">Random Thoughts</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/blogs/" title="">Posts</a><a class="menu-item" href="/" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Scribbles</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Boda Sadallah</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2021-10-27">2021-10-27</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;4282 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;21 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#transformers">Transformers</a>
+      <ul>
+        <li><a href="#transformers-1">Transformers</a></li>
+        <li><a href="#multi-head-attention">multi-head attention</a></li>
+        <li><a href="#positional-info">Positional info</a></li>
+        <li><a href="#residual-connections">Residual connections</a></li>
+        <li><a href="#layer-normalization">Layer Normalization</a></li>
+      </ul>
+    </li>
+    <li><a href="#debugging-ml-models">Debugging ML Models</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#svm-and-kernels">SVM and Kernels</a></li>
+    <li><a href="#distributed-training-in-pytorch">Distributed Training in Pytorch</a>
+      <ul>
+        <li><a href="#pytorch-ddp-internal">Pytorch DDP Internal</a></li>
+        <li><a href="#dataparallel-vs-distributeddataparallel">DataParallel VS DistributedDataParallel</a></li>
+      </ul>
+    </li>
+    <li><a href="#complete-statistical-theory-of-learning---vladimir-vapnik">Complete Statistical Theory of Learning - <strong>Vladimir Vapnik</strong></a>
+      <ul>
+        <li><a href="#ref">Ref: https://www.youtube.com/watch?v=Ow25mjFjSmg</a></li>
+      </ul>
+    </li>
+    <li><a href="#statistical-machine-learning">Statistical Machine Learning</a>
+      <ul>
+        <li><a href="#part-1">part 1:</a></li>
+        <li><a href="#part-2">Part 2:</a></li>
+        <li><a href="#part3">Part3</a></li>
+      </ul>
+    </li>
+    <li><a href="#dl-book">DL Book</a>
+      <ul>
+        <li><a href="#ch1">CH1</a></li>
+        <li><a href="#ai">AI</a></li>
+        <li><a href="#ml">ML</a></li>
+        <li><a href="#representation-learning">Representation learning</a></li>
+        <li><a href="#dl">DL</a></li>
+        <li><a href="#ch2">CH2</a></li>
+      </ul>
+    </li>
+    <li><a href="#deep-generative-modeling">Deep Generative Modeling</a>
+      <ul>
+        <li><a href="#autoencoders">Autoencoders:</a></li>
+        <li><a href="#variational-autoencoders-vae">Variational Autoencoders (VAE)</a></li>
+        <li><a href="#generative-adversarial-networks-gans">Generative Adversarial Networks (GANs)</a></li>
+      </ul>
+    </li>
+    <li><a href="#subwords">SubWords</a></li>
+    <li><a href="#decision-trees">Decision Trees</a></li>
+    <li><a href="#purity-function">Purity function</a></li>
+    <li><a href="#why-going-deep-in-deep-learning">Why going deep in Deep Learning</a></li>
+    <li><a href="#few-shot-learning">Few-shot Learning</a></li>
+    <li><a href="#glide">GLIDE:</a>
+      <ul>
+        <li><a href="#diffusion-models">Diffusion Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#p-vs-np">P vs NP</a></li>
+    <li><a href="#expectation-maximization">Expectation Maximization</a>
+      <ul>
+        <li><a href="#how-it-works">How it works</a></li>
+      </ul>
+    </li>
+    <li><a href="#ctc-loss">CTC Loss</a></li>
+    <li><a href="#contrastive-loss">Contrastive loss</a>
+      <ul>
+        <li><a href="#how-it-works-1">How it works</a></li>
+      </ul>
+    </li>
+    <li><a href="#map---maximum-a-posteriori">MAP - Maximum a posteriori</a>
+      <ul>
+        <li><a href="#pros">Pros:</a></li>
+        <li><a href="#cons">Cons</a></li>
+      </ul>
+    </li>
+    <li><a href="#activation-checkpointing">Activation Checkpointing</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#zero">ZeRO</a></li>
+    <li><a href="#palm">PaLM</a></li>
+    <li><a href="#chain-of-though-prompting">Chain of Though Prompting</a></li>
+    <li><a href="#hubert">HuBert</a></li>
+    <li><a href="#graphical-models">Graphical models</a>
+      <ul>
+        <li><a href="#variation-inference">Variation Inference</a></li>
+      </ul>
+    </li>
+    <li><a href="#vq-vae">VQ VAE</a></li>
+    <li><a href="#teacher-forcing-in-rnn">Teacher forcing in RNN</a></li>
+    <li><a href="#parti">Parti</a>
+      <ul>
+        <li><a href="#steps">steps</a></li>
+      </ul>
+    </li>
+    <li><a href="#faster-rcnn">Faster RCNN</a>
+      <ul>
+        <li><a href="#questions">questions</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-choose-validation-sets">How to choose validation sets</a>
+      <ul>
+        <li><a href="#cases-when-is-a-random-subset-not-good-enough">Cases when is a random subset not good enough?</a></li>
+      </ul>
+    </li>
+    <li><a href="#masked-rcnn">Masked RCNN</a>
+      <ul>
+        <li><a href="#why-pyramid-network">why pyramid network</a></li>
+      </ul>
+    </li>
+    <li><a href="#test-time-augmentation-tta">Test Time Augmentation (TTA)</a></li>
+    <li><a href="#linear-factor-models">Linear Factor Models</a></li>
+    <li><a href="#autoencoders-1">Autoencoders</a>
+      <ul>
+        <li><a href="#caveats-and-dangers">Caveats and Dangers</a></li>
+      </ul>
+    </li>
+    <li><a href="#dom-document-object-model">DOM (Document Object Model)</a></li>
+    <li><a href="#interpreter-vs-compiler">Interpreter Vs Compiler</a></li>
+    <li><a href="#category-theory">Category Theory</a></li>
+    <li><a href="#turing-lecture-yoshua-bengio">Turing Lecture: Yoshua Bengio</a>
+      <ul>
+        <li><a href="#ref-1">Ref:</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-backward-propagation-insights">Some backward propagation insights:</a></li>
+    <li><a href="#rust-and-raii-resource-acquisition-is-initialization">RUST and RAII (Resource Acquisition is Initialization)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="transformers">Transformers</h2>
+<p>To deal with sequential data we have to options:</p>
+<ul>
+<li>1-D convolution NN
+<ul>
+<li>processing can be parallel</li>
+<li>not practical for long sequences</li>
+</ul>
+</li>
+<li>Recurrent NN
+<ul>
+<li>can&rsquo;t happen in prallel</li>
+<li>have gradient vanshing problem of the squence becomes so long</li>
+<li>we have bottleneck at the end of the encoder</li>
+</ul>
+</li>
+<li>RNN with attention mechanism
+<ul>
+<li>to solve the bottleneck problem, we make Encoder-Decoder attention</li>
+<li>Decoder utilzes:
+<ul>
+<li>context vector</li>
+<li>weighted sum of hidden states (h1,h2, &hellip; ) from the encoder</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="transformers-1">Transformers</h3>
+<h4 id="encoder">Encoder</h4>
+<ul>
+<li>first we do input embedding, and positional embedding</li>
+<li>in self attention: we multiply q,w,v by a matrix to do lenear transformation</li>
+<li>self attentoion: k _ q &ndash;&gt; scaling down &ndash;&gt; softmax &ndash;&gt; _ v</li>
+</ul>
+<h3 id="multi-head-attention">multi-head attention</h3>
+<ul>
+<li>works as we use many filters in CNN</li>
+<li>in wide attention: it takes every word and spread it multi-head attention</li>
+<li>in narrow attention: it take every word and split it up across the multi-head
+<ul>
+<li>but didnt we lose the adcantage of using multi-head as mutli prespectives, as we do with filters in CNN?</li>
+</ul>
+</li>
+</ul>
+<h3 id="positional-info">Positional info</h3>
+<ul>
+<li>positional encoding using the rotation sin/cos matrix</li>
+<li>positional embedding</li>
+</ul>
+<h3 id="residual-connections">Residual connections</h3>
+<ul>
+<li>to give the chance to skip some learning parameters if it&rsquo;s better to minimize the loss</li>
+</ul>
+<h3 id="layer-normalization">Layer Normalization</h3>
+<ul>
+<li>in batch normalization
+<ul>
+<li>==&gt; we normalize to zero mean and unity varince</li>
+<li>we calculate for all samples in each batch (for each channel )</li>
+</ul>
+</li>
+<li>in layer normalization
+<ul>
+<li>==&gt; $y = \gamma * x + \beta $ where gamm and bata are trainable parametes</li>
+<li>calculates for all channles in the same sample</li>
+</ul>
+</li>
+<li>in instance normalization ==&gt; calculate for one channel in one sample</li>
+</ul>
+<h2 id="debugging-ml-models">Debugging ML Models</h2>
+<ul>
+<li>
+<p>Understand bias-variance diagnoses</p>
+<ul>
+<li>getting more data ==&gt; fixes high variance</li>
+<li>smaller set of features ==&gt; fixes high variance</li>
+</ul>
+</li>
+</ul>
+<h4 id="refrence">Refrence</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ORrStCArmP4" target="_blank" rel="noopener noreffer ">Prof. Andrew NG Vid</a></li>
+</ul>
+<h2 id="svm-and-kernels">SVM and Kernels</h2>
+<ul>
+<li>The main idea of kernels, is that if you can formlate the optimization problem as some of inner products of feater vectors, that can have infinite dimentions, and to come up with a way to calc these inner products efficiently</li>
+</ul>
+<p>we have $ X(i) \in R^{100}$, suppose W can be expressed as a linear combintaion of X</p>
+<p>$ W = \sum*{i = 1}^{M} \alpha*{i} y^i x^i$ (This can be proved with the representer theorem)</p>
+<ul>
+<li>vector W is perpendicular to the decsion boundry specified by algorithm, so W kinds of sets the orientation of the decision boundry and the bias moves it alont right and left.</li>
+</ul>
+<p>optimization problem is :
+$\min  {w,b}  {1/2} <em>||W||^2 $<br>
+s.t  $y^i</em>((W^T * x^i) + b) &gt;= 1$</p>
+<ul>
+<li>For SVM you can make a trade off between the margin and how much you can tolerate wrong calssified examples using a constant</li>
+</ul>
+<h2 id="distributed-training-in-pytorch">Distributed Training in Pytorch</h2>
+<h3 id="pytorch-ddp-internal">Pytorch DDP Internal</h3>
+<p>DDP relies on c10d ProcessGroup for communications. Hence, applications must create ProcessGroup instances before constructing DDP.
+The DDP constructor takes a reference to the local module, and broadcasts state_dict() from the process with rank 0 to all other processes in the group to make sure that all model replicas start from the exact same state.
+DDP registers autograd hooks during construction, one hook per parameter. These hooks will be triggered during the backward pass when the gradient becomes ready.</p>
+<p>Backward pass: Because <code>backward()</code> function is called on the loss directly, which out of DDP&rsquo;s control. So, it waits till one of the autograd hooks are invoked, to trigger the gradients synchronization.</p>
+<p>DDP waits for all gradients in one bucket are ready, Reducer kicks off an asynchronous allreduce on that bucket to calculate mean of gradients across all processes.</p>
+<p>Optimizer Step: From the optimizer’s perspective, it is optimizing a local model. Model replicas on all DDP processes can keep in sync because they all start from the same state and they have the same averaged gradients in every iteration.</p>
+<h3 id="dataparallel-vs-distributeddataparallel">DataParallel VS DistributedDataParallel</h3>
+<ul>
+<li><code>DataParallel</code> is single-process, multi-thread, and only works on a single machine, while <code>DistributedDataParallel</code> is multi-process and works for both single- and multi- machine training. DataParallel is usually slower than DistributedDataParallel even on a single machine due to GIL contention across threads, per-iteration replicated model, and additional overhead introduced by scattering inputs and gathering outputs.</li>
+<li><code>DataParallel</code> doesn&rsquo;t support model parallel</li>
+</ul>
+<h4 id="resources">Resources</h4>
+<pre><code>- https://pytorch.org/docs/master/notes/ddp.html
+- https://pytorch.org/tutorials/intermediate/ddp_tutorial.html?highlight=distributed%20training
+</code></pre>
+<h2 id="complete-statistical-theory-of-learning---vladimir-vapnik">Complete Statistical Theory of Learning - <strong>Vladimir Vapnik</strong></h2>
+<ul>
+<li>There are two ways for generalization: more data, and complete learning theory</li>
+<li>Turing said, that you should imitate intelligent person</li>
+</ul>
+<h3 id="ref">Ref: <a href="https://www.youtube.com/watch?v=Ow25mjFjSmg" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=Ow25mjFjSmg</a></h3>
+<h2 id="statistical-machine-learning">Statistical Machine Learning</h2>
+<h3 id="part-1">part 1:</h3>
+<h4 id="deduction-vs-induction">deduction vs induction:</h4>
+<ul>
+<li>deduction: is the process of reasoning from one or more general statements to reach a logically certain conclusion. premises must be correct.</li>
+<li>induction: reasoning that construct or evaluates general proposition that are derived from specific examples. we can never be sure our conclusion can be wrong!</li>
+<li>machine learning tries to automate the process of inductive inference.</li>
+</ul>
+<h4 id="why-should-ml-work">why should ML work?</h4>
+<ul>
+<li>ML tries to find patterns in data</li>
+<li>we will only be able to learn if there&rsquo;s something to learn</li>
+<li>ML makes some assumptions, which are are rarely made explicit.</li>
+<li>we need to have an idea what we are looking for. This is called &ldquo;inductive bias&rdquo;. Learning is impossible without such a bias
+<ul>
+<li>the formal theorem if this is called <code>no free lunch theorem</code></li>
+</ul>
+</li>
+<li>on the other hand, if we have a very strong inductive bias, then with just few training examples, then we can have high certainty in the output</li>
+<li>the problem of selecting a good hypothesis class is called model selection.</li>
+<li>any system that learns has an inductive bias.</li>
+<li>if the algorithm works, <strong>THERE HAS TO BE A BIAS</strong></li>
+<li>the inductive bias, rules over our function space</li>
+</ul>
+<h3 id="part-2">Part 2:</h3>
+<ul>
+<li>it;s not hard for ML algorithm to correctly predict training labels</li>
+<li>usually ML algorithms make training errors, that is the function,they come up with doesn&rsquo;t perfectly fit the training data</li>
+<li>what we care about is the performance on teh test set</li>
+<li>it&rsquo;s not always the case that lowering the train data would lower that test data</li>
+</ul>
+<h4 id="k-nearest-algorithms">K-Nearest algorithms:</h4>
+<ul>
+<li>for K-nearest algorithm,
+<ul>
+<li>the best value for K is log(N)</li>
+<li>if k is too small ==&gt; overfitting</li>
+<li>if k is too large ==&gt; underfitting</li>
+</ul>
+</li>
+<li>k nearest algo achieves good results on MNIST dataset for classifying two classes, with simple euclidean distance function</li>
+<li>k-nearest can be used for density estimation, clustering, outlier detection</li>
+<li>the inductive bias in K nearest algo, is that near points are the of teh same category</li>
+<li>the challenging part about k nearest algo is how to measure the distance between points</li>
+</ul>
+<h3 id="part3">Part3</h3>
+<ul>
+<li>for ML, we don&rsquo;t put any assmuptions for the data probability ditribution</li>
+<li>often, the input and output are random variables</li>
+<li>in some applications, it&rsquo;s important that the loss depends on the input X.</li>
+<li>also in some cases, the type of error is critical, for exp. spaam detection</li>
+<li>Bayes risk: is the min error for the expected values over all examples &ndash;&gt; basically the it&rsquo;s the lowest error you can achieve</li>
+<li>Consistency: we say algorithm A is consistent, if we have an infinite iid datapoints, and the risk of algorithm&rsquo;s selected function converges to the Baye&rsquo;s risk.
+<ul>
+<li>basically means that if we have infinite data samples, then our algorthms reaches the Bayes risk, which is the lowest error possible</li>
+</ul>
+</li>
+<li>Universally consistent: no mattter the underlying probability distribution is, when we have enough data points, the algorithm would be consistent
+<ul>
+<li>consistent independantly of the data distribution</li>
+<li>KNN classifier, SVM, boositn, random forests are universally consistent</li>
+</ul>
+</li>
+</ul>
+<h2 id="dl-book">DL Book</h2>
+<h3 id="ch1">CH1</h3>
+<ul>
+<li>one of the key ideas in DL is that data representation matters a lot, and that DL is a technique for learning how to represent the data</li>
+</ul>
+<h3 id="ai">AI</h3>
+<ul>
+<li>in AI we need the computer to do some tasks like humans</li>
+<li>we do that by providing the computer with a lot of rules describing the world and how to act in different scenarios</li>
+</ul>
+<h3 id="ml">ML</h3>
+<ul>
+<li>in machine learning we can learn these rules without explicitly told them</li>
+<li>but we still need to be provided with custom features that are given by domain experts</li>
+</ul>
+<h3 id="representation-learning">Representation learning</h3>
+<ul>
+<li>a specific type of ML where we don&rsquo;t tell the computer the specific features</li>
+<li>instead, we give the computer raw input, and it should learn the more complex features explicitly</li>
+<li>ex: autoencoders</li>
+</ul>
+<h3 id="dl">DL</h3>
+<ul>
+<li>is a representation learning algorithms that is applied in multi sequential manner</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/blogs/svg/loading.min.svg"
+        data-src="learning-paradigms.png"
+        data-srcset="learning-paradigms.png, learning-paradigms.png 1.5x, learning-paradigms.png 2x"
+        data-sizes="auto"
+        alt="learning-paradigms.png"
+        title="learning-paradigms.png" /></p>
+<h3 id="ch2">CH2</h3>
+<h2 id="deep-generative-modeling">Deep Generative Modeling</h2>
+<ul>
+<li>latent variable: it&rsquo;s a variable that is controlling some behaviors, but we can&rsquo;t directly observe it</li>
+<li>we are trying to observe <code>true explanatory factors</code>, for example, <code>latent variables</code>, from only observed data</li>
+</ul>
+<h3 id="autoencoders">Autoencoders:</h3>
+<ul>
+<li>the encoder learns to map from data, to a low-dimensional latent space</li>
+<li>the decoder learns to map back from the low-dimensional space back into a reconstructed observation</li>
+<li>the bottleneck hidden layer forces the network to learn a compressed latent representation</li>
+<li>the reconstruction loss forces the latent representation to capture as much information from the data</li>
+</ul>
+<h3 id="variational-autoencoders-vae">Variational Autoencoders (VAE)</h3>
+<ul>
+<li>
+<p>with classic autoencoders, once we train the network, then the latent representation is deterministic</p>
+</li>
+<li>
+<p>but in VAE, we add some randomness, so we can generate new samples</p>
+</li>
+<li>
+<p>so the encoder should output a mean and a standard deviation, which represents a distribution of the input, then we can sample from this distribution to generate new sample</p>
+</li>
+<li>
+<p>the encoder is trying to infer a probability distribution of the latent space with respect to its input data</p>
+</li>
+<li>
+<p>the decoder is trying to infer a new probability distribution over the input space given the latent space</p>
+</li>
+<li>
+<p>the loss is going to be function of the parameters of the two distributions</p>
+</li>
+<li>
+<p>the loss would consist of a construction loss and a regularization term, which is responsible for inducing some notion of structure of this probabilistic space</p>
+</li>
+<li>
+<p>We need regularization and a prior to:</p>
+<ul>
+<li>continuity: points that are close in the latent space, should remain close after decoding</li>
+<li>completeness: samples from the latent space, should produce meaning content after decoding</li>
+</ul>
+</li>
+<li>
+<p>we can&rsquo;t perform back propagation, as there&rsquo;s stochasticity in the latent space,</p>
+</li>
+<li>
+<p>to solve this issue, we fix, the mean and variance, and introduce the stochastic term separate from them</p>
+</li>
+<li>
+<p>The key problem with VAEs, is a concern of density estimation</p>
+</li>
+</ul>
+<h3 id="generative-adversarial-networks-gans">Generative Adversarial Networks (GANs)</h3>
+<ul>
+<li>we need to sample from a very complex distribution, that we don&rsquo;t know, and can&rsquo;t estimate</li>
+<li>the solution, is to sample from a simple distribution (eg. noise), then learn a transformation, to the data distribution</li>
+<li>we have a Generator, that&rsquo;s tries to transform the data sampled from the random noise, into data that looks real, to trick the discriminator</li>
+<li>we have a discriminator, which tries to identify real data from fake.</li>
+</ul>
+<h2 id="subwords">SubWords</h2>
+<ul>
+<li>it&rsquo;s just like the skip-gram model</li>
+<li>but we just changed the score function</li>
+<li>so that we increased the vocab size by adding N-grams of all words we have</li>
+<li>then we use them to capture more meaning from the words</li>
+<li>if we encounter new word, then we add it&rsquo;s N-gram and thats would be the word vector</li>
+</ul>
+<h2 id="decision-trees">Decision Trees</h2>
+<ul>
+<li>they are greedy algorithm</li>
+<li>they can stuck in local minimum</li>
+<li>if the we have some continuous features, we can use it multiple times, every time with different range</li>
+</ul>
+<h2 id="purity-function">Purity function</h2>
+<ul>
+<li>
+<p>we want to define a purity function, that has the following</p>
+<ul>
+<li>it has it&rsquo;s maximum value when probability of any class in 1</li>
+<li>it has it&rsquo;s minimum value when all classes has the same probability</li>
+<li>Purity( pa, pb) == Purity (pb, pa)</li>
+</ul>
+</li>
+<li>
+<p>entropy = impurity = -1 * purity</p>
+</li>
+<li>
+<p>one function that satisfies all these requirements, is</p>
+<ul>
+<li>$ purity(p*{c1}, p*{c2}, p*{c3}) = p*{c1} \log(p*{c1}) * p*{c2} \log(p*{c2}) * p*{c3} \log(p_{c3})$</li>
+</ul>
+</li>
+<li>
+<p>so we choose features, that would increase purity the most after splitting the dataset using it</p>
+</li>
+<li>
+<p>to calculate after entropy or purity of a set after seperation, would be the weighted average of the subsets</p>
+</li>
+</ul>
+<h2 id="why-going-deep-in-deep-learning">Why going deep in Deep Learning</h2>
+<ul>
+<li>one motivation, is that going deep can reduce the size of our units exponentially</li>
+<li>in our underlying function, there could be some symmetry, that we can fold the function across its axis</li>
+<li>for statistical reasons, we would want to infer out initial beliefs, about our function, that is involve the composition of several simpler functions</li>
+<li>Empirical experiment<a href="https://www.youtube.com/watch?v%3DKbBMaMVk0eE" target="_blank" rel="noopener noreffer "></a>s show that deeper networks generalize better</li>
+</ul>
+<h2 id="few-shot-learning">Few-shot Learning</h2>
+<ul>
+<li>we want to classify examples, that we only have few examples for, maybe even 0</li>
+<li>the idea is instead of having a classifier as the last layer(softmax layer), we can use a siamese network, just to tell us is the two examples are similar</li>
+<li>so we just learn a similarity function</li>
+</ul>
+<h2 id="glide">GLIDE:</h2>
+<ul>
+<li>Generates realistic images from text</li>
+<li>GLIDE is the next version of DALLE, with respect to photo realism and caption similarity</li>
+<li>this is fine-tuned model, not zero-shot like DALLE</li>
+<li>It can generate or edit images</li>
+<li>so you can generate an image using zero-shot, then you can edit the image by putting masks on the image and tell the model what to draw in the masked area</li>
+</ul>
+<h3 id="diffusion-models">Diffusion Models</h3>
+<ul>
+<li>we start with the original image, then we keep add noise to it till it become so noisy</li>
+<li>then we try to reverse the operation and get it back to the input image</li>
+</ul>
+<h2 id="p-vs-np">P vs NP</h2>
+<ul>
+<li>P = problems solvable in polynomial time</li>
+<li>NP = decision problems solvable in nondeterministic polynomial time
+<ul>
+<li>decision problems = yes, no problems</li>
+<li>NP problems are hard to solve, but each to check the correctness of the answers</li>
+</ul>
+</li>
+</ul>
+<h2 id="expectation-maximization">Expectation Maximization</h2>
+<ul>
+<li>If we have a probability distribution that is function of two variables, one is observable and the other is latent and we want to calculate the MLE for this model.</li>
+<li>Then we can calculate the marginal likelihood instead</li>
+<li>The marginal probability basically means that we take the summation over all possible states of the latent variable</li>
+</ul>
+<h3 id="how-it-works">How it works</h3>
+<ul>
+<li>
+<p>you have some samples, and you want to cluster them according to two distributions</p>
+</li>
+<li>
+<p>you init the two ditros, randomly, and calculate the postrior that every sample belong to this distro</p>
+</li>
+<li>
+<p>then you take the weighted average that every one of thees samples belong to the distro</p>
+</li>
+<li>
+<p>it&rsquo;s like K-means except that we have probability that every sample belong to a distro, instead of 0-1</p>
+</li>
+<li>
+<p>we keep iterating till we reach the most accurate distros</p>
+</li>
+</ul>
+<h2 id="ctc-loss">CTC Loss</h2>
+<ul>
+<li>when we have many-to-many sequence prediction</li>
+<li>Labeling order matters , but there&rsquo;s no one-to-one correspondence between outputs and labels</li>
+<li>we need to impose structural constraints on the output sequence</li>
+<li>Mostly used with speech recognition, where we have labels much less that input</li>
+<li>they have a special blank token, and they reduce all similar tokens in the same span between blanks with one token</li>
+</ul>
+<h2 id="contrastive-loss">Contrastive loss</h2>
+<ul>
+<li>In cross-entropy loss, all we care about is make similar images in the same side of the decision boundry</li>
+<li>But in contrastive loss, we first try to move all similar examples near each other, so then we can train the calssification layer easily</li>
+<li>in case of self supervised learning, there can be a probelm of taking a postive example as a negative one, because we don&rsquo;t have labeled data, which can make it hard on downstream tasks</li>
+</ul>
+<h3 id="how-it-works-1">How it works</h3>
+<ul>
+<li>we have the original image, and they call it the anchor</li>
+<li>they augment this anchor image to obtain the positive examples</li>
+<li>for each anchor, they generate one positive pair, and 2N-2 negative pairs</li>
+<li>they calculate the dot product similarity between the anchor and these pairs</li>
+<li>they take the log for the similarity of the anchor and the positive example in the numerator, and the summation of the similarity between the anchor and negative examples in the denomerator</li>
+<li>so our objective is increasing the enumerator and decreacing the denomerator</li>
+<li>They also apply temperature smoothing</li>
+<li>This is can be also extended to supervised contrastive
+<ul>
+<li>we can have more than one positive label</li>
+<li>we can have multiple anchor classes</li>
+</ul>
+</li>
+<li>we can see the anchor-positive similarity appears in the gradients, and this makes the gradient the biggest for hard-positives (positive examples that the model didn&rsquo;t learn the similarity between yet)</li>
+</ul>
+<h2 id="map---maximum-a-posteriori">MAP - Maximum a posteriori</h2>
+<ul>
+<li>Tries to estimate the best parameters given the likilhood on the data, and the prior of the parameters</li>
+</ul>
+<h3 id="pros">Pros:</h3>
+<ul>
+<li>easy interpretable</li>
+<li>avoid overfitting (has regularization )</li>
+<li>tends to look like MLE asymptotically</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>point estimate, no representation of uncertainty in Theta</li>
+<li>not invariant under reparameterization (meaning that if we mapped Theta using a function, then the new MAP value will not simply be the paramterized value on the old MAP value)</li>
+<li>must assume prior on Theta</li>
+</ul>
+<h2 id="activation-checkpointing">Activation Checkpointing</h2>
+<ul>
+<li>normally we store the activations for all layers, because we need them in the backward path</li>
+<li>for large models, this can cause huge memory footprint</li>
+<li>The idea is to only store the activation for the last layer in each block</li>
+<li>and then recalculate the activations for the other layers when we need them</li>
+</ul>
+<h1 id="loss-scalling">Loss Scalling</h1>
+<ul>
+<li>
+<p>in half-precision training, some small values are rounded to zero, bacause of the representation limitation of FP16</p>
+</li>
+<li>
+<p>but we can just scale the loss, by multiplying it with certain value,and so the gradients would be scaled as well</p>
+</li>
+<li>
+<p>this trick enables us to cover larger range of values</p>
+</li>
+<li>
+<p>for ex, if we scaled the loss by factor of 8, then extend the covered range with 3 exponents (2^3)</p>
+</li>
+</ul>
+<h2 id="zero">ZeRO</h2>
+<ul>
+<li>
+<p>The main idea is in Data parallel, why copy state of optimizer and weights and gradients to all devices, while you can partition them</p>
+</li>
+<li>
+<p>the idea is to partition all those over the devices, so that teh total memory would reduce dramatically</p>
+</li>
+<li>
+<p>This works because these states (optimizer, weights, gradietns) are temporal independent, meaning that we don&rsquo;t the whole matrix to calculate teh local step</p>
+</li>
+</ul>
+<h2 id="palm">PaLM</h2>
+<ul>
+<li>Outperformed finetuned SOA models</li>
+<li>breakthroughs multi-step reasoning</li>
+<li>efficient utilization</li>
+</ul>
+<h2 id="chain-of-though-prompting">Chain of Though Prompting</h2>
+<ul>
+<li>instead of doing standard prompting, they did chain of thought prompting</li>
+<li>they just provide the model with the chain of thought on how to generate the answer</li>
+</ul>
+<center> <img src="chain-of-thought.png"/></center>
+<h2 id="hubert">HuBert</h2>
+<ul>
+<li>the main idea is that they wanted to do MLM like bert, but that&rsquo;s challenging with audio.</li>
+<li>so they first applied MFCCs to convert the audio signal into chunks</li>
+<li>then they applied offline K-means algorithm to cluster each frame</li>
+<li>so basically the labels comes from an unsupervised teacher which is the k-means</li>
+<li>they applied the k-means on the MFCC</li>
+<li>the main insight of why this works, is that the K-means algorithm is consistent, so the model learns more of the sequential structure of the data</li>
+</ul>
+<h2 id="graphical-models">Graphical models</h2>
+<ul>
+<li>to solve the marginal probability over the latent variable, we have two options:
+<ul>
+<li>monte carlo inference
+<ul>
+<li>this method is unbiased, but have high variance</li>
+</ul>
+</li>
+<li>Variational inference
+<ul>
+<li>this is very lowe variance, but is biased</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="variation-inference">Variation Inference</h3>
+<ul>
+<li>we can&rsquo;t calculate the original postrior</li>
+<li>so we estimate it using another approximation, that is tractable, and we tweak it till it becomes like the original intractable distribution</li>
+</ul>
+<p><strong>if you maximize the lower bound of a function, you maximize that function</strong></p>
+<h2 id="vq-vae">VQ VAE</h2>
+<ul>
+<li>they applied sigmoid to the random variable to make it only takes confined range, istead of having values outside of pixels values range</li>
+</ul>
+<h2 id="teacher-forcing-in-rnn">Teacher forcing in RNN</h2>
+<ul>
+<li>it&rsquo;s a technique used to train randomness</li>
+<li>it&rsquo;s applicable only in case we have output-to-hidden connections, and it can&rsquo;t be used in hidden-to-hidden connections</li>
+<li>the main idea is that they use the true label from last step instead of the output. This way, we can parallelize the training</li>
+<li>biggest disadvantage to this, is that it can&rsquo;t be used with <code>open loop</code>, meaning in case we enter the models&rsquo;s output as input. because this way, there will be some inputs as test time that the model didn&rsquo;t see at training.</li>
+</ul>
+<h2 id="parti">Parti</h2>
+<ul>
+<li>it&rsquo;s autoregressive Text-to-Image model</li>
+<li>it uses transformer based image tokenizer</li>
+<li>they can have detailed image description from dataset designed for vision-impaired people</li>
+</ul>
+<h3 id="steps">steps</h3>
+<ul>
+<li>first they train image tokenzier, which converts images to tokens</li>
+<li>then they train encoder-decoder model to do teacher-inforcing style training from the sentence tokens</li>
+</ul>
+<h2 id="faster-rcnn">Faster RCNN</h2>
+<ul>
+<li>
+<p>it&rsquo;s fast because they merged the the feature map for Region Proposal Network and the classifier network</p>
+</li>
+<li>
+<p>they pass on the extracted feature map with 3*3 sliding window</p>
+</li>
+<li>
+<p>for every anchor point he tries to generate 9 anchor boxes</p>
+</li>
+</ul>
+<h3 id="questions">questions</h3>
+<ul>
+<li>what if this anchor point doesn&rsquo;t have a ground truth? we only consider the first term of the loss, which is the objectivity. and we exclude the second term as we don&rsquo;t have ground truth for this pixel</li>
+<li>why do we make intermediate anchor boxes? it&rsquo;s like adding a prior knowledge, we normalize our predictions and ground truth according to these anchors</li>
+</ul>
+<h2 id="how-to-choose-validation-sets">How to choose validation sets</h2>
+<blockquote>
+<p>This is taken from Dr. Rachel&rsquo;s blog post <a href="https://www.fast.ai/posts/2017-11-13-validation-sets.html" target="_blank" rel="noopener noreffer ">here</a></p>
+</blockquote>
+<ul>
+<li>the most common way is to choose a random subset from the training set.</li>
+<li>but this doesn&rsquo;t always give the best results in real world</li>
+</ul>
+<h3 id="cases-when-is-a-random-subset-not-good-enough">Cases when is a random subset not good enough?</h3>
+<ul>
+<li>Time series models
+<ul>
+<li>it&rsquo;s better here to choose continuous intervals as val or test</li>
+</ul>
+</li>
+<li>when you dataset has many instances of the same object (ex: same person, same car ). and your task is not detecting the object, but rather the action or the environment.
+<ul>
+<li>so if you didn&rsquo;t take all the pictures from the same object in one split of the data, there&rsquo;s a high chance your model would learn features related to the object and not the action</li>
+<li>so we want to gather all dataset examples of the same object in the same split (train, or val)</li>
+</ul>
+</li>
+</ul>
+<h2 id="masked-rcnn">Masked RCNN</h2>
+<h3 id="why-pyramid-network">why pyramid network</h3>
+<ul>
+<li>
+<p>we want to have good semantic understanding but in high resolution</p>
+</li>
+<li>
+<p>it&rsquo;s so computationally expensive</p>
+</li>
+<li>
+<p>we use it as a backbone for FasterRCNN</p>
+<ul>
+<li>question? how do we use it as a backbone?</li>
+</ul>
+</li>
+<li>
+<p>The main idea is that they seprated the mask predictor from, classification and bounding box detection</p>
+</li>
+</ul>
+<h2 id="test-time-augmentation-tta">Test Time Augmentation (TTA)</h2>
+<p><strong>During inference or validation, creating multiple versions of each image, using data augmentation, and then taking the average or maximum of the predictions for each augmented version of the image.</strong></p>
+<ul>
+<li>It&rsquo;s a nice way to increase accuracy</li>
+<li>Jermy Howard Said: &ldquo;This is one of the most under-appreciated deep learning tricks, in my opinion!&rdquo;</li>
+</ul>
+<h2 id="linear-factor-models">Linear Factor Models</h2>
+<ul>
+<li>they are one of the simplest classes of probabilistic models</li>
+<li>they may not be used in SOA models, but they are a building block for many of them.</li>
+<li>defined by the use of a stochastic linear decoder that generates x by adding noise to a linear transformation of h
+<ul>
+<li>we take the hidden representation <code>h</code> and do linear transformation, then add noise to that, to get <code>x</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="autoencoders-1">Autoencoders</h2>
+<ul>
+<li>We force the model to learn rich features by making the hidden features dimension to be less than the input&rsquo;s</li>
+</ul>
+<h3 id="caveats-and-dangers">Caveats and Dangers</h3>
+<ul>
+<li>Reconstruction loss is <strong>indifferent</strong> to latent space, meaning it just compares the input with the output.</li>
+<li>Higher representational power gives flexibility for suboptimal encodings.</li>
+</ul>
+<ul>
+<li>
+<p>this means that good construction loss doesn&rsquo;t necessary mean that we learned good hidden features</p>
+</li>
+<li>
+<p>we need more constraints to learn manifolds</p>
+<ul>
+<li>manifolds are areas that have high probability for the data to be in</li>
+</ul>
+</li>
+</ul>
+<h2 id="dom-document-object-model">DOM (Document Object Model)</h2>
+<ul>
+<li>
+<p>it&rsquo;s how a browser renders the website</p>
+</li>
+<li>
+<p>it&rsquo;s like a skeleton for the website</p>
+</li>
+<li>
+<p>it&rsquo;s has documents with elements and attributes</p>
+</li>
+<li>
+<p>it converts your HTML code to objects, and that&rsquo;s how you can interact with it with JS</p>
+</li>
+<li>
+<p>So the DOM and the HTML are the same thing, with just two different representations</p>
+</li>
+</ul>
+<h2 id="interpreter-vs-compiler">Interpreter Vs Compiler</h2>
+<ul>
+<li>compiler just takes your code, and statically compiles it, and hand you the binary for it and goes away</li>
+<li>interpreter, stays with you and interprets your code line by line, and can make use of some speedups like JIT compilation</li>
+</ul>
+<h2 id="category-theory">Category Theory</h2>
+<ul>
+<li>Category theory takes a bird&rsquo;s eye view of mathematics.From that high you can&rsquo;t see the details, but you however can see the patterns..</li>
+</ul>
+<h2 id="turing-lecture-yoshua-bengio">Turing Lecture: Yoshua Bengio</h2>
+<h3 id="ref-1">Ref:</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=llGG62fNN64" target="_blank" rel="noopener noreffer ">YT Vid</a></li>
+</ul>
+<ul>
+<li>As we try to estimate functions that grow exponentially in complexity, we need to have training samples that grows with the same rate as well</li>
+<li>but we can add the concept on composintialilty to mitigate this</li>
+<li>we can do that by adding more layers, or adding more parameters per layer</li>
+<li>local minimas are bad in low dimensions only, but in higher dimensions, they are more rare, and only happen near the global minima, cause they require the grad to be low in all dimensions.</li>
+<li>on the other hand, high dimensions functions suffer from saddle points</li>
+<li>we found that NN are good as classifiers, and that our data is concentrated in small regions called the <code>manifolds</code>. so we can use this to separate real data from fake one, and learn these manifolds as a side effect, and this is what GANs do</li>
+</ul>
+<h2 id="some-backward-propagation-insights">Some backward propagation insights:</h2>
+<ul>
+<li>sum in forward, propagates ones in backward</li>
+<li>broadcasting in forward, propagates sum in backward ( for example: bias)</li>
+<li>max,min,median operations in forward , becomes inserting ones in the positions of max,min,etc, and zeros in the other positions</li>
+<li>view operation is just a reshape, and we can undo it in backward pass (just rearrange the gradient like the original tensor shape)</li>
+<li>for embedding matrices, we need to see which entries did we use, and propagate the gradient for them, for each time we used them,(example: if we used the embedding for <code>a</code> twice and <code>c</code> once, then we need to propagate the gradient for <code>c</code> twice, and for <code>a</code> once)
+<ul>
+<li>one way to do this, is to loop over the input and for each entry that we used the embedding for, accumulate the forwarded gradient vector</li>
+</ul>
+</li>
+</ul>
+<h2 id="rust-and-raii-resource-acquisition-is-initialization">RUST and RAII (Resource Acquisition is Initialization)</h2>
+<ul>
+<li>the main idea is that when you create an object, you allocate some memory, and when you destroy that object, you destroy the memory</li>
+<li>they do that, by ensuring that every chunk of memory the program allocates has only one owner, and this owner has the control over this memory chunk</li>
+<li>in the code, if we assign this memory to another variable, then it becomes the new owner and the old one has no longer access to the data</li>
+<li>there&rsquo;s also the option to borrow the data, instead of taking ownership over it</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-10-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://bodasadallah.github.io/blogs/scribbles-2021/" data-title="Scribbles" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fbodasadallah.github.io%2fblogs%2fscribbles-2021%2f&amp;text=Scribbles" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/blogs/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blogs/tts-research-2021/" class="prev" rel="prev" title="TTS Research"><i class="fas fa-angle-left" aria-hidden="true"></i>TTS Research</a>
+            <a href="/blogs/python-2021/" class="next" rel="next" title="Python">Python<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Boda Sadallah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/blogs/js/theme.js"></script></body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>A glimpse into PyTorch Autograd internals - Random Thoughts</title><meta name="Description" content="Blog posts"><meta property="og:url" content="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/">
+  <meta property="og:site_name" content="Random Thoughts">
+  <meta property="og:title" content="A glimpse into PyTorch Autograd internals">
+  <meta property="og:description" content="Trying to understand some errors we get, while using pyTorch">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-01-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-01-10T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A glimpse into PyTorch Autograd internals">
+  <meta name="twitter:description" content="Trying to understand some errors we get, while using pyTorch">
+<meta name="application-name" content="Random Thoughts">
+<meta name="apple-mobile-web-app-title" content="Random Thoughts">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" /><link rel="prev" href="https://bodasadallah.github.io/blogs/distributed-training-2022/" /><link rel="next" href="https://bodasadallah.github.io/blogs/peer-review-2024/" /><link rel="stylesheet" href="/blogs/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A glimpse into PyTorch Autograd internals",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bodasadallah.github.io\/blogs\/a-glimpse-into-pytorch-autograd-internals-2023\/"
+        },"genre": "posts","wordcount":  832 ,
+        "url": "https:\/\/bodasadallah.github.io\/blogs\/a-glimpse-into-pytorch-autograd-internals-2023\/","datePublished": "2023-01-10T00:00:00+00:00","dateModified": "2023-01-10T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Boda Sadallah"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="sticky" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Random Thoughts">Random Thoughts</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/blogs/"> Posts </a><a class="menu-item" href="/"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Random Thoughts">Random Thoughts</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/blogs/" title="">Posts</a><a class="menu-item" href="/" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">A glimpse into PyTorch Autograd internals</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Boda Sadallah</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;832 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#normal-training">Normal training</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="intro">Intro</h2>
+<p>Here, we are going to discuss the internals of PyTorch <code>Autograd</code> module. The most of us don&rsquo;t have to know about this. I was the same till I came across this error:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>unsupported operand type(s) for *: &#39;float&#39; and &#39;NoneType&#39;</code></pre></div>
+<p>This came from executing the following code:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">+=</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">grad</span></span></span></code></pre></div></div>
+<p>But why? We defined that the gradient of <code>a</code> should be calculated by putting <code>requires_grad</code> to be <code>True</code>!</p>
+<p>After some investigation, the error was due to that <code>a.grad</code> is <code>None</code>. But why is that the case? When we multiplied <code>a</code> by <code>0.1</code> we internally created a new tensor that is <code>intermediate</code>. And by default, PyTorch only populate gradients for <code>leaf</code> tensors only.</p>
+<h2 id="notes">Notes</h2>
+<p>These are some notes to help understand the internals of PyTorch, and its Autograd module, and why did we get this error.</p>
+<p><strong>To know more about this, in a more structured way,read this blog post <a href="https://medium.com/@mrityu.jha/understanding-the-grad-of-autograd-fc8d266fd6cf" target="_blank" rel="noopener noreffer ">here</a></strong></p>
+<ul>
+<li>
+<p><code>requires_grad</code> tells PyTorch, if it should save the forward results, to use it to calculate the gradients.</p>
+</li>
+<li>
+<p>All tensors with <code>requires_grad</code> is <code>False</code> are leafs tensors.</p>
+</li>
+<li>
+<p>Tensors with <code>requires_grad</code> is <code>True</code> are leafs only if they are created by the user, and not as a result by a mathematical expression for example.</p>
+</li>
+<li>
+<p>When a tensor is created as a result of an operation on a few tensors, then it would be <code>leaf</code> if and only if all the tensor used to generate it has <code>requires_grad</code> set to <code>False</code>, as only then, the <code>requires_grad</code> for this tensor will be set to <code>False</code>, and as we mentioned above, it will be a leaf.</p>
+</li>
+<li>
+<p>For a tensor to have <code>tensor.grad</code> populated, it must have <code>requires_grad</code> to be <code>True</code>, and it must be a <code>leaf</code>.</p>
+</li>
+<li>
+<p>You can&rsquo;t change the <code>requires_grad</code> for <code>non-leaf</code> tensors. They are set automatically according the tensors used in the operation creating them</p>
+</li>
+<li>
+<p>PyTorch doesn&rsquo;t allow updates(in-place) on leaf tensors if the <code>requires_grad</code> is set to <code>True</code>, as it causes troubles in the backward pass.</p>
+</li>
+<li>
+<p>What does it mean, that Autograd will not populate the gradient for a tensor?</p>
+<ul>
+<li>Here&rsquo;s what the backward graph does while calculating and propagating the gradient:
+<ul>
+<li>If this tensor has <code>requires_grad</code> set to <code>False</code>, then this tensor is not part of the backward graph, and it will do nothing.</li>
+<li>If the tensor has <code>requires_grad</code> set to <code>True</code>, and <code>is_leaf</code> set to <code>False</code>, this means that this is an <code>intermediate</code> tensor that came off an operation. In this case, Autograd doesn&rsquo;t populate the <code>grad</code> attribute for this tensor, and just propagate the gradient to the operation that generated this tensor (to <code>grad_fn</code>.)</li>
+<li>Lastly, if the tensor is a <code>leaf</code>, and has <code>requires_grad</code> set to <code>True</code>, then Autograd calculates the accumulated grad value, and puts it in <code>grad</code> field for the tensor.</li>
+</ul>
+</li>
+<li>There&rsquo;s an amazing video explaining this <a href="https://www.youtube.com/watch?v=MswxJw-8PvE" target="_blank" rel="noopener noreffer ">here</a></li>
+</ul>
+</li>
+</ul>
+<p>Now for the Solutions:</p>
+<p>There are two solutions for this:</p>
+<ol>
+<li>call <code>a.retain_grad()</code>, which tells PyTorch to keep the grad for this tensor anyway.
+<ul>
+<li>Note: this solution is not fast.</li>
+</ul>
+</li>
+<li>remove <code>requires_grad</code> from the initialization of the tensor, and then do it explicitly in a separate step.</li>
+<li>wrap the weight update under <code>torch.no_grad</code>, and I will explain why we need this step below.</li>
+</ol>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">+=</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">grad</span></span></span></code></pre></div></div>
+<h2 id="normal-training">Normal training</h2>
+<p>Here&rsquo;s another script for a training a network with just one neuron. Our normal training system, would be something like this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Input</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># weight</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># bias</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># forward pass</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">w</span> <span class="o">+</span>  <span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># backward pass</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># weight update</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span> <span class="o">=</span>   <span class="n">w</span> <span class="o">+</span>  <span class="mf">0.1</span><span class="o">*</span><span class="n">w</span><span class="o">.</span><span class="n">grad</span></span></span></code></pre></div></div>
+<p>This will not work!!</p>
+<p>As we said, the weight update line, will produce an <code>intermediate</code> tensor, which the <code>grad</code> will not be populated for.
+That&rsquo;s why we all wrap our weight updating steps under <code>torch.no_grad()</code> context, and do in-place calculation,which tells PyTorch not to keep track of these operations in the grad calculations, and thus the weights tensor will remain a <code>leaf</code> tensor.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">+=</span>   <span class="mf">0.1</span><span class="o">*</span><span class="n">w</span><span class="o">.</span><span class="n">grad</span></span></span></code></pre></div></div>
+<ul>
+<li>so we use <code>torch.no_grad()</code> for two main reasons:
+<ol>
+<li>we don&rsquo;t need to include the weight update operation in the gradient graph.
+<ul>
+<li>although, we zero our gradient before every backward pass, but this weight update step will add a new branch in the gradient calculations for the weights tensors,and this will mess with the calculations.</li>
+</ul>
+</li>
+<li>we need to be able to do <code>in-place</code> operation, and so, our tensor will remain a <code>leaf</code>, and Autograd will keep populating its gradient.</li>
+</ol>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>At last, we usually, use pre-built optimizers for the training step, or we even use a <code>trainer</code>, which make the things way easier.
+This was just a try to go back to the basics and trying to understand the roots of the problem.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://PyTorch.org/docs/stable/generated/torch.Tensor.is_leaf.html#torch.Tensor.is_leaf" target="_blank" rel="noopener noreffer ">https://PyTorch.org/docs/stable/generated/torch.Tensor.is_leaf.html#torch.Tensor.is_leaf</a></li>
+<li><a href="https://www.youtube.com/watch?v=MswxJw-8PvE" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=MswxJw-8PvE</a></li>
+<li><a href="https://medium.com/@mrityu.jha/understanding-the-grad-of-Autograd-fc8d266fd6cf" target="_blank" rel="noopener noreffer ">https://medium.com/@mrityu.jha/understanding-the-grad-of-Autograd-fc8d266fd6cf</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-01-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/" data-title="A glimpse into PyTorch Autograd internals" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fbodasadallah.github.io%2fblogs%2fa-glimpse-into-pytorch-autograd-internals-2023%2f&amp;text=A%20glimpse%20into%20PyTorch%20Autograd%20internals" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/blogs/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blogs/distributed-training-2022/" class="prev" rel="prev" title="Distributed Training"><i class="fas fa-angle-left" aria-hidden="true"></i>Distributed Training</a>
+            <a href="/blogs/peer-review-2024/" class="next" rel="next" title="Peer Review">Peer Review<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Boda Sadallah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/blogs/js/theme.js"></script></body>
+</html>

@@ -36,7 +36,7 @@
         try {
             // Determine the correct path based on current location
             const configPath = window.BLOG_POST_ID ? '../content/site/config.yaml' : 'content/site/config.yaml';
-            const response = await fetch(configPath);
+            const response = await fetch(configPath, { cache: 'no-store' });
             const yamlText = await response.text();
             siteConfig = jsyaml.load(yamlText);
             return siteConfig;
@@ -59,7 +59,7 @@
             if (window.BLOG_POST_ID && path.startsWith('blogs/')) {
                 adjustedPath = path.substring('blogs/'.length);
             }
-            const response = await fetch(adjustedPath);
+            const response = await fetch(adjustedPath, { cache: 'no-store' });
             const yamlText = await response.text();
             return jsyaml.load(yamlText);
         } catch (error) {
@@ -126,6 +126,51 @@ function parseMarkdown(markdown) {
     markdown = markdown.replace(/\{\{TOC\}\}/g, '<div id="toc-placeholder"></div>');
 
     let html = markdown;
+
+    const escapeHtml = (text) => text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+    // Extract fenced code blocks first so markdown formatting doesn't alter them
+    const codeBlocks = [];
+    html = html.replace(/```([\s\S]*?)```/g, (match, innerContent) => {
+        let language = '';
+        let code = '';
+
+        const normalized = (innerContent || '').replace(/^\n/, '');
+
+        if (normalized.includes('\n')) {
+            const lines = normalized.split('\n');
+            const firstLine = (lines[0] || '').trim();
+
+            if (/^[A-Za-z0-9_-]+$/.test(firstLine)) {
+                language = firstLine;
+                code = lines.slice(1).join('\n');
+            } else {
+                code = normalized;
+            }
+        } else {
+            const singleLine = normalized.trim();
+            const inlineMatch = singleLine.match(/^([A-Za-z0-9_-]+)\s+([\s\S]+)$/);
+
+            if (inlineMatch) {
+                language = inlineMatch[1];
+                code = inlineMatch[2];
+            } else {
+                code = singleLine;
+            }
+        }
+
+        const blockIndex = codeBlocks.length;
+        codeBlocks.push({
+            language,
+            code: code.replace(/\n$/, '')
+        });
+        return `@@CODEBLOCK_${blockIndex}@@`;
+    });
     
     // Parse headings
     html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
@@ -134,13 +179,19 @@ function parseMarkdown(markdown) {
     
     // Parse links [text](url)
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
+    // Unescape markdown-escaped punctuation outside fenced code blocks
+    html = html.replace(/\\([\\`*_{}\[\]()#+\-.!])/g, '$1');
     
     // Parse bold **text** or __text__
     html = html.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/__([^_]+)__/g, '<strong>$1</strong>');
     
-    // Parse italic *text*
-    html = html.replace(/\*([^\*]+)\*/g, '<em>$1</em>');
+    // Parse italic *text* (avoid matching list bullets like "* item")
+    html = html.replace(/\*(\S(?:[^*\n]*\S)?)\*/g, '<em>$1</em>');
+
+    // Parse inline code `code`
+    html = html.replace(/`([^`\n]+)`/g, '<code>$1</code>');
     
     // Parse lists - handle both unordered (-) and ordered (1.)
     const blocks = html.split(/\n\n+/);
@@ -153,11 +204,11 @@ function parseMarkdown(markdown) {
             line.trim().match(/^[-*]\s/) || line.trim() === ''
         );
         
-        if (isUnorderedList && block.match(/^[-*]\s/m)) {
+        if (isUnorderedList && block.match(/^\s*[-*]\s/m)) {
             const listItems = block.split('\n')
                 .filter(line => line.trim())
                 .map(line => {
-                    const match = line.match(/^[-*]\s+(.+)$/);
+                    const match = line.match(/^\s*[-*]\s+(.+)$/);
                     return match ? `<li>${match[1]}</li>` : '';
                 })
                 .join('\n');
@@ -169,11 +220,11 @@ function parseMarkdown(markdown) {
             line.trim().match(/^\d+\.\s/) || line.trim() === ''
         );
         
-        if (isOrderedList && block.match(/^\d+\.\s/m)) {
+        if (isOrderedList && block.match(/^\s*\d+\.\s/m)) {
             const listItems = block.split('\n')
                 .filter(line => line.trim())
                 .map(line => {
-                    const match = line.match(/^\d+\.\s+(.+)$/);
+                    const match = line.match(/^\s*\d+\.\s+(.+)$/);
                     return match ? `<li>${match[1]}</li>` : '';
                 })
                 .join('\n');
@@ -181,13 +232,27 @@ function parseMarkdown(markdown) {
         }
         
         // Don't wrap if it's already an HTML tag
+        if (block.match(/^@@CODEBLOCK_\d+@@$/)) {
+            return block;
+        }
+
         if (block.startsWith('<h') || block.startsWith('<figure') ||
             block.startsWith('<ul') || block.startsWith('<ol') ||
             block.startsWith('<div') || block.startsWith('</')) {
             return block;
         }
-        return '<p>' + block + '</p>';
+        return '<p>' + block.replace(/\n/g, '<br>\n') + '</p>';
     }).join('\n');
+
+    // Restore code blocks at the end to preserve exact formatting
+    html = html.replace(/@@CODEBLOCK_(\d+)@@/g, (match, index) => {
+        const block = codeBlocks[Number(index)];
+        if (!block) return '';
+
+        const languageClass = block.language ? ` class="language-${block.language}"` : '';
+        const languageAttribute = block.language ? ` data-language="${escapeHtml(block.language)}"` : '';
+        return `<pre${languageAttribute}><code${languageClass}>${escapeHtml(block.code)}</code></pre>`;
+    });
     
     return html;
 }
@@ -272,6 +337,9 @@ async function loadTimeline() {
             formattedDescription = formatInlineMarkdown(formattedDescription);
             // Support paragraph breaks with \n\n
             formattedDescription = formattedDescription.replace(/\n\n/g, '</p><p class="timeline-description">');
+
+            // Always start timeline entry with the position title
+            const formattedTitle = formatInlineMarkdown(item.title || '');
             
             // Make logo clickable if URL exists
             const logoHTML = item.url 
@@ -284,6 +352,7 @@ async function loadTimeline() {
                 <div class="timeline-year">${yearRange}</div>
                 ${logoHTML}
                 <div class="timeline-content">
+                    <p class="timeline-title">${formattedTitle}</p>
                     <p class="timeline-description">${formattedDescription}</p>
                 </div>
             </div>
@@ -313,31 +382,55 @@ async function loadMedia() {
         
         const container = document.getElementById('media-list');
         if (!container || !mediaItems) return;
+
+        const sortedItems = [...mediaItems].sort((a, b) => {
+            if (!a.date && !b.date) return 0;
+            if (!a.date) return 1;
+            if (!b.date) return -1;
+            return new Date(b.date) - new Date(a.date);
+        });
+
+        const hasVideos = sortedItems.some(item => item.video_id);
+        container.classList.toggle('news-list', !hasVideos);
         
-        const mediaCards = mediaItems.map(item => {
-            const videoUrl = item.timestamp 
-                ? `https://www.youtube.com/embed/${item.video_id}?start=${item.timestamp}`
-                : `https://www.youtube.com/embed/${item.video_id}`;
-            
-            // Format title and description with markdown support
-            const formattedTitle = formatInlineMarkdown(item.title);
-            const formattedDescription = formatInlineMarkdown(item.description);
-            
-            return `
-            <div class="media-item">
-                <div class="media-thumbnail">
-                    <iframe 
-                        src="${videoUrl}" 
-                        title="${item.title}"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+        const mediaCards = sortedItems.map(item => {
+            const formattedTitle = formatInlineMarkdown(item.title || '');
+            const formattedDescription = formatInlineMarkdown(item.description || '');
+
+            if (item.video_id) {
+                const videoUrl = item.timestamp
+                    ? `https://www.youtube.com/embed/${item.video_id}?start=${item.timestamp}`
+                    : `https://www.youtube.com/embed/${item.video_id}`;
+
+                return `
+                <div class="media-item">
+                    <div class="media-thumbnail">
+                        <iframe 
+                            src="${videoUrl}" 
+                            title="${item.title}"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="media-info">
+                        <h3>${formattedTitle}</h3>
+                        <p>${formattedDescription}</p>
+                    </div>
                 </div>
+                `;
+            }
+
+            const dateLine = item.date ? formatDate(item.date) : '';
+
+            // Format title and description with markdown support
+            return `
+                <article class="media-item news-item">
                 <div class="media-info">
+                    <p class="news-date">${dateLine}</p>
                     <h3>${formattedTitle}</h3>
                     <p>${formattedDescription}</p>
                 </div>
-            </div>
+                </article>
             `;
         });
         
@@ -506,12 +599,12 @@ async function loadProfileContent() {
             markdownContent = config.site.profile;
         } else {
             // Fallback to bio.md file
-            const bioResponse = await fetch('content/site/bio.md');
+            const bioResponse = await fetch('content/site/bio.md', { cache: 'no-store' });
             markdownContent = await bioResponse.text();
         }
         
-        // Convert markdown to HTML
-        const htmlContent = convertSimpleMarkdownToHtml(markdownContent);
+        // Convert markdown to HTML (supports lists, links, emphasis, paragraphs)
+        const htmlContent = parseMarkdown(markdownContent);
         const profileElement = document.getElementById('profile-content');
         if (profileElement) {
             profileElement.innerHTML = htmlContent;
@@ -622,17 +715,31 @@ async function loadPublications() {
  */
 async function loadBlogs() {
     try {
-        const blogs = await loadYaml('blogs/blogs.yaml');
+        let blogs = [];
         const listContainer = document.getElementById('blog-list');
+
+        try {
+            const response = await fetch('blogs/blogs-index.json', { cache: 'no-store' });
+            if (response.ok) {
+                blogs = await response.json();
+            }
+        } catch (_) {
+            blogs = [];
+        }
+
+        if (!Array.isArray(blogs) || blogs.length === 0) {
+            blogs = await loadYaml('blogs/blogs.yaml');
+        }
         
         if (!listContainer || !blogs) return;
         
         const blogCards = blogs.map(blog => {
             const formattedDate = formatDate(blog.date);
             const dateLine = formattedDate + (blog.reading_time ? ' · ' + blog.reading_time : '');
+            const link = blog.url || `blogs/${blog.id}.html`;
 
             return `
-            <a href="blogs/${blog.id}.html" style="text-decoration:none;">
+            <a href="${link}" style="text-decoration:none;">
             <div class="blog-post">
                 <div class="blog-image">
                     <img src="${blog.thumbnail}" alt="${blog.title} cover image">
@@ -655,40 +762,39 @@ async function loadBlogs() {
 
 /**
  * Load design configuration and apply CSS custom properties
- * Sets layout variables, typography, and image sizing from design.json
+ * Sets layout variables, typography, and image sizing from config.yaml
  */
 async function loadDesignConfiguration() {
     try {
-        const response = await fetch('content/site/design.json');
-        if (!response.ok) return;
-        const config = await response.json();
+        const config = await loadConfig();
+        if (!config?.design) return;
+        const design = config.design;
         
         // Layout variables
-        if (config.layout?.maxWidth) {
-            const value = config.layout.maxWidth.value;
-            const unit = config.layout.maxWidth.unit || 'px';
-            document.documentElement.style.setProperty('--maxw', value + unit);
+        if (design.layout?.max_width) {
+            document.documentElement.style.setProperty('--maxw', design.layout.max_width);
+        }
+        if (design.layout?.padding?.horizontal) {
+            document.documentElement.style.setProperty('--padding-horizontal', design.layout.padding.horizontal);
         }
         
         // Typography variables
-        if (config.typography?.body?.lineHeight) {
+        if (design.typography?.body?.line_height) {
             document.documentElement.style.setProperty(
                 '--body-line-height', 
-                config.typography.body.lineHeight.value
+                design.typography.body.line_height
             );
         }
         
         // Image variables
-        const pubThumbnail = config.images?.publicationThumbnail;
+        const pubThumbnail = design.images?.publication_thumbnail;
         if (pubThumbnail) {
-            const width = pubThumbnail.width?.value;
-            const widthUnit = pubThumbnail.width?.unit || 'px';
-            const height = pubThumbnail.height?.value;
-            const heightUnit = pubThumbnail.height?.unit || 'px';
-            const borderRadius = pubThumbnail.borderRadius || '4px';
+            const width = pubThumbnail.width;
+            const height = pubThumbnail.height;
+            const borderRadius = pubThumbnail.border_radius || '4px';
             
-            if (width) document.documentElement.style.setProperty('--pub-thumb-width', width + widthUnit);
-            if (height) document.documentElement.style.setProperty('--pub-thumb-height', height + heightUnit);
+            if (width) document.documentElement.style.setProperty('--pub-thumb-width', `${width}px`);
+            if (height) document.documentElement.style.setProperty('--pub-thumb-height', `${height}px`);
             document.documentElement.style.setProperty('--pub-thumb-radius', borderRadius);
         }
     } catch (error) {
@@ -829,7 +935,7 @@ async function loadBlogPost() {
         const pageTitleElement = document.getElementById('page-title');
         
         if (titleElement) titleElement.textContent = blog.title;
-        if (pageTitleElement) pageTitleElement.textContent = `🤘 Fablogio`;
+        if (pageTitleElement) pageTitleElement.textContent = blog.title;
         wireShareButtons(blog.title);
         const headerTitleElement = document.getElementById('blog-header-title');
         if (headerTitleElement) {
@@ -960,8 +1066,8 @@ function generateTableOfContents() {
                 e.preventDefault();
                 const header = document.querySelector('.site-header, .blog-header, header');
                 const headerHeight = header ? header.getBoundingClientRect().height : 0;
-                const tocTop = inlineToc.getBoundingClientRect().top + document.body.scrollTop - headerHeight - 16;
-                document.body.scrollTo({ top: tocTop, behavior: 'smooth' });
+                const tocTop = inlineToc.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+                window.scrollTo({ top: tocTop, behavior: 'smooth' });
             });
         }
     } else {
@@ -972,7 +1078,7 @@ function generateTableOfContents() {
             tocBtn.setAttribute('aria-label', 'Back to top');
             tocBtn.addEventListener('click', e => {
                 e.preventDefault();
-                document.body.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
     }
@@ -984,45 +1090,50 @@ function generateTableOfContents() {
     document.body.appendChild(progressPill);
 
     // --- CURRENT SECTION INDICATOR ---
+    let h2Indicator = null;
+    let h3Indicator = null;
     if (headerNav) {
-        const h2Indicator = document.createElement('span');
+        h2Indicator = document.createElement('span');
         h2Indicator.className = 'blog-current-h2';
         h2Indicator.id = 'blog-current-section'; // keep for any external refs
 
-        const h3Indicator = document.createElement('span');
+        h3Indicator = document.createElement('span');
         h3Indicator.className = 'blog-current-h3';
 
         headerNav.appendChild(h2Indicator);
         headerNav.appendChild(h3Indicator);
+        headerNav.style.display = 'none';
+    }
 
-        document.body.addEventListener('scroll', () => {
-            let currentH2 = null;
-            let currentH3 = null;
-            headings.forEach(h => {
-                if (h.getBoundingClientRect().top <= 120) {
-                    if (h.tagName === 'H2') {
-                        currentH2 = h;
-                        currentH3 = null; // reset subsection when entering a new section
-                    } else if (h.tagName === 'H3') {
-                        currentH3 = h;
-                    }
+    window.addEventListener('scroll', () => {
+        let currentH2 = null;
+        let currentH3 = null;
+        headings.forEach(h => {
+            if (h.getBoundingClientRect().top <= 120) {
+                if (h.tagName === 'H2') {
+                    currentH2 = h;
+                    currentH3 = null;
+                } else if (h.tagName === 'H3') {
+                    currentH3 = h;
                 }
-            });
+            }
+        });
+
+        if (headerNav && h2Indicator && h3Indicator) {
             h2Indicator.textContent = currentH2 ? currentH2.textContent : '';
             h3Indicator.textContent = currentH3 ? currentH3.textContent : '';
             headerNav.style.display = currentH2 ? '' : 'none';
+        }
 
-            const pct = Math.round(
-                document.body.scrollTop / (document.body.scrollHeight - document.body.clientHeight) * 100
-            );
-            progressPill.textContent = pct + '%';
-            progressPill.style.setProperty('--fill', pct + '%');
-            progressPill.classList.toggle('visible', pct > 0);
-        });
-
-        // Set initial state (hidden until scrolling begins)
-        headerNav.style.display = 'none';
-    }
+        const scrollTop = window.scrollY;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollable = Math.max(1, scrollHeight - clientHeight);
+        const pct = Math.round((scrollTop / scrollable) * 100);
+        progressPill.textContent = pct + '%';
+        progressPill.style.setProperty('--fill', pct + '%');
+        progressPill.classList.toggle('visible', pct > 0);
+    });
 }
 
 /**

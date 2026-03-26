@@ -1,0 +1,89 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Random Thoughts</title>
+        <link>https://bodasadallah.github.io/blogs/</link>
+        <description>Blog posts</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 30 Mar 2025 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://bodasadallah.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First Review</title>
+    <link>https://bodasadallah.github.io/blogs/first-review-2025/</link>
+    <pubDate>Sun, 30 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/first-review-2025/</guid>
+    <description><![CDATA[I have just submitted two reviews for the ACL 2025 conference, and overall, I would say it was a positive experience. It was partially an eye-opener and also a confirmation of some problems in our current reviewing&hellip;]]></description>
+</item>
+<item>
+    <title>Peer Review</title>
+    <link>https://bodasadallah.github.io/blogs/peer-review-2024/</link>
+    <pubDate>Fri, 10 May 2024 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/peer-review-2024/</guid>
+    <description><![CDATA[What is Peer-review]]></description>
+</item>
+<item>
+    <title>A glimpse into PyTorch Autograd internals</title>
+    <link>https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/</link>
+    <pubDate>Tue, 10 Jan 2023 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/a-glimpse-into-pytorch-autograd-internals-2023/</guid>
+    <description><![CDATA[Trying to understand some errors we get, while using pyTorch]]></description>
+</item>
+<item>
+    <title>Distributed Training</title>
+    <link>https://bodasadallah.github.io/blogs/distributed-training-2022/</link>
+    <pubDate>Tue, 08 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/distributed-training-2022/</guid>
+    <description><![CDATA[Distributed Training]]></description>
+</item>
+<item>
+    <title>Univnet</title>
+    <link>https://bodasadallah.github.io/blogs/univnet-2022/</link>
+    <pubDate>Mon, 07 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/univnet-2022/</guid>
+    <description><![CDATA[Research for Vocoders]]></description>
+</item>
+<item>
+    <title>Programming Facts</title>
+    <link>https://bodasadallah.github.io/blogs/programming-facts-2022/</link>
+    <pubDate>Mon, 23 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/programming-facts-2022/</guid>
+    <description><![CDATA[Some facts that I learned by time]]></description>
+</item>
+<item>
+    <title>Applied Deep Learning</title>
+    <link>https://bodasadallah.github.io/blogs/applied-deep-learning-2022/</link>
+    <pubDate>Tue, 01 Feb 2022 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/applied-deep-learning-2022/</guid>
+    <description><![CDATA[Long Course that gives a good breadth over many Deep Learning subjects. It]]></description>
+</item>
+<item>
+    <title>Python</title>
+    <link>https://bodasadallah.github.io/blogs/python-2021/</link>
+    <pubDate>Wed, 10 Nov 2021 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/python-2021/</guid>
+    <description><![CDATA[Python tricks]]></description>
+</item>
+<item>
+    <title>Scribbles</title>
+    <link>https://bodasadallah.github.io/blogs/scribbles-2021/</link>
+    <pubDate>Wed, 27 Oct 2021 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/scribbles-2021/</guid>
+    <description><![CDATA[A bunch of very different topics scribbles]]></description>
+</item>
+<item>
+    <title>TTS Research</title>
+    <link>https://bodasadallah.github.io/blogs/tts-research-2021/</link>
+    <pubDate>Thu, 14 Oct 2021 00:00:00 &#43;0000</pubDate>
+    <author>Boda Sadallah</author>
+    <guid>https://bodasadallah.github.io/blogs/tts-research-2021/</guid>
+    <description><![CDATA[A summary research for TTS]]></description>
+</item>
+</channel>
+</rss>

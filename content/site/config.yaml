@@ -5,16 +5,17 @@
 # Site Metadata
 # ===========================
 site:
-  name: "Fabio J. Fehr"
-  footer_name: "Fabio J. Fehr"
-  page_title: "🌞 Fabio J. Fehr"  # Browser tab title
-  nationality_flags: "🇿🇦 🇨🇭"  # Optional: displayed under profile picture
-  author_name_pattern: "F. Fehr"  # Pattern to bold in publication author lists
-  google_scholar_url: "https://scholar.google.com/citations?user=WaZWY0wAAAAJ&hl=en"
-  cv_url: "content/site/Fabio_J_Fehr_CV_2025.pdf"  # Path to CV/Resume PDF
+  name: "Boda Sadallah"
+  footer_name: "Boda Sadallah"
+  page_title: "Boda Sadallah"
+  url: "https://bodasadallah.github.io"
+  nationality_flags: "Lugano, Switzerland"
+  author_name_pattern: "Sadallah"
+  google_scholar_url: "https://scholar.google.com/citations?user=XtAYJs8AAAAJ&hl=en"
+  cv_url: "content/site/CV.pdf"
   role:
-    title: "Postdoctoral Researcher"
-    affiliation: "Oxford University, TVG"
+    title: "PhD Student"
+    affiliation: "Università della Svizzera italiana (USI)"
 
 # ===========================
 # Layout & Navigation
@@ -24,7 +25,7 @@ layout:
     navigation:
       - label: "Experience"
         href: "#timeline"
-      - label: "Highlights"
+      - label: "News"
         href: "#media-heading"
       - label: "Publications"
         href: "#publications-heading"
@@ -38,18 +39,18 @@ layout:
     timeline:
       title: "Timeline"
     media:
-      title: "Highlights"
+      title: "News"
     publications:
       title: "Selected Publications"
       note: "Please see my <a href=\"{{google_scholar_url}}\" target=\"_blank\">Google Scholar</a> for a complete list of publications."
     blog:
-      title: "🤘 Fablogio"
-      subtitle: "Welcome to my space for story telling!"
+      title: "Random Thoughts"
+      subtitle: "A bunch of scribbles that come to my mind."
   
   footer:
-    year: 2025
-    tagline: "Created entirely by vibe coding and groovy tunes 🤖🎸 • Open source template"
-    license_text: "Template by Fabio J. Fehr"
+    year: 2026
+    tagline: "Personal website and blog"
+    license_text: "Based on template by Fabio J. Fehr"
     license_url: "https://github.com/FJFehr/fjfehr.github.io/"
 
 # ===========================
@@ -58,49 +59,31 @@ layout:
 contacts:
   - name: "Email"
     icon: "✉️"
-    url: "mailto:fabiofehr96@gmail.com"
-    display: "fabiofehr96@gmail.com"
+    url: "mailto:abdelrahman.sadallah@usi.ch"
+    display: "abdelrahman.sadallah@usi.ch"
   
   - name: "Google Scholar"
     icon: "content/site/icons/google-scholar-svgrepo-com.svg"
-    url: "https://scholar.google.com/citations?user=WaZWY0wAAAAJ&hl=en"
+    url: "https://scholar.google.com/citations?user=XtAYJs8AAAAJ&hl=en"
     display: "Google Scholar"
     is_image: true
   
   - name: "LinkedIn"
     icon: "content/site/icons/linkedin-svgrepo-com.svg"
-    url: "https://www.linkedin.com/in/fabio-j-fehr/"
+    url: "https://www.linkedin.com/in/boda-sadallah/"
     display: "LinkedIn"
     is_image: true
   
   - name: "GitHub"
     icon: "content/site/icons/github-svgrepo-com.svg"
-    url: "https://github.com/FJFehr"
+    url: "https://github.com/bodasadallah"
     display: "GitHub"
     is_image: true
   
   - name: "Twitter"
     icon: "𝕏"
-    url: "https://twitter.com/FabioFehr"
+    url: "https://twitter.com/bodasadallah"
     display: "Twitter"
-  
-  - name: "YouTube"
-    icon: "content/site/icons/youtube-svgrepo-com.svg"
-    url: "https://www.youtube.com/@FabioJFehr"
-    display: "YouTube"
-    is_image: true
-  
-  - name: "Instagram"
-    icon: "content/site/icons/instagram-2016-logo-svgrepo-com.svg"
-    url: "https://www.instagram.com/fabio_j_fehr/"
-    display: "Instagram"
-    is_image: true
-  
-  - name: "Spotify"
-    icon: "content/site/icons/spotify-color-svgrepo-com.svg"
-    url: "https://open.spotify.com/user/rsb5wsunuryza4ziszf8viphz?si=6d07fad53a7948e9"
-    display: "Spotify"
-    is_image: true
 
 # ===========================
 # Design System

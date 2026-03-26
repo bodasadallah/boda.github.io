@@ -1,0 +1,1 @@
+https://github.com/gohugoio/hugo/releases/download/v0.159.1/hugo_extended_0.159.1_linux-amd64.tar.gz

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Univnet - Random Thoughts</title><meta name="Description" content="Blog posts"><meta property="og:url" content="https://bodasadallah.github.io/blogs/univnet-2022/">
+  <meta property="og:site_name" content="Random Thoughts">
+  <meta property="og:title" content="Univnet">
+  <meta property="og:description" content="Research for Vocoders">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-11-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-11-07T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Univnet">
+  <meta name="twitter:description" content="Research for Vocoders">
+<meta name="application-name" content="Random Thoughts">
+<meta name="apple-mobile-web-app-title" content="Random Thoughts">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bodasadallah.github.io/blogs/univnet-2022/" /><link rel="prev" href="https://bodasadallah.github.io/blogs/programming-facts-2022/" /><link rel="next" href="https://bodasadallah.github.io/blogs/distributed-training-2022/" /><link rel="stylesheet" href="/blogs/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Univnet",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bodasadallah.github.io\/blogs\/univnet-2022\/"
+        },"genre": "posts","wordcount":  892 ,
+        "url": "https:\/\/bodasadallah.github.io\/blogs\/univnet-2022\/","datePublished": "2022-11-07T00:00:00+00:00","dateModified": "2022-11-07T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Boda Sadallah"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="sticky" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Random Thoughts">Random Thoughts</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/blogs/"> Posts </a><a class="menu-item" href="/"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Random Thoughts">Random Thoughts</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/blogs/" title="">Posts</a><a class="menu-item" href="/" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Univnet</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Boda Sadallah</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-07">2022-11-07</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;892 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#wavenet">Wavenet</a></li>
+        <li><a href="#wavegan">WaveGan</a></li>
+        <li><a href="#end-to-end-tts">End-to-End TTS</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="tts-text-to-speech">TTS (Text To Speech)</h1>
+<p>TTS can be viewed as a sequence-to-sequence mapping problem; from a sequence of discrete symbols
+(text) to a real-valued time series (speech signals). A typical TTS pipeline has two parts; 1)
+text analysis and 2) speech synthesis. The text analysis part typically includes a number of natural
+language processing (NLP) steps, such as sentence segmentation, word segmentation, text normalization,
+part-of-speech (POS) tagging, and grapheme-to-phoneme (G2P) conversion. It takes a word
+sequence as input and outputs a phoneme sequence with a variety of linguistic contexts. The speech
+synthesis part takes the context-dependent phoneme sequence as its input and outputs a synthesized
+speech waveform.</p>
+<h3 id="wavenet">Wavenet</h3>
+<h4 id="wavenet-v1">Wavenet V1</h4>
+<p>before wavenet, ther was two methods:</p>
+<ul>
+<li>generative method:
+<ul>
+<li>which would produce the over all song of the sentece well, but would fail to produce the individual sounds well</li>
+</ul>
+</li>
+<li>concatinative:
+<ul>
+<li>we use a huge corpus of phonatics and concatinate them together to procude a whole sentence, this way we would procuce the individual sounds correctly, but we would lose the song of the sentence</li>
+</ul>
+</li>
+</ul>
+<p>wavenet:</p>
+<ul>
+<li>
+<p>tries to do both of the above methods, it also can change the speaker by changing some parameters</p>
+<ul>
+<li>
+<p>data output: 16 khz rate</p>
+</li>
+<li>
+<p>we cant use normal RNN as the max seq length around 50</p>
+</li>
+<li>
+<p>they used dilated CNNs:</p>
+<ul>
+<li>can have very long look back</li>
+<li>fast to train</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>WaveNet: is a deep generative model of audio data that operates directly at
+the waveform level. WaveNets are autoregressive and combine causal filters with dilated convolutions
+to allow their receptive fields to grow exponentially with depth, which is important to model
+the long-range temporal dependencies in audio signals.WaveNets can be conditioned
+on other inputs in a global (e.g. speaker identity) or local way (e.g. linguistic features).
+When applied to TTS, WaveNets produced samples that outperform the current best TTS systems
+in subjective naturalness. Finally, WaveNets showed very promising results when applied to music
+audio modeling and speech recognition.</p>
+<h4 id="wavenet-v2">Wavenet V2</h4>
+<p>The original Wavenet implementation suffered from low speed inference, because it predicts samples squentially.
+They needed to predict time samples in prallel so that wavenet can be used in production, so the used a fully trained wavenet teacher, to train a smaller wavnet student, which doesn&rsquo;t depend on previous samples to produce the current sample, while still maintaining the same quality.</p>
+<h3 id="wavegan">WaveGan</h3>
+<p>WaveGAN is a generative adversarial network for unsupervised synthesis of raw-waveform audio (as opposed to image-like spectrograms).</p>
+<p>The WaveGAN architecture is based off DCGAN. The DCGAN generator uses the transposed convolution operation to iteratively upsample low-resolution feature maps into a high-resolution image. WaveGAN modifies this transposed convolution operation to widen its receptive field, using a longer one-dimensional filters of length 25 instead of two-dimensional filters of size 5x5, and upsampling by a factor of 4 instead of 2 at each layer. The discriminator is modified in a similar way, using length-25 filters in one dimension and increasing stride from 2 to 4. These changes result in WaveGAN having the same number of parameters, numerical operations, and output dimensionality as DCGAN</p>
+<h4 id="before-wavegan">Before WaveGan</h4>
+<h5 id="autoregressive-generation">Autoregressive generation:</h5>
+<ul>
+<li>It&rsquo;s an approach in which speech samples are generated one by one in sequence.</li>
+<li>Examples: WaveNet</li>
+<li>Has high quality</li>
+<li>Takes around 180 secs to generate a one second of speech</li>
+<li>can&rsquo;t be applied to services in production due to low speed</li>
+</ul>
+<h5 id="non-autoregressive-generation">Non-autoregressive generation:</h5>
+<ul>
+<li>It&rsquo;s an approach where all voice samples are generated in prallel</li>
+<li>Examples: Prallel WaveNet</li>
+<li>Lower quality than autoregressive method</li>
+<li>takes 0.03 seconds to generates one second of speed</li>
+</ul>
+<h3 id="end-to-end-tts">End-to-End TTS</h3>
+<p>End-to-end TTS systems can be splitted into two main components:</p>
+<ul>
+<li>Speech Synthesizer, which takes in raw text and output mel-spectrogram.
+<ul>
+<li>Ex: Tacotron</li>
+</ul>
+</li>
+<li>Vocoder, which takes in mel-spectrogram and outputs sound waves.
+<ul>
+<li>Ex: Prallel WaveGan, Univnet</li>
+</ul>
+</li>
+</ul>
+<h4 id="tacotron2">Tacotron2</h4>
+<p>Tacotron 2 is a neural network architecture for speech synthesis directly from text. It consists of two components: a recurrent sequence-to-sequence feature prediction network with attention which predicts a sequence of mel spectrogram frames from an input character sequence, followed by a modified WaveNet model acting as a vocoder to synthesize time-domain
+waveforms from those spectrograms.</p>
+<p><figure><a class="lightgallery" href="tacotron_arch.png" title="Tacotron_arch" data-thumbnail="tacotron_arch.png" data-sub-html="<h2>Tacotron2 Architecture</h2><p>Tacotron_arch</p>">
+        <img
+            class="lazyload"
+            src="/blogs/svg/loading.min.svg"
+            data-src="tacotron_arch.png"
+            data-srcset="tacotron_arch.png, tacotron_arch.png 1.5x, tacotron_arch.png 2x"
+            data-sizes="auto"
+            alt="tacotron_arch.png" />
+    </a><figcaption class="image-caption">Tacotron2 Architecture</figcaption>
+    </figure></p>
+<h4 id="prallel-wavegan">Prallel WaveGan</h4>
+<p>Parallel WaveGAN1, a distillation-free, fast, and small-footprint waveform generation method using a generative adversarial network. In the proposed method, a non-autoregressive WaveNet is trained by jointly optimizing multi-resolution spectrogram and adversarial loss functions, which can effectively capture the time-frequency distribution of the realistic speech waveform. As our method does not require density distillation used in the conventional teacher-student framework, the entire model can be easily trained even with a small number of parameters. In particular, the proposed Parallel WaveGAN has only 1.44 M parameters and can generate 24 kHz speech waveform 28.68 times faster than real-time on a single GPU environment. Perceptual listening test results verify that our proposed method achieves 4.16 mean opinion score within a Transformer-based text-to-speech framework, which is comparative to the best distillation-based Parallel WaveNet system.</p>
+<p><figure><a class="lightgallery" href="parallel_wavegan_arch.png" title="Parallel_WaveGan_arch" data-thumbnail="parallel_wavegan_arch.png" data-sub-html="<h2>Parallel WaveGan Architecture</h2><p>Parallel_WaveGan_arch</p>">
+        <img
+            class="lazyload"
+            src="/blogs/svg/loading.min.svg"
+            data-src="parallel_wavegan_arch.png"
+            data-srcset="parallel_wavegan_arch.png, parallel_wavegan_arch.png 1.5x, parallel_wavegan_arch.png 2x"
+            data-sizes="auto"
+            alt="parallel_wavegan_arch.png" />
+    </a><figcaption class="image-caption">Parallel WaveGan Architecture</figcaption>
+    </figure></p>
+<h4 id="univnet">Univnet</h4>
+<p>UnivNet, a neural vocoder that
+synthesizes high-fidelity waveforms in real time. Inspired by
+works in the field of voice activity detection, we added a multiresolution spectrogram discriminator that employs multiple linear spectrogram magnitudes computed using various parameter
+sets. Using full-band mel-spectrograms as input, we expect to
+generate high-resolution signals by adding a discriminator that
+employs spectrograms of multiple resolutions as the input</p>
+<p><figure><a class="lightgallery" href="univnet_arch.png" title="Univnet_arch" data-thumbnail="univnet_arch.png" data-sub-html="<h2>Univnet Architecture</h2><p>Univnet_arch</p>">
+        <img
+            class="lazyload"
+            src="/blogs/svg/loading.min.svg"
+            data-src="univnet_arch.png"
+            data-srcset="univnet_arch.png, univnet_arch.png 1.5x, univnet_arch.png 2x"
+            data-sizes="auto"
+            alt="univnet_arch.png" />
+    </a><figcaption class="image-caption">Univnet Architecture</figcaption>
+    </figure></p>
+<h3 id="resources">Resources</h3>
+<ul>
+<li>Wavenet
+<ul>
+<li><a href="https://deepmind.com/blog/article/high-fidelity-speech-synthesis-wavenet" target="_blank" rel="noopener noreffer ">https://deepmind.com/blog/article/high-fidelity-speech-synthesis-wavenet</a></li>
+<li><a href="https://www.youtube.com/watch?v=YyUXG-BfDbE" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=YyUXG-BfDbE</a></li>
+<li><a href="https://www.kdnuggets.com/2020/07/deep-learning-signal-processing.html" target="_blank" rel="noopener noreffer ">https://www.kdnuggets.com/2020/07/deep-learning-signal-processing.html</a></li>
+<li><a href="https://deepmind.com/blog/article/wavenet-generative-model-raw-audio" target="_blank" rel="noopener noreffer ">https://deepmind.com/blog/article/wavenet-generative-model-raw-audio</a></li>
+</ul>
+</li>
+<li>WaveGan
+<ul>
+<li><a href="https://arxiv.org/pdf/1802.04208v3.pdf" target="_blank" rel="noopener noreffer ">https://arxiv.org/pdf/1802.04208v3.pdf</a></li>
+<li><a href="https://paperswithcode.com/method/wavegan" target="_blank" rel="noopener noreffer ">https://paperswithcode.com/method/wavegan</a></li>
+</ul>
+</li>
+<li>Prallel WaveGan</li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=knzT7M6qsl0" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=knzT7M6qsl0</a></li>
+<li><a href="https://github.com/kan-bayashi/ParallelWaveGAN" target="_blank" rel="noopener noreffer ">https://github.com/kan-bayashi/ParallelWaveGAN</a></li>
+<li><a href="https://arxiv.org/pdf/1910.11480.pdf" target="_blank" rel="noopener noreffer ">https://arxiv.org/pdf/1910.11480.pdf</a></li>
+</ul>
+<ul>
+<li>Tacotron</li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/pdf/1712.05884v2.pdf" target="_blank" rel="noopener noreffer ">https://arxiv.org/pdf/1712.05884v2.pdf</a></li>
+</ul>
+<ul>
+<li>Univnet
+<ul>
+<li><a href="https://arxiv.org/pdf/2106.07889.pdf" target="_blank" rel="noopener noreffer ">https://arxiv.org/pdf/2106.07889.pdf</a></li>
+</ul>
+</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://bodasadallah.github.io/blogs/univnet-2022/"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://bodasadallah.github.io/blogs/univnet-2022/" data-title="Univnet" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fbodasadallah.github.io%2fblogs%2funivnet-2022%2f&amp;text=Univnet" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/blogs/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blogs/programming-facts-2022/" class="prev" rel="prev" title="Programming Facts"><i class="fas fa-angle-left" aria-hidden="true"></i>Programming Facts</a>
+            <a href="/blogs/distributed-training-2022/" class="next" rel="next" title="Distributed Training">Distributed Training<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Boda Sadallah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/blogs/js/theme.js"></script></body>
+</html>

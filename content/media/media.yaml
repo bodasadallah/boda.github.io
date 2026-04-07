@@ -1,6 +1,11 @@
 # News
 # Imported from old template _news entries
 
+- id: 13
+  date: "2026-04-06"
+  title: "Paper accepted to Findings of ACL"
+  description: "[Instruction-Guided Poetry Generation in Arabic and Its Dialects](https://openreview.net/) has been accepted to Findings of ACL!"
+
 - id: 1
   date: "2026-01-19"
   title: "Started my PhD at [USI](https://www.usi.ch/)"
